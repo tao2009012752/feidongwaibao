@@ -44,10 +44,11 @@ class Company extends Common
         if (Request::instance()->isPost()) {
             $request  = Request::instance();
             $insertData = [
+                'account' =>  $request->param('account'),
                 'company_name' =>  $request->param('company_name'),
                 'intro' => $request->param('intro'),
                 'location' => $request->param('location'),
-                'another' => $request->param('another'),
+                'core_business' => $request->param('core_business'),
                 'contact' => $request->param('contact'),
                 'phone' => $request->param('phone'),
                 'email' => $request->param('email'),
@@ -71,6 +72,11 @@ class Company extends Common
             }
         }
 
+        //新增用户时给定默认相关信息
+        $companyInfo = [];
+        $companyInfo['is_forbidden'] = 1;
+        $this->assign('companyInfo', $companyInfo);
+
         return $this->fetch();
     }
 
@@ -89,10 +95,11 @@ class Company extends Common
         if (Request::instance()->isPost()) {
             $updateData = [
                 'company_id' => $companyId,
+                'account' =>  $request->param('account'),
                 'company_name' =>  $request->param('company_name'),
                 'intro' => $request->param('intro'),
                 'location' => $request->param('location'),
-                'another' => $request->param('another'),
+                'core_business' => $request->param('core_business'),
                 'contact' => $request->param('contact'),
                 'phone' => $request->param('phone'),
                 'email' => $request->param('email'),
@@ -105,6 +112,7 @@ class Company extends Common
             }
 
             $updateData['orderby'] = (int) $request->param('orderby');
+            $updateData['update_time'] = time();
 
             if (Db::name($this->_tableName)->update($updateData) ) {
                 ajax_return(['code' => 0, 'msg' => '编辑成功']);

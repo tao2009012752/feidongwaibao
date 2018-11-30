@@ -29,6 +29,7 @@ class Login extends Controller
             }
 
             $managerInfo = Db::name('manager')->where(['account' => $manager, 'password' => sha1(config('passsalt').$password)])->find();
+
             if ($managerInfo)
             {
                 Session::set('admin', $managerInfo['account']);
