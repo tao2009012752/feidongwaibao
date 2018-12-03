@@ -76,7 +76,7 @@ class Company extends Common
 
         //新增用户时给定默认相关信息
         $companyInfo = [];
-        $companyInfo['is_forbidden'] = 1;
+        $companyInfo['is_open'] = 1;
         $this->assign('companyInfo', $companyInfo);
 
         return $this->fetch();
