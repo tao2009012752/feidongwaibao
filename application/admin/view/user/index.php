@@ -24,7 +24,6 @@
                 <th><input type="checkbox" id="checkall"></th>
                 <th>ID</th>
                 <th>用户名</th>
-                <th>性别</th>
                 <th>是否显示</th>
                 <th>注册时间</th>
                 <th width="268">操作</th>
@@ -36,10 +35,17 @@
                 <td><input type="checkbox" class="check" value="<{$v['user_id']}>"></td>
                 <td><{$v.user_id}></td>
                 <td><{$v.account}></td>
-                <td><{$v.sex_value}></td>
                 <td><{$v.is_forbidden_value}></td>
                 <td><?=date('Y-m-d H:i', $v['add_time'])?></td>
                 <td>
+                    <a href="javascript:void(0);"
+                       class="table_btn table_info detail_btn"
+                       mini="show"
+                       data-url="<{:url('User/viewResume',['info_id' => $v['userinfo_id']])}>"
+                    >
+                        <i class="fa fa-reorder"></i>
+                        <span>查看简历</span>
+                    </a>
                     <a href="javascript:void(0);"
                        class="table_btn table_edit edit_btn"
                        mini="show"
