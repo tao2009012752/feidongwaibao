@@ -24,6 +24,7 @@
                 <th><input type="checkbox" id="checkall"></th>
                 <th>ID</th>
                 <th>企业名</th>
+                <th>企业logo</th>
                 <th>电话</th>
                 <th>邮箱</th>
                 <th>公司位置</th>
@@ -37,6 +38,7 @@
                 <td><input type="checkbox" class="check" value="<{$v['company_id']}>"></td>
                 <td><{$v.company_id}></td>
                 <td><{$v.company_name}></td>
+                <td><img src="<{$v.logo}>" style="max-width: 200px" /></td>
                 <td><{$v.phone}></td>
                 <td><{$v.email}></td>
                 <td><{$v.location}></td>

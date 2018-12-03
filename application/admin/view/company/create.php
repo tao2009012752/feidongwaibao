@@ -1,4 +1,19 @@
 {include file="public:header" /}
+
+<style>
+    #upload1 {
+        position: relative;
+    }
+
+    #upload1 input {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+        cursor: pointer;
+        position: absolute;
+        left: 110px;
+    }
+</style>
 <div class="main_box">
     <h2><span></span>添加企业</h2>
     <div class="cont_box">
@@ -15,6 +30,26 @@
                 <li>
                     <label><span class="red">*</span> 企业名：</label>
                     <input type="text" placeholder="请输入企业名" name="company_name" />
+                </li>
+                <li id="upload">
+                    <label><span class="red">*</span> 企业Logo：</label>
+                    <img src="/assets/images/upload.png" width="100">
+                    <input type="file" name="logo" id="upimg" data-url="<{:url('third/upload')}>"  />
+                    <input type="hidden" name="logo" />
+                </li>
+                <li class="view-img">
+                    <label >&nbsp;</label>
+                    <img src="" style="max-width: 500px">
+                </li>
+                <li id="upload1">
+                    <label><span class="red">*</span> 企业图片：</label>
+                    <img src="/assets/images/upload.png" width="100">
+                    <input type="file" name="image" id="upimg1" data-url="<{:url('third/upload')}>"  />
+                    <input type="hidden" name="image" />
+                </li>
+                <li class="view-img">
+                    <label >&nbsp;</label>
+                    <img src="" style="max-width: 500px">
                 </li>
                 <li>
                     <label><span class="red">*</span> 企业简介：</label>
@@ -47,9 +82,9 @@
                 <li>
                     <label>是否显示：</label>
                     <div class="radio_box">
-                        <input type="radio" name="is_forbidden" value="1"  <?=$companyInfo['is_forbidden'] ? 'checked' : ''?> > <span>是</span>
+                        <input type="radio" name="is_open" value="1"  <?=$companyInfo['is_open'] ? 'checked' : ''?> > <span>是</span>
                         <span style="width: 15px;height: 1px"></span>
-                        <input type="radio" name="is_forbidden" value="0" <?=$companyInfo['is_forbidden'] ? '' : 'checked'?>> <span>否</span>
+                        <input type="radio" name="is_open" value="0" <?=$companyInfo['is_open'] ? '' : 'checked'?>> <span>否</span>
                     </div>
                 </li>
 

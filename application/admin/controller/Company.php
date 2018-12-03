@@ -46,6 +46,8 @@ class Company extends Common
             $insertData = [
                 'account' =>  $request->param('account'),
                 'company_name' =>  $request->param('company_name'),
+                'logo' =>  $request->param('logo'),
+                'image' =>  $request->param('image'),
                 'intro' => $request->param('intro'),
                 'location' => $request->param('location'),
                 'core_business' => $request->param('core_business'),
@@ -97,6 +99,8 @@ class Company extends Common
                 'company_id' => $companyId,
                 'account' =>  $request->param('account'),
                 'company_name' =>  $request->param('company_name'),
+                'logo' =>  $request->param('logo'),
+                'image' =>  $request->param('image'),
                 'intro' => $request->param('intro'),
                 'location' => $request->param('location'),
                 'core_business' => $request->param('core_business'),

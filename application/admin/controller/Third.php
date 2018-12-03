@@ -33,4 +33,5 @@ class Third extends Controller{
             ajax_return(['code' => 1, 'msg' => $file->getError()]);
         }
     }
+
 }

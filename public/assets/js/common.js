@@ -163,6 +163,41 @@ $("#upimg").change(function() {
     var index = 0;
     var url = $(this).attr('data-url');
     formData.append('file', $('#upimg')[0].files[0]);
+    $.ajax({
+        url: url,
+        type: 'POST',
+        cache: false,
+        data: formData,
+        dataType:'json',
+        processData: false,
+        contentType: false,
+        beforeSend:function() {
+            index = layer.load(2, {time: 5*1000});
+        },
+        success:function(res) {
+            if (res.code) {
+                layer.alert(res.msg, {icon:2, title:'提示'});
+            }
+            $("#upload input[type='hidden']").val(res.file_path)
+            $("#upload").next().find("img").attr('src', res.file_path);
+            $("#upload").next().removeAttr('hidden');
+            // $(".view-img img").attr('src', res.file_path);
+            // $(".view-img").removeAttr('hidden');
+        },
+        complete:function() {
+            layer.close(index)
+        }
+    });
+})
+
+/*
+ *上传多张图片
+ */
+$("#upimg1").change(function() {
+    var formData = new FormData();
+    var index = 0;
+    var url = $(this).attr('data-url');
+    formData.append('file', $('#upimg1')[0].files[0]);
 
     $.ajax({
         url: url,
@@ -180,9 +215,11 @@ $("#upimg").change(function() {
                 layer.alert(res.msg, {icon:2, title:'提示'});
             }
 
-            $("#upload input[type='hidden']").val(res.file_path)
-            $(".view-img img").attr('src', res.file_path);
-            $(".view-img").removeAttr('hidden');
+            $("#upload1 input[type='hidden']").val(res.file_path)
+            $("#upload1").next().find("img").attr('src', res.file_path);
+            $("#upload1").next().removeAttr('hidden');
+            // $(".view-img img").attr('src', res.file_path);
+            // $(".view-img").removeAttr('hidden');
         },
         complete:function() {
             layer.close(index)
