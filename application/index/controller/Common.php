@@ -1,6 +1,7 @@
 <?php
 
 namespace app\index\controller;
+use think\Config;
 use think\Controller;
 use think\Session;
 use think\Request;
@@ -10,7 +11,20 @@ use think\Request;
  * @author mersycle<mersycle@hotmail.com>
  */
 class Common extends Controller{
-  
+
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        /*静态配置*/
+        $static = Config::get('static');
+        $this->assign('css',$static['css']);
+        $this->assign('js',$static['js']);
+        $this->assign('font',$static['font']);
+        $this->assign('img',$static['img']);
+    }
+
     public function isLogin () {
         if (Session::get('user')) {
             return true;

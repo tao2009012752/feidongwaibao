@@ -1,0 +1,774 @@
+body {
+	
+	margin: 0px;
+	padding: 0px;
+	background: #f3f3f3;
+	font-family: "宋体";
+	color: #000;
+	font-size: 12px;
+}
+ul,li,div,a,h1,h2,p,span,h3,input{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+.contant{
+	width: 1160px !important;
+	margin: 0 auto;
+}
+input:focus{outline:0;}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #999999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #999999;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #909;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #909;
+}
+.disnone{
+	display: none;
+}
+/*首页*/
+.pageTop{
+	height: 34px;
+	background:#f4f4f4 ;
+	border-bottom: 1px solid #bfbfbf;
+}
+.pageTop{
+	color: #000;
+	font-size: 12px;
+	line-height: 34px;
+}
+.pageTop .loginText a{
+	color: #666;
+	text-decoration: none;
+}
+.pageTop .loginText a:hover{
+	color: #e60012;
+}
+.headBox{
+	height: 110px;
+	background: #fff;
+}
+.headBox .logo{
+	margin-top: 32px;
+}
+.searchBox .searchInput{
+	height:30px ;
+	width: 320px;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+.searchBox .searchBtn{
+	width: 90px;
+	height: 34px;
+	background: #016ec5;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
+.searchBox .searchBtn:hover{
+	background:#025aa3 ;
+}
+
+.searchBox{
+	margin-top: 34px;
+}
+.navWrap{
+	width: 100%;
+	height: 45px;
+	background: url(../img/navLine.png) repeat-x;
+}
+.navBox ul li{
+	float: left;
+	width: 128px;
+	text-align: center;
+	line-height: 43px;
+	cursor: pointer;
+}
+.navBox ul li a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+}
+.navBox ul li:hover{
+	background: #e8850d;
+}
+.liAction{
+	background: #e8850d;
+}
+
+.news{
+	
+	background: #fff;
+	margin-top: 20px;
+}
+.newsBox{
+	padding: 20px;
+	overflow: hidden;
+}
+.mySlider{
+	width: 690px;
+	height: 487px;
+	background: #eee;
+}
+
+/*首页slider*/
+
+.slideBox{ width:690px; height:487px; overflow:hidden; position:relative; border:1px solid #ddd;  }
+.slideBox .hd{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:12px; z-index:1; }
+.slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
+.slideBox .hd ul li{ float:left; margin-right:6px;  width:12px; height:12px; line-height:14px; text-align:center; background:#fff; cursor:pointer;border-radius: 50%; }
+.slideBox .hd ul li.on{ background:#016ec5; color:#fff; }
+.slideBox .bd{ position:relative; height:100%; z-index:0;   }
+.slideBox .bd li{ zoom:1; vertical-align:middle; }
+.slideBox .bd img{ width:690px; height:487px; display:block;  }
+
+.sliTit{
+	position: absolute;
+	bottom: 0;
+	background-color:rgba(0,0,0,0.5);
+	color: #fff;
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+}
+.sliTit p{
+	padding-left: 20px;
+}
+.newsTap{
+	width: 410px;
+	height: 310px;
+}
+/*选项卡*/
+.slideTxtBox{ width:410px; border:1px solid #bfbfbf; text-align:left;  }
+.slideTxtBox .hd{ height:35px; line-height:35px; background:#f4f4f4; padding:0 10px 0 20px;   border-bottom:1px solid #ddd;  position:relative; }
+.slideTxtBox .hd ul{ float:left;  position:absolute; left:0px; top:-1px; height:35px;   }
+.slideTxtBox .hd ul li{ float:left; padding:0 26px; cursor:pointer;}
+.slideTxtBox .hd ul li.on{ height:34px;  background:#fff; border:1px solid #ddd; border-bottom:2px solid #fff; border-top: 2px solid #016ec5; color: #016ec5; font-weight: bold;}
+.slideTxtBox .bd ul{ padding:15px;  zoom:1;  }
+.slideTxtBox .bd li{ height:30px; line-height:30px;  border-bottom: 1px dashed #dcdcdc;   }
+.slideTxtBox .bd li .date{ float:right; color:#999;  }
+.newsTap li a{
+	font-size: 14px;
+	color: #000;
+	text-decoration: none;
+	width: 290px;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display: inline-block;
+}
+.newsTap li a:hover{
+	color: #e60012;
+}
+.newsTap li span{
+	font-size: 14px;
+}
+.newsTap .tapUl{
+	font-size: 16px;
+}
+.loginBox .loginTit{
+	height: 32px;
+	background: #f4f4f4;
+	border-bottom: 1px solid #ddd;
+}
+.loginBox{
+	width: 100%;
+	margin-top: 15px;
+	border: 1px solid #bfbfbf;
+	border-top-left-radius: 4px;
+}
+.loginBox .loginForm{
+	width: 100%;
+	background: #edf5fb;
+	overflow: hidden;
+	height: 128px;
+}
+.loginBox .loginText{
+	
+	margin: 10px auto;
+	
+	width: 167px;
+}
+.loginBox .loginText a{
+	display: inline-block;
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
+	
+}
+.liActions{
+	color: #2965a4 !important;
+	font-weight: bold;
+}
+.loginCon{
+	width: 344px;
+	margin: 0 auto;
+}
+.loginCon .formInputs{
+	height: 26px;
+	width: 190px;
+	padding-left: 10px;
+
+}
+.loginCon .leftName{
+	font-size: 14px;
+	text-align: right;
+	width: 60px;
+	display: inline-block;
+}
+.loginCon .inputLine{
+	margin-bottom: 10px;
+	margin-top: 3px;
+}
+.dividing{
+	margin: 0 6px;
+}
+.loginBtn{
+	cursor: pointer;
+}
+/*系统集合*/
+.nomarl{
+	margin-left: 0 !important;
+}
+.systemBox{
+	background: #fff;
+	margin: 20px auto;
+
+}
+.systemCon{
+	padding: 20px 20px 10px;
+	
+}
+.systemCon ul{
+	overflow: hidden;
+}
+.systemCon ul li{
+	float: left;
+	margin-left: 17px;
+}
+.conBox{
+	background: #fff;
+	border-top: 1px solid #016ec5;
+	overflow: hidden;
+}
+.conCon{
+	padding: 10px 20px;
+	overflow: hidden;
+	background: #fff;
+}
+.conCon h3{
+	
+	font-size: 16px;
+	font-weight: bold;
+	color: #026ec6;
+	border-bottom: 1px solid #ddd;
+
+}
+.conCon h3 span{
+	display: inline-block;
+	border-bottom: 2px solid #016ec5;
+	padding-bottom: 10px;
+}
+.zhengBox{
+	margin-top: 20px;
+}
+.titBox{
+	border: 1px solid #bfbfbf;
+}
+.style1{
+	width: 300px;
+}
+
+.titleBox{
+	height: 32px;
+	line-height: 32px;
+	border-bottom: 1px solid #ddd;
+	overflow: hidden;
+	background: #f4f4f4;
+}
+.tits{
+	font-size: 16px;
+	position: absolute;
+	z-index: 999;
+	margin-top: -1px;
+	color: #026ec6;
+	font-weight: bold;
+	border-top: 2px solid #026ec6;
+	padding: 0 20px;
+	background: #fff;
+	border-right: 1px solid #ddd;
+}
+.detailBox .date{
+	font-size: 14px;
+	color: #999;
+	display: inline-block;
+	float: right;
+}
+.detailBox{
+	padding: 15px;
+	overflow: hidden;
+}
+.detailBox li{
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px dashed #ddd;
+}
+.detailBox li a{
+	float: left;
+	width: 70%;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+.detailBox li a:hover{
+	color: #e60012;
+}
+.more{
+	font-size: 14px;
+	font-weight: bold;
+	padding-right: 10px;
+	display: inline-block;
+
+}
+.more a{
+	color: #000;
+	text-decoration: none;
+}
+.style2{
+	width: 450px;
+	margin-left: 20px;
+}
+.conCon1{
+	padding: 10px 0;
+	width: 100%;
+}
+.conCon1 h3 span{
+	border-bottom: 2px solid #026ec6;
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	color: #026ec6;
+	display: inline-block;
+}
+.conCon1 h3{
+	font-size: 16px;
+	font-weight: bold;
+	color: #026ec6;
+	border-bottom: 1px solid #ddd;
+}
+.platBox img{
+	margin-top: 17px;
+}
+.zhenceBox{
+	width: 770px;
+}
+.pingtaiBox{
+	width: 334px;
+}
+.adver{
+	margin: 20px auto;
+	background: #fff;
+}
+.adverBox{
+	padding: 20px;
+}
+.exam{
+	border-top: 1px solid #026ec6;
+}
+.kaoNews{
+	margin-top: 20px;
+}
+.examIcons img{
+	margin-bottom: 15px;
+}
+.nomarb{
+	margin-bottom: 0 !important;
+}
+.examNews{
+	width: 450px;
+	border: 1px sold #bfbfbf;
+	margin-left: 20px;
+
+}
+.examIcons{
+	width: 300px;
+}
+.examxin{
+	width: 335px;
+
+}
+.examxin .topImg{
+	height: 156px;
+	overflow: hidden;
+	position: relative;
+}
+.examxin .topImg img{
+	width: 100%;
+}
+.examxin .imgTit{
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	height: 26px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 26px;
+	padding-left: 10px;
+}
+.examxin .chenLine{
+	margin-top: 7px;
+}
+.examxin .biaoLine{
+	margin-top: 2px;
+}
+.train{
+	margin-top: 20px;
+	border-top: 1px solid #026ec6;
+}
+.peiBox{
+	margin-top: 20px;
+}
+.peiRight{
+	width: 336px;
+}
+.shizi{
+	margin-top: 10px;
+	border: 1px solid #bfbfbf;
+}
+.shiziBox{
+	overflow: hidden;
+}
+.shiziBox .shiziImg{
+	width: 101px;
+	height: 106px;
+	margin: 17px 10px;
+}
+.shiziBox .shiziText{
+	width: 190px;
+	font-size: 14px;
+	margin: 17px 10px;
+}
+.shiziBox .shiziText a{
+	color: #000;
+	text-decoration: none;
+}
+.colorBlue{
+	color: #026ec6;
+}
+.recruit{
+	margin-top: 20px;
+	border-top: 1px solid #026ec6;
+	overflow: hidden;
+	background: #fff;
+}
+.recruitCon{
+	overflow: hidden;
+	background: #fff;
+	padding: 0px 20px;
+	font-size: 14px;
+	margin-top: 8px;
+	
+}
+.reBox{
+	width: 550px;
+}
+.reBox li{
+	height: 32px;
+	line-height: 32px;
+	padding: 0 10px;
+}
+.reBox li a{
+	color: #000;
+	text-decoration: none;
+}
+.reBox li a:hover{
+	color: #e60012;
+}
+.recruitLi{
+	background:#f4f4f4;;
+}
+.reBox li .job{
+	color: #026ec6;
+	text-decoration: none;
+}
+.company{
+	margin-top: 20px;
+	border-top: 1px solid #026ec6;
+	overflow: hidden;
+	background: #fff;
+}
+/*滚动条*/
+/* 本例子css */
+.picMarquee-left{ width:100%;  overflow:hidden; position:relative;}
+.picMarquee-left .bd{ padding:10px 0;   }
+.picMarquee-left .bd ul{ overflow:hidden; zoom:1; }
+.picMarquee-left .bd ul li{ margin:0 8px; float:left; _display:inline; overflow:hidden; text-align:center;  }
+.picMarquee-left .bd ul li .pic{ text-align:center; }
+.picMarquee-left .bd ul li .pic img{ width:226px; height:110px; display:block; padding:2px; border:1px solid #ccc; }
+.picMarquee-left .bd ul li .pic a:hover img{ border-color:#999;  }
+.picMarquee-left .bd ul li .title{ line-height:24px; font-size: 14px;  }
+/*footer*/
+.footer{
+	height: 124px;
+	background: #999;
+	margin-top: 20px;
+	border-top: 1px solid #0071d0;
+}
+.footerBox{
+	padding-top: 35px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	line-height: 1.8;
+}
+/*新闻列表*/
+.newsList{
+	border-top: 1px solid #0071d0;
+	margin-top: 20px;
+	background: #fff;
+	overflow: hidden;
+
+}
+.newsList .leftBox{
+	width: 300px;
+	margin-top: 20px;
+}
+.newsList .erjiTit{
+	border-bottom: 1px solid #ddd;
+	font-size: 16px;
+}
+.newsList .newsListBox{
+	padding: 20px;
+	overflow: hidden;
+}
+.newsList .erjiTit{
+	padding-bottom: 10px;
+	color: #016ec5;
+	font-weight: bold;
+}
+.newsList .leftBox .titBoxs li{
+	font-size: 14px;
+	height: 45px;
+	line-height: 45px;
+	color: #fff;
+	background: #f4f4f4;
+	margin-bottom: 6px;
+	text-align: center;
+	border-radius: 4px;
+}
+.newsList .leftBox .titBoxs li a{
+	color: #000;
+	text-decoration: none;
+	width: 100%;
+	display: inline-block;
+	border-radius: 4px;
+	
+}
+.newsList .leftBox .titBoxs li a:hover{
+	background: #016ec5 !important;
+	color: #fff !important;
+}
+.newsList .rightnow{
+	border-bottom: 1px solid #026ec6;
+	padding-bottom: 10px;
+	color: #000;
+	
+}
+.newsList .rightnow a{
+	color: #026ec6;
+	text-decoration: none;
+}
+.erjiListAction{
+	background: #016ec5 !important;
+	color: #fff !important;
+}
+.newsList .rightArrow{
+	padding-right: 10px;
+}
+.hotNews{
+	border: 1px solid #bfbfbf;
+	margin-top: 20px;
+}
+.titleEx{
+	height: 34px;
+	background: #f4f4f4;
+	border-bottom: 1px solid #ddd;
+}
+.titleEx span{
+	background: #fff;
+	display: inline-block;
+	height: 34px;
+	border-top: 2px solid #026ec6;
+	padding:  0 20px;
+	line-height: 34px;
+	font-size: 16px;
+	border-right: 1px solid #ddd;
+	
+}
+.hotBox{
+	padding: 20px;
+}
+.hotBox li{
+	width: 90%;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    height: 30px;
+    line-height: 30px;
+}
+.hotBox li a{
+	color: #333;
+	text-decoration: none;
+}
+.hotBox li a:hover{
+	color: #e60012;
+}
+.hotCons{
+	margin-top: 20px;
+}
+.aboutLink{
+	margin-top: 20px;
+}
+.newsList .rightBox{
+	width: 790px;
+	border: 1px solid #bfbfbf;
+	margin-top: 20px;
+}
+.newsList .rightBox .listBox{
+	padding: 20px;
+}
+.newsList .rightBox .listBox li{
+	height: 34px;
+	border-bottom: 1px dashed #dcdcdc;
+	line-height: 34px;
+
+}
+.newsList .rightBox .listBox li a{
+	color: #000;
+	text-decoration: none;
+	font-size: 14px;
+	width: 550px;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display: inline-block;
+	
+}
+.newsList .rightBox .listBox li a:hover{
+	color: #e60012;
+}
+.newsList .rightBox .listBox .date{
+	font-size: 14px;
+	color: #999;
+}
+.pageList{
+	width: 560px;
+	margin: 0 auto;
+	text-align: center;
+
+}
+.newsList .rightBox{
+	padding-bottom: 20px;
+}
+.newsDetailBox{
+	padding: 30px 20px;
+}
+.newsDetailBox h3{
+	text-align: center;
+	font-size: 22px;
+	margin: 20px 0 30px;
+}
+.newsDetailBox h4{
+	font-weight: normal;
+	font-size: 14px;
+	color: #999;
+	border-bottom: 1px solid #bfbfbf;
+	padding-bottom: 10px;
+	text-align: right;
+}
+.spanLine{
+	margin-right: 20px;
+}
+.duan{
+	color: #333;
+	font-size: 14px;
+	line-height: 2;
+	text-indent: 2em;
+	margin: 10px 0;
+}
+.newsDetailBox  .next{
+	border-top: 1px solid #bfbfbf;
+	padding-top: 20px;
+}
+.newsDetailBox  .next div{
+	margin-top: 10px;
+}
+.newsDetailBox  .next a{
+	color: #333;
+	text-decoration: none;
+}
+.newsDetailBox  .next a:hover{
+	color: #e60012;
+}
+.newsDetailBox  .neirong{
+	margin: 30px 0;
+}
+/*人才库*/
+.talentCon{
+	padding: 10px;
+	background: #fff;
+	margin: 15px 0;
+	overflow: hidden;
+}
+.infoList a{
+	color: #e8850d;
+	text-decoration: none;
+}
+/* 本例子css */
+.txtMarquee-left{ width:100%;  position:relative;  overflow: hidden;  }
+.txtMarquee-left .hd{ overflow:hidden;  height:30px; background:#f4f4f4; padding:0 10px;  }
+.txtMarquee-left .bd .tempWrap{ width:920px !important; }/* 用 !important覆盖SuperSlide自动生成的宽度，这样就可以手动控制可视宽度。 */
+.txtMarquee-left .bd ul{ overflow:hidden; zoom:1; }
+.txtMarquee-left .bd ul li{ margin-right:20px;  float:left; height:24px; line-height:24px;  text-align:left; _display:inline; width:auto !important;  }/* 用 width:auto !important 覆盖SuperSlide自动生成的宽度，解决文字不衔接问题 */
+
+
+.txtMarquee-left .bd ul li span{ color:#999;  }
+.newsText{
+	line-height: 24px;
+	margin: 0 10px;
+}
+.talentTop .talentLeft{
+	background: red;
+	width: 300px;
+}
+.talentTop .talentCenter{
+	background: red;
+	width: 470px;
+	margin-left: 15px;
+}
+.talentTop .talentRight{
+	background: red;
+	width: 360px;
+	margin-left: 15px;
+}
