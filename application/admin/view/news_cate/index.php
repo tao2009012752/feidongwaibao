@@ -8,7 +8,7 @@
     }
 </style>
 <div class="main_box">
-    <h2><span></span>管理员列表</h2>
+    <h2><span></span>分类列表</h2>
     <div class="count">
         <div class="left">
             <button type="button" class="btn btn_info" mini="show" data-url="<{:url('newsCate/create')}>" /><i class="fa fa-plus"></i> 新增一级新闻分类</button>

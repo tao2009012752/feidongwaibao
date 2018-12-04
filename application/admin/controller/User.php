@@ -24,20 +24,24 @@ class User extends Common{
             $where['type'] = $type;
         }
         $count = Db::table($this->_tableName)->where($where)->count();
-        $list = Db::table($this->_tableName)->where($where)->order('friend_link_sort desc')->paginate(20);
+        $list = Db::table($this->_tableName)
+            ->where($where)->order('friend_link_sort desc')
+            ->join('user_info ui',"$this->_tableName.user_id = ui.uid")
+            ->paginate(20);
 
 
         //将对象转换成数组
         $list_array = $list->all();
 
+//        dump($list_array);die;
+
         //获取系统定义默认数组
-        $sex_arr = config('sex');
         $status_arr = config('status');
 
         if(!empty($list_array)){
             foreach($list_array as $k=>$v){
-                $list_array[$k]['sex_value'] = $sex_arr[$v['sex']];
                 $list_array[$k]['is_forbidden_value'] = $status_arr[$v['is_forbidden']];
+                $list_array[$k]['userinfo_id'] = 1;
             }
         }
         
@@ -59,7 +63,6 @@ class User extends Common{
             $insertData = [
                 'account' => $request->param('account'),
                 'pwd' =>md5(md5($request->param('pwd'))),
-                'sex' =>$request->param('sex'),
                 'is_forbidden' => $request->param('is_forbidden'),
                 'add_time' => time(),
                 'add_ip' => $request->ip(),
@@ -90,7 +93,6 @@ class User extends Common{
 
         //新增用户时给定默认相关信息
         $userInfo = [];
-        $userInfo['sex'] = 1;
         $userInfo['is_forbidden'] = 1;
         $this->assign('userInfo', $userInfo);
 
@@ -117,7 +119,6 @@ class User extends Common{
                 'user_id' => $userId,
                 'account' => Request::instance()->param('account'),
                 'pwd' =>(Request::instance()->param('pwd')),
-                'sex' =>Request::instance()->param('sex'),
                 'is_forbidden' => Request::instance()->param('is_forbidden'),
                 'update_time' => time()
             ];
@@ -140,6 +141,45 @@ class User extends Common{
     }
 
 
+    /*
+     * 查看用户简历
+     */
+    public function viewResume(){
+        //获取当前用户简历信息
+        $infoId = (int) Request::instance()->param('info_id');
+
+        if (!$infoId || !$userInfo = Db::name('user_info')
+                ->where(['userinfo_id' => $infoId])
+                ->find()
+        ) {
+            $this->error('用户简历不存在#');
+        }
+
+        if($userInfo['sex'] == 1){
+            $userInfo['sex_value'] = '男';
+        }else if($userInfo['sex'] == 0){
+            $userInfo['sex_value'] = '女';
+        }else{
+            $userInfo['sex_value'] = '保密';
+        }
+
+        if($userInfo['marital_status'] == 1){
+            $userInfo['marital_status_value'] = '已婚';
+        }else{
+            $userInfo['marital_status_value'] = '未婚';
+        }
+
+        $userInfo['birthday'] = date('Y-m-d',$userInfo['birthday']);
+        
+        $this->assign('detail', $userInfo);
+
+        return $this->fetch();
+    }
+
+
+    /*
+     * 删除用户
+     */
     public function delete ()
     {
         $_POST['table_name'] = $this->_tableName;
@@ -147,6 +187,10 @@ class User extends Common{
         ajax_return($ret);
     }
 
+
+    /*
+     * 批量删除用户
+     */
     public function deleteSome ()
     {
         $_POST['table_name'] = $this->_tableName;

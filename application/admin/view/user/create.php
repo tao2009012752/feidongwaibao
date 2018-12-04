@@ -13,14 +13,6 @@
                     <input type="password" name="pwd" placeholder="请输入密码" />
                 </li>
                 <li>
-                    <label>性别：</label>
-                    <div class="radio_box">
-                        <input type="radio" name="sex" value="1"  <?=$userInfo['sex'] ? 'checked' : ''?> > <span>男</span>
-                        <span style="width: 15px;height: 1px"></span>
-                        <input type="radio" name="sex" value="0" <?=$userInfo['sex'] ? '' : 'checked'?>> <span>女</span>
-                    </div>
-                </li>
-                <li>
                     <label>是否显示：</label>
                     <div class="radio_box">
                         <input type="radio" name="is_forbidden" value="1"  <?=$userInfo['is_forbidden'] ? 'checked' : ''?> > <span>是</span>
