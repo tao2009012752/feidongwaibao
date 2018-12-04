@@ -45,6 +45,14 @@
                 <td><?=date('Y-m-d H:i', $v['add_time'])?></td>
                 <td>
                     <a href="javascript:void(0);"
+                       class="table_btn table_info detail_btn"
+                       mini="show"
+                       data-url="<{:url('Company/viewJobs',['company_id' => $v['company_id']])}>"
+                    >
+                        <i class="fa fa-edit"></i>
+                        <span>查看在招职位</span>
+                    </a>
+                    <a href="javascript:void(0);"
                        class="table_btn table_edit edit_btn"
                        mini="show"
                        data-url="<{:url('Company/edit',['company_id' => $v['company_id']])}>"

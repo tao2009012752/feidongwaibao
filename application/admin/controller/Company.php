@@ -129,6 +129,45 @@ class Company extends Common
         return $this->fetch();
     }
 
+
+    //返回在招职位信息
+    public function viewJobs(){
+        $companyId = (int) Request::instance()->param('company_id');
+
+        if (!$companyId || !$companyInfo = Db::name($this->_tableName)
+                ->where(['company_id' => $companyId])
+                ->find()
+        ) {
+            $this->error('不存在该企业信息#');
+        }
+        
+
+        $where = [];
+        $where['is_delete'] = 0;
+        $where['company_id'] = $companyId;
+
+
+        $count = Db::name('jobs')->where($where)->count();
+        $jobsInfo = Db::name('jobs')->where($where)->order("job_id desc")->select();
+
+        if(!empty($jobsInfo)){
+            foreach($jobsInfo as $key=>$val){
+                if($val['sex'] == '1'){
+                    $jobsInfo[$key]['sex_value'] = '男';
+                }else if($val['sex'] == '2'){
+                    $jobsInfo[$key]['sex_value'] = '女';
+                }else{
+                    $jobsInfo[$key]['sex_value'] = '不限';
+                }
+            }
+        }
+
+        $this->assign('count', $count);
+        $this->assign('list',$jobsInfo);
+
+        return $this->fetch();
+    }
+
     public function delete ()
     {
         $_POST['table_name'] = $this->_tableName;

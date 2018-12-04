@@ -104,13 +104,84 @@ class Account extends Common{
     
     //    登陆页
     public function login() {
-        if ($this->isLogin()) {
+        /*if ($this->isLogin()) {
             return $this->redirect('index/index');
-        }
+        }*/
         return $this->fetch();
     }
+
+
+    //用户登录
+    public function user_login(){
+        //如果已登录，默认直接进入首页或个人中心
+        if ($this->isLogin()) {
+            ajax_return(['code' => 1000, 'msg' => '已登录']);
+        }
+
+        $request = Request::instance();
+        $res = (new LoginValidate())->goCheck();
+        if($res !== true){
+            return $res;
+        }
+        $user_info = db('user')
+            ->where([
+                'account' => $request->param('account'),
+                'pwd' => md5($request->param('pwd').config('passsalt')),
+                'is_delete' => 0
+            ])->find();
+
+        if ($user_info) {
+            Session::set('user.user_id',$user_info['user_id']);
+            Session::set('user.account',$user_info['account']);
+
+            //获取当前企业相关信息
+            $userInfo = db('company')
+                ->where([
+                    'user_id' => $user_info['user_id'],
+                    'is_delete' => 0
+                ])->find();
+            Session::set('userInfo',$userInfo);
+
+            ajax_return(['code' => 0, 'msg' => '登录成功']);
+        }
+        ajax_return(['code' => 1001, 'msg' => '用户名或密码错误']);
+    }
+
+
+    //企业登录
+    public function company_login(){
+        //如果已登录，默认直接进入首页或企业中心
+        if ($this->isLogin()) {
+            ajax_return(['code' => 1000, 'msg' => '已登录']);
+        }
+
+        $request = Request::instance();
+        $company_info = db('company')
+            ->where([
+                'account' => $request->param('account'),
+                'pwd' => md5($request->param('pwd').config('passsalt')),
+                'is_delete' => 0
+            ])->find();
+
+        if ($company_info) {
+            Session::set('user.company_id',$company_info['company_id']);
+            Session::set('user.account',$company_info['account']);
+
+            //获取当前企业相关信息
+            $companyInfo = db('company')
+                ->where([
+                    'company_id' => $company_info['company_id'],
+                    'is_delete' => 0
+                ])->find();
+            Session::set('companyInfo',$companyInfo);
+
+            ajax_return(['code' => 0, 'msg' => '登录成功']);
+        }
+        ajax_return(['code' => 1001, 'msg' => '用户名或密码错误']);
+    }
+
     
-    //    用户登陆普通登陆
+    /*//    用户登陆普通登陆
     public function login1 () {
         if ($this->isLogin()) {
             return '已登录';
@@ -170,7 +241,7 @@ class Account extends Common{
             return '用户未注册';
         }
         return $this->redirect('account/login');
-    }
+    }*/
     
     //    退出
     public function logout () {

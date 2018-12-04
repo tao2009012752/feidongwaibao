@@ -170,7 +170,7 @@ class User extends Common{
         }
 
         $userInfo['birthday'] = date('Y-m-d',$userInfo['birthday']);
-        
+
         $this->assign('detail', $userInfo);
 
         return $this->fetch();
