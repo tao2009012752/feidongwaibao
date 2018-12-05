@@ -687,12 +687,6 @@ input:focus{outline:0;}
 	font-size: 14px;
 	color: #999;
 }
-.pageList{
-	width: 560px;
-	margin: 0 auto;
-	text-align: center;
-
-}
 .newsList .rightBox{
 	padding-bottom: 20px;
 }
@@ -931,6 +925,7 @@ input:focus{outline:0;}
 	margin-top: 15px;
 }
 
+
 /*人才库详细*/
 .talentDetail{
 	margin-top: 20px;
@@ -972,4 +967,33 @@ input:focus{outline:0;}
 	margin: 10px 0;
 	line-height: 1.8;
 	text-indent: 2em;
+}
+
+/*分页函数*/
+.pageList{
+	margin-right: 16px;
+	float: right;
+}
+.pageList ul li{
+	float: left;
+	background: #fff;
+	border: 1px solid #c5b7b7;
+	margin: 0 3px;
+	height: 30px;
+	line-height: 30px;
+}
+.pageList ul li a,.pageList ul li span{
+	font-size: 14px;
+	padding: 4px 10px;
+	color: #888;
+	text-decoration: none;
+}
+
+.pageList ul .active{
+	background: #568dbd;
+	border-color: #568dbd;
+	cursor: default;
+}
+.pageList ul .active span{
+	color: #fff;
 }

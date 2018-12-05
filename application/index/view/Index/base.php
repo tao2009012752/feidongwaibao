@@ -7,6 +7,7 @@
 		<script src="<{$js}>/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="<{$js}>/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
 		<script src="<{$js}>/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="<{$js}>/main.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<!-- header -->
@@ -41,9 +42,9 @@
 		<div class="navWrap">
 			<div class="navBox contant">
 				<ul>
-					<li class="liAction"><a href="<{:url('/','','',true)}>">网站首页</a></li>
-                                        <li><a href="<{:url('/index/index/newslist','','',true)}>">资讯中心</a></li>
-					<li><a href="<{:url('/index/talent/index','','',true)}>">人才库</a></li>
+					<li><a href="<{:url('/','','',true)}>">网站首页</a></li>
+                                        <li><a href="<{:url('/index/Index/newslist','','html',true)}>">资讯中心</a></li>
+					<li><a href="<{:url('/index/Talent/index','','html',true)}>">人才库</a></li>
 					<li><a href="#">培训信息</a></li>
 					<li><a href="#">人才招聘</a></li>
 					<li><a href="#">人才考评</a></li>
@@ -68,5 +69,11 @@
 			</div>
 		</div>
 		<!-- footer结束 -->
+
+		<script>
+			$(function(){
+				Base.Menu(); //导航栏切换效果
+			})
+		</script>
 	</body>
 </html>
