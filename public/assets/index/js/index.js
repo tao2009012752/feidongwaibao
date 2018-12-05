@@ -22,7 +22,7 @@ $(function(){
 		}
 	})
 
-if($(".pageJs").length>0){
+/*if($(".pageJs").length>0){
 	//分页
 	$("#pagination3").pagination({
 		currentPage: 4,
@@ -37,7 +37,7 @@ if($(".pageJs").length>0){
 			$("#current3").text(current)
 		}
 	});
-}
+}*/
 //新闻滚动
 if($(".gundong").length>0){
 	jQuery(".txtMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",interTime:50,trigger:"click"});

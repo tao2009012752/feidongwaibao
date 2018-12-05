@@ -19,7 +19,7 @@ class News_cate extends Model{
         if(count($catelist)>0){
             $cateid = '';
             foreach($catelist as $v){
-                $cateid = ','.$v['news_cate_id'];
+                $cateid .= ','.$v['news_cate_id'];
             }
             $cateid = substr($cateid,1);
             if($type!=1){

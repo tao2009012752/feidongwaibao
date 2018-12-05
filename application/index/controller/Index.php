@@ -3,6 +3,7 @@ namespace app\index\controller;
 
 use app\index\model\Carousels;
 use app\index\model\News;
+use app\index\model\News_cate;
 use think\Request;
 
 class Index extends Common
@@ -35,11 +36,15 @@ class Index extends Common
 
     //资讯中心
     public function newsList(){
-        $cate = Request::instance()->get('cate/d');
+        $cate = Request::instance()->param('cate/d',1);
 
-        $pagelist = News::getTopNews($cate?$cate:1,25);
+        $catedata = News_cate::get($cate);
+        $pagelist = News::getTopNews($cate,25);
+        $rd = News::getNews(16);
 
+        $this->assign('catedata',$catedata);
         $this->assign('pagelist',$pagelist);
+        $this->assign('rdlist',$rd);
         return $this->fetch();
     }
 }

@@ -32,7 +32,7 @@ class News extends Model{
         $cateid = News_cate::getCid($cate);
         if($cateid){
             $where = " is_delete = 0 and news_cate_id in({$cateid}) ";
-            return self::field('news_id,title,add_time')->where($where)->paginate($num,false,['query'=>Request::instance()->param()]);
+            return self::field('news_id,title,add_time')->where($where)->paginate($num,false);
         }
         return false;
     }
