@@ -38,7 +38,7 @@
 								{volist name="gglist" id="v"}
 								<li>
 									<span class="date"><{$v.add_time|date='Y-m-d',###}></span>
-									<a href="<{$v.news_id}>" target="_blank"><{$v.title}></a>
+									<a href="<{:url('Index/listdetail',['id'=>$v['news_id']],'html',true)}>" target="_blank"><{$v.title}></a>
 								</li>
 								{/volist}
 								</ul>
@@ -46,7 +46,7 @@
 								{volist name="zxlist" id="v"}
 								<li>
 									<span class="date"><{$v.add_time|date='Y-m-d',###}></span>
-									<a href="<{$v.news_id}>" target="_blank"><{$v.title}></a>
+									<a href="<{:url('Index/listdetail',['id'=>$v['news_id']],'html',true)}>" target="_blank"><{$v.title}></a>
 								</li>
 								{/volist}
 							</ul>
@@ -125,7 +125,7 @@
 							<ul>
 								{volist name="gjzclist" id="v"}
 								<li>
-									<a href="<{$v.news_id}>">
+									<a href="<{:url('Index/listdetail',['id'=>$v['news_id']],'html',true)}>">
 										<{$v.title}>
 									</a>
 									<span class="date"><{$v.add_time|date="Y-m-d",###}></span>
@@ -145,7 +145,7 @@
 							<ul>
 								{volist name="dfzclist" id="v"}
 								<li>
-									<a href="<{$v.news_id}>">
+									<a href="<{:url('Index/listdetail',['id'=>$v['news_id']],'html',true)}>">
 										<{$v.title}>
 									</a>
 									<span class="date"><{$v.add_time|date="Y-m-d",###}></span>
@@ -234,7 +234,7 @@
 							<ul>
 								{volist name="kslist" id="v"}
 								<li>
-									<a href="<{$v.news_id}>">
+									<a href="<{:url('Index/listdetail',['id'=>$v['news_id']],'html',true)}>">
 										<{$v.title}>
 									</a>
 									<span class="date"><{$v.add_time|date="Y-m-d",###}></span>
@@ -275,7 +275,7 @@
 								<ul>
 									{volist name="kclist" id="v"}
 									<li>
-										<a href="<{$v.news_id}>">
+										<a href="<{:url('Index/listdetail',['id'=>$v['news_id']],'html',true)}>">
 											<{$v.title}>
 										</a>
 										<span class="date"><{$v.add_time|date="Y-m-d",###}></span>
@@ -296,7 +296,7 @@
 							<ul>
 								{volist name="zdlist" id="v"}
 								<li>
-									<a href="<{$v.news_id}>">
+									<a href="<{:url('Index/listdetail',['id'=>$v['news_id']],'html',true)}>">
 										<{$v.title}>
 									</a>
 									<span class="date"><{$v.add_time|date="Y-m-d",###}></span>

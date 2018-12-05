@@ -38,12 +38,36 @@ class Index extends Common
     public function newsList(){
         $cate = Request::instance()->param('cate/d',1);
 
+        //热点新闻
+        $rd = News::getNews(16);
+
         $catedata = News_cate::get($cate);
         $pagelist = News::getTopNews($cate,25);
-        $rd = News::getNews(16);
+
 
         $this->assign('catedata',$catedata);
         $this->assign('pagelist',$pagelist);
+        $this->assign('rdlist',$rd);
+        return $this->fetch();
+    }
+
+    //新闻详细页
+    public function listDetail(){
+        $id = Request::instance()->param('id/d',1);
+
+        //热点新闻
+        $rd = News::getNews(16);
+
+        $newsdata = News::get($id);
+        $catearr = News_cate::getPid($newsdata['news_cate_id'],2);
+        $catedata = News_cate::get($catearr[count($catearr)-1]);
+
+        //上一篇下一篇
+        $prenext = News::preNext($id,$catearr[count($catearr)-1]);
+
+        $this->assign('prenext',$prenext);
+        $this->assign('catedata',$catedata);
+        $this->assign('newsdata',$newsdata);
         $this->assign('rdlist',$rd);
         return $this->fetch();
     }
