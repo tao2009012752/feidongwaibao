@@ -1,0 +1,98 @@
+				<div class="box itembox" style="margin-bottom:0px;border-bottom:1px solid #CCCCCC;">
+					<div class="col-xs-12">
+						<ol class="breadcrumb">
+							<li><a href="index.php?exam-master">考试模块</a></li>
+							<li class="active">试卷管理</li>
+						</ol>
+					</div>
+				</div>
+				<div class="box itembox" style="padding-top:10px;margin-bottom:0px;">
+					<h4 class="title" style="padding:10px;">
+						试卷管理
+						<span class="pull-right">
+							<a data-toggle="dropdown" class="btn btn-primary" href="#">添加试卷 <strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li><a href="index.php?exam-master-exams-autopage&page=">随机组卷</a></li>
+								<li><a href="index.php?exam-master-exams-selfpage&page=">手动组卷</a></li>
+								<li><a href="index.php?exam-master-exams-temppage&page=">即时组卷</a></li>
+							</ul>
+						</span>
+					</h4>
+			        <form action="index.php?exam-master-exams" method="post" class="form-inline">
+						<table class="table">
+							<thead>
+				                <tr>
+							        <th colspan="2">搜索</th>
+							        <th></th>
+							        <th></th>
+							        <th></th>
+							        <th></th>
+				                </tr>
+				            </thead>
+							<tr>
+								<td>
+									选择类型：
+								</td>
+								<td>
+									<select name="search[examtype]" class="form-control">
+										<option value="0">不限</option>
+										<option value="1">随机抽题</option>
+										<option value="2">手动抽题</option>
+										<option value="2">即时组卷</option>
+									</select>
+								</td>
+								<td>
+									选择科目：
+								</td>
+								<td>
+									<select name="search[examsubject]" class="form-control">
+										<option value="0">不限</option>
+																		  		<option value="1">PHP工程师笔试题</option>
+								  											</select>
+								</td>
+								<td>
+									<button class="btn btn-primary" type="submit">搜索</button>
+									<input type="hidden" value="1" name="search[argsmodel]" />
+								</td>
+							</tr>
+						</table>
+					</form>
+			        <table class="table table-hover table-bordered">
+						<thead>
+							<tr class="info">
+			                    <th>ID</th>
+						        <th>考试名称</th>
+						        <th>组卷人</th>
+						        <th>组卷类型</th>
+						        <th>组卷时间</th>
+						        <th>考试科目</th>
+						        <th>操作</th>
+			                </tr>
+			            </thead>
+			            <tbody>
+		                    					        <tr>
+								<td>
+									1								</td>
+								<td>
+									PHP笔试题								</td>
+								<td>
+									peadmin								</td>
+								<td>
+									随机组卷								</td>
+								<td>
+									2018-12-04								</td>
+								<td>
+									PHP工程师笔试题								</td>
+								<td>
+									<div class="btn-group">
+			                    					                    					                    		<a class="btn" href="index.php?exam-master-exams-modify&page=&examid=1" title="修改"><em class="glyphicon glyphicon-edit"></em></a>
+										<a class="btn confirm" href="index.php?exam-master-exams-del&page=&examid=1" title="删除"><em class="glyphicon glyphicon-remove"></em></a>
+			                    	</div>
+								</td>
+					        </tr>
+					        			        	</tbody>
+			        </table>
+			        <ul class="pagination pull-right">
+			            			        </ul>
+				</div>
+			</div>

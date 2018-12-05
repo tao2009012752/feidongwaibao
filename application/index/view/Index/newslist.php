@@ -1,0 +1,41 @@
+{extend name="index/base" /}
+{block name="tdk"}
+<title>新闻列表</title>
+{/block}
+{block name="content"}
+<!--新闻列表-->
+<div class="newsList contant pageJs">
+
+    <div class="newsListBox">
+
+        <!-- 左侧导航 -->
+        {include file='Index/newsListLeft'/}
+        <!-- 左侧导航结束 -->
+
+        <!-- 列表 -->
+        <div class="fr rightBox">
+            <div class="titleEx">
+                <span><{$catedata.cate_name}></span>
+            </div>
+            <ul class="listBox">
+                {volist name = "pagelist" id="v"}
+                <li>
+                    <a href="<{:url('Index/listdetail',['id'=>$v['news_id']],'html',true)}>"><{$v.title}></a>
+                    <span class="fr date"><{$v.add_time|date="Y-m-d",###}></span>
+                </li>
+                {/volist}
+            </ul>
+            <!--分页-->
+            <div class="pageList">
+                <{$pagelist->render()}>
+            </div>
+        </div>
+        <!-- 列表结束 -->
+    </div>
+</div>
+<script>
+    $(function () {
+        News.Menu(<{$catedata.news_cate_id}>);//左侧导航特效切换
+    })
+</script>
+{/block}

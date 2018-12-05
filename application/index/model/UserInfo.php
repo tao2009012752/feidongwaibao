@@ -10,10 +10,9 @@ use think\Model;
 class UserInfo extends Model{
     
     public static function testa ($id) {
-//        print_r($id);
+        // 获取人才简历
         $res = self::where('user_id',$id)->find();
-        
         return $res;
     }
-    //put your code here
+    
 }

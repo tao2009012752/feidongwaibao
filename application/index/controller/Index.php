@@ -1,71 +1,87 @@
 <?php
 namespace app\index\controller;
 
-use think\Db;
+use app\index\model\Carousels;
+use app\index\model\Company;
+use app\index\model\Jobs;
+use app\index\model\News;
+use app\index\model\News_cate;
+use think\Request;
+
 class Index extends Common
 {
-
-    private $_tableName = 'news';
-
-    //返回首页新闻类资讯公共部分
-    /*public function $this->pub_function($par_cate_id,$news_cate_id,$limit){
-        $where = [];
-        $where['par_cate_id'] = $par_cate_id;
-        $where['news_cate_id'] = $news_cate_id;
-        $res = Db::name($this->_tableName)->where($where)->limit($limit)->order('news_id desc')->select();
-        return $res;
-    }*/
-
+    //首页
     public function index()
     {
-        /*
-         * 返回首页相关区域内容信息
-         */
+        //轮播
+        $lb = Carousels::where(['is_open'=>1])->order('orderby desc')->select();
 
-        //通知公告
-        /*$where = [];
-        $where['par_cate_id'] = 1;
-        $where['news_cate_id'] = 15;
-        $list['noticeInfo'] = Db::name($this->_tableName)->where($where)->limit(8)->order('news_id desc')->select();*/
-        $list['noticeInfo'] = $this->pub_function(1,15,8);
+        //新闻
+        $gg = News::getNews(15);
+        $zx = News::getNews(17);
+        $gjzc = News::getNews(12);
+        $dfzc = News::getNews(14);
+        $ks = News::getNews(19);
+        $ksxw = News::getNews(1);
+        $kc = News::getNews(18);
+        $zd = News::getNews(23);
 
+        //招聘
+        $jobs = Jobs::getRecentJob(12);
 
-        //行业资讯
-        $list['industry_info'] = $this->pub_function(3,17,8);
-
-
-        //国家政策
-        $list['national_policy'] = $this->pub_function(4,12,5);
-
-        //地方政策
-        $list['local_policy'] = $this->pub_function(4,14,5);
-
-        //考试信息
-        $list['exam_info'] = $this->pub_function(6,19,7);
-
-        //热门课程
-        $list['popular_course'] = $this->pub_function(5,18,7);
-
-        //人才指导
-        $list['talent_guidance'] = $this->pub_function(5,25,7);
-
-
-        //人才招聘
-        $talentData = 'j.job_id,c.company_name,j.job_name';
-        $list['recruitment'] = Db::name('jobs')->alias('j')->join('company c','c.company_id = j.company_id')->field($talentData)->limit(12)->order('job_id desc')->select();
-
-
-        //企业录
-        $companyData = 'company_id,company_name,image';
-        $list['business_record'] = Db::name('company')->field($companyData)->limit(12)->order('company_id desc')->select();
-
-
-//        return 'hello world';
-
-        $this->assign('list', $list);
+        //公司
+        $com = Company::where('is_open = 1 and is_delete = 0')->limit(6)->order('company_id desc')->select();
+        
+        $this->assign('lblist',$lb);
+        $this->assign('gglist',$gg);
+        $this->assign('zxlist',$zx);
+        $this->assign('gjzclist',$gjzc);
+        $this->assign('dfzclist',$dfzc);
+        $this->assign('kslist',$ks);
+        $this->assign('ksxwlist',$ksxw);
+        $this->assign('kclist',$kc);
+        $this->assign('zdlist',$zd);
+        $this->assign('joblist',$jobs);
+        $this->assign('comlist',$com);
         return $this->fetch();
     }
 
+    //资讯中心
+    public function newsList(){
+        $cate = Request::instance()->param('cate/d',1);
+
+        //热点新闻
+        $rd = News::getNews(16);
+
+        $catedata = News_cate::get($cate);
+        $pagelist = News::getTopNews($cate,25);
 
 
+        $this->assign('catedata',$catedata);
+        $this->assign('pagelist',$pagelist);
+        $this->assign('rdlist',$rd);
+        return $this->fetch();
+    }
+
+    //新闻详细页
+    public function listDetail(){
+        $id = Request::instance()->param('id/d',1);
+
+        //热点新闻
+        $rd = News::getNews(16);
+
+        $newsdata = News::get($id);
+        $catearr = News_cate::getPid($newsdata['news_cate_id'],2);
+        $catedata = News_cate::get($catearr[count($catearr)-1]);
+
+        //上一篇下一篇
+        $prenext = News::preNext($id,$catearr[count($catearr)-1]);
+
+        $this->assign('prenext',$prenext);
+        $this->assign('catedata',$catedata);
+        $this->assign('newsdata',$newsdata);
+        $this->assign('rdlist',$rd);
+        return $this->fetch();
+    }
 }
+

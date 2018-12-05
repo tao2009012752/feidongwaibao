@@ -253,4 +253,12 @@ return [
         '0'=>'否',
         '1'=>'是',
     ],
+
+    //静态路径
+    'static' => [
+        'css' => '/assets/index/css',
+        'font' => '/assets/index/fonts',
+        'img' => '/assets/index/img',
+        'js' => '/assets/index/js',
+    ],
 ];
