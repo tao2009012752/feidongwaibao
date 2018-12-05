@@ -43,7 +43,7 @@
 			<div class="navBox contant">
 				<ul>
 					<li><a href="<{:url('/','','',true)}>">网站首页</a></li>
-                    			<li><a href="<{:url('newslist','','html',true)}>">资讯中心</a></li>
+                    <li><a href="<{:url('Index/newslist','','html',true)}>">资讯中心</a></li>
 					<li><a href="<{:url('Talent/index','','html',true)}>">人才库</a></li>
 					<li><a href="#">培训信息</a></li>
 					<li><a href="#">人才招聘</a></li>

@@ -6,7 +6,7 @@ Base = {
         var url = window.location.href;
         if(url.search('newslist')>0){
             $('.navBox li').eq(1).addClass('liAction');
-        }else if(url.search('talent')>0){
+        }else if(url.search('Talent/index')>0){
             $('.navBox li').eq(2).addClass('liAction');
         }else{
             $('.navBox li').eq(0).addClass('liAction');
