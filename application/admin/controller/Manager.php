@@ -126,6 +126,7 @@ class Manager extends Common
             if (Db::name($this->_tableName)->update($insertData) ) {
                 ajax_return(['code' => 0, 'msg' => '编辑成功']);
             } else {
+                echo Db::name($this->_tableName)->getLastSql();
                 ajax_return(['code' => 2000, 'msg' => '编辑失败']);
             }
         }

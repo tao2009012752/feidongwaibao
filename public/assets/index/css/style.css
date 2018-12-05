@@ -105,6 +105,7 @@ input:focus{outline:0;}
 	text-decoration: none;
 	font-size: 16px;
 	font-weight: bold;
+	display: inline-block;
 }
 .navBox ul li:hover{
 	background: #e8850d;
@@ -758,17 +759,160 @@ input:focus{outline:0;}
 	line-height: 24px;
 	margin: 0 10px;
 }
+.talentTop{
+	background: #fff;
+	overflow: hidden;
+}
 .talentTop .talentLeft{
-	background: red;
-	width: 300px;
+	background: #fff;
+	width: 290px;
+	padding: 15px 0 0px 15px;
 }
 .talentTop .talentCenter{
-	background: red;
+	background: #fff;
 	width: 470px;
 	margin-left: 15px;
+	margin-top: 15px;
 }
 .talentTop .talentRight{
-	background: red;
-	width: 360px;
+	background: #fff;
+	width: 330px;
+	margin-left: 15px;
+	margin-top: 15px;
+	background: #edf5fb;
+	height: 283px;
+}
+
+.borderdc{
+	border: 1px solid #dcdcdc;
+}
+.talentLeft li{
+	margin-bottom: 10px;
+}
+.talentBox{
+	overflow: hidden;
+}
+.talentTop .newsTap1{
+	width: 470px;
+}
+.talentTop .slideTxtBox{
+	width: 470px;
+}
+.talentLoginBox .title{
+	text-align: center;
+	margin: 30px 0;
+}
+.talentLoginBox .talentInput{
+	width:240px;
+	margin: 20px auto;
+}
+.talentLoginBox .talentInput div{
+	margin-bottom: 15px;
+}
+.talentLoginBox .talentInput input{
+	height: 24px;
+	padding-left: 10px;
+}
+.talentLoginBox .submitBox{
+	width: 98px;
+	height: 36px;
+	margin: 20px auto 20px;
+}
+.talentPic{
+	background: #fff;
+	margin-top: 15px;
+}
+.talentPicBox{
+	padding: 15px;
+
+}
+.talentPicBox h4 .shu{
+	width: 4px;
+	height: 16px;
+	background: #e8850d;
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+.talentPicBox h4{
+	margin: 0;
+	font-size: 16px;
+	color: #333;
+	border-bottom: 1px solid #bfbfbf;
+	padding-bottom: 10px;
+	
+}
+/* 本例子css */
+		.picScroll-left{ width:97%;  overflow:hidden; position:relative;  }
+		.picScroll-left .hd{ overflow:hidden;  height:20px;padding:0 10px;  }
+		.picScroll-left .hd .prev,.picScroll-left .hd .next{ display:block;  width:5px; height:9px; float:right; margin-right:5px; margin-top:10px;  overflow:hidden;
+			 cursor:pointer; background:url("../img/arrow.png") no-repeat;}
+		.picScroll-left .hd .next{ background-position:0 -50px;  }
+		.picScroll-left .hd .prevStop{ background-position:-60px 0; }
+		.picScroll-left .hd .nextStop{ background-position:-60px -50px; }
+		.picScroll-left .hd ul{ float:right; overflow:hidden; zoom:1; margin-top:10px; zoom:1; }
+		.picScroll-left .hd ul li{ float:left;  width:9px; height:9px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer; background:url("../img/icoCircle.gif") 0 -9px no-repeat; }
+		.picScroll-left .hd ul li.on{ background-position:0 0; }
+		.picScroll-left .bd{ padding:10px;   }
+		.picScroll-left .bd ul{ overflow:hidden; zoom:1; }
+		.picScroll-left .bd ul li{ margin:0 12px; float:left; _display:inline; overflow:hidden; text-align:center;  }
+		.picScroll-left .bd ul li .pic{ text-align:center; }
+		.picScroll-left .bd ul li .pic img{ width:126px; height:130px; display:block;  padding:2px; border:1px solid #ccc; }
+		.picScroll-left .bd ul li .pic a:hover img{ border-color:#999;  }
+		.picScroll-left .bd ul li .title{ line-height:18px;   }
+.talentPicBox .title{
+	
+	padding: 4px;
+}
+.talentPicBox .title p a{
+	text-decoration: none;
+	color: #000;	
+}
+.talentPicBox .jian span{
+	color: #333;
+}
+.jianliBox .jian{
+	width: 264px;
 	margin-left: 15px;
 }
+.jianliBox .jian li a{
+	text-decoration: none;
+	color: #026ec6;
+	font-size: 14px;
+}
+.jianliBox .jian li{
+	line-height: 1.8;
+	height: 50px;
+	border-bottom: 1px dashed #dcdcdc;
+	padding: 6px 0 0 0;
+}
+.jianliBox {
+	overflow: hidden;
+	margin-top: 10px;
+}
+.jianliBox .ge{
+	margin: 0 5px;
+}
+.jianliBox .time{
+	color: #999 !important;
+	margin-left: 10px;
+}
+.more1{
+	float: right;
+	text-decoration: none;
+	color: #026ec6;
+	font-size: 14px;
+	
+}
+.recruitCon1{
+	padding: 0;
+}
+.talentPic .reBox li {
+	padding: 2px 15px;
+}
+.adverBox1{
+	border: 1px solid #dcdcdc;
+	background: #fff;
+	margin-top: 15px;
+}
+
