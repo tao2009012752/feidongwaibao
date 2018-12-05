@@ -12,7 +12,7 @@ class User extends Model{
     
     //    关联user_info表
     public function info(){
-        return $this->hasOne('UserInfo', 'user_id', 'user_id');
+        return $this->hasOne('UserInfo', 'uid', 'user_id');
     }
     
     
@@ -24,5 +24,10 @@ class User extends Model{
     public static function getUserInfoByID($user_id){
         $userInfo = self::with('info')->find($user_id);
         return $userInfo;
+    }
+    
+    public static function getRecentUser ($limit=12) {
+        $res_ = self::with('info')->order('user_id','desc')->limit($limit)->select();
+        return $res_;
     }
 }

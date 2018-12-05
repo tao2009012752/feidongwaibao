@@ -65,7 +65,7 @@ input:focus{outline:0;}
 	background: #fff;
 }
 .headBox .logo{
-	margin-top: 32px;
+	margin-top: 30px;
 }
 .searchBox .searchInput{
 	height:30px ;
@@ -491,13 +491,17 @@ input:focus{outline:0;}
 	margin-top: 8px;
 	
 }
-.reBox{
-	width: 550px;
-}
+
 .reBox li{
 	height: 32px;
 	line-height: 32px;
 	padding: 0 10px;
+	width: 520px;
+	float: left;
+	margin-right: 25px;
+}
+.nomarr{
+	margin-right: 0 !important;
 }
 .reBox li a{
 	color: #000;
@@ -555,7 +559,7 @@ input:focus{outline:0;}
 	width: 300px;
 	margin-top: 20px;
 }
-.newsList .erjiTit{
+.erjiTit{
 	border-bottom: 1px solid #ddd;
 	font-size: 16px;
 }
@@ -563,7 +567,7 @@ input:focus{outline:0;}
 	padding: 20px;
 	overflow: hidden;
 }
-.newsList .erjiTit{
+.erjiTit{
 	padding-bottom: 10px;
 	color: #016ec5;
 	font-weight: bold;
@@ -590,13 +594,13 @@ input:focus{outline:0;}
 	background: #016ec5 !important;
 	color: #fff !important;
 }
-.newsList .rightnow{
+.rightnow{
 	border-bottom: 1px solid #026ec6;
 	padding-bottom: 10px;
 	color: #000;
 	
 }
-.newsList .rightnow a{
+.rightnow a{
 	color: #026ec6;
 	text-decoration: none;
 }
@@ -826,10 +830,18 @@ input:focus{outline:0;}
 	padding: 15px;
 
 }
-.talentPicBox h4 .shu{
+.shu{
 	width: 4px;
 	height: 16px;
 	background: #e8850d;
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+.shu1{
+	width: 4px;
+	height: 16px;
+	background: #026ec6;
 	display: inline-block;
 	margin-right: 10px;
 	vertical-align: middle;
@@ -871,20 +883,23 @@ input:focus{outline:0;}
 .talentPicBox .jian span{
 	color: #333;
 }
-.jianliBox .jian{
-	width: 264px;
-	margin-left: 15px;
-}
+
 .jianliBox .jian li a{
 	text-decoration: none;
 	color: #026ec6;
 	font-size: 14px;
 }
+.jianliBox .jian ul{
+	padding-left: 10px;
+}
 .jianliBox .jian li{
 	line-height: 1.8;
 	height: 50px;
 	border-bottom: 1px dashed #dcdcdc;
-	padding: 6px 0 0 0;
+	padding: 6px 0 6px 0;
+	float: left;
+	margin-right: 46px;
+	margin-top: 6px;
 }
 .jianliBox {
 	overflow: hidden;
@@ -916,3 +931,45 @@ input:focus{outline:0;}
 	margin-top: 15px;
 }
 
+/*人才库详细*/
+.talentDetail{
+	margin-top: 20px;
+}
+.talentDetailBox{
+	padding: 15px;
+	background: #fff;
+	border-top: 1px solid #0071d0;
+	overflow: hidden;
+}
+.talentDetailBox .leftBox{
+	width: 863px;
+	border: 1px solid #dcdcdc;
+	
+}
+.talentDetailBox .rightBox{
+	width: 250px;
+	background: red;
+}
+.talentDetailCon{
+	margin-top: 20px;
+}
+.talentDetailCon .huangTit{
+	background: url(../img/titBg.png) no-repeat left #f6f6f6;
+	height: 30px;
+	margin: 0;
+	font-size: 16px;
+	color: #fff;
+	line-height: 30px;
+	padding-left: 15px;
+	border-bottom: 1px solid #dcdcdc;
+	
+}
+.talentText{
+	padding: 15px;
+	font-size: 14px;
+}
+.talentText p{
+	margin: 10px 0;
+	line-height: 1.8;
+	text-indent: 2em;
+}

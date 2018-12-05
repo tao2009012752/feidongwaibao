@@ -23,6 +23,7 @@
                 <thead>
                 <tr>
                     <th><input type="checkbox" id="checkall"></th>
+                    <th>ID</th>
                     <th>分类名称</th>
                     <th>排序</th>
                     <th>操作</th>
@@ -32,6 +33,7 @@
                     <?php foreach($childs as $v) { ?>
                         <tr>
                             <td><input type="checkbox" class="check" value="<{$v['news_cate_id']}>"></td>
+                            <td><{$v['news_cate_id']}></td>
                             <td><input type="text"  style="width:100px !important;" name="old[<{$v['news_cate_id']}>][cate_name]" value="<{$v['cate_name']}>" /></td>
                             <td><input type="number" name="old[<{$v['news_cate_id']}>][orderby]" value="<{$v['orderby']}>" /></td>
                             <td>
@@ -68,6 +70,7 @@
 
         html += '<tr class="new_tr">';
         html += '    <td><input type="checkbox" class="check" ></td>';
+        html += '    <td></td>';
         html += '    <td><input type="text" style="width:100px !important;"  name="new['+i+'][cate_name]"></td>';
         html += '   <td>';
         html += '       <input type="number" name="new['+i+'][orderby]" />';

@@ -42,9 +42,16 @@ if($(".pageJs").length>0){
 if($(".gundong").length>0){
 	jQuery(".txtMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",interTime:50,trigger:"click"});
 }
+if($(".qiehuan").length>0){
+	//	选项卡
+		jQuery(".slideTxtBox").slide();
+}
+if($(".talentPic").length>0){
+	//	选项卡
+		jQuery(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:8,trigger:"click",delayTime:500});
+}
 
 
 
 
 })
-

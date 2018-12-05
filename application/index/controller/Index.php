@@ -21,7 +21,7 @@ class Index extends Common
         $ks = News::getNews(19);
         $kc = News::getNews(18);
         $zd = News::getNews(23);
-
+        
         $this->assign('lblist',$lb);
         $this->assign('gglist',$gg);
         $this->assign('zxlist',$zx);
