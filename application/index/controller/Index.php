@@ -19,6 +19,8 @@ class Index extends Common
         $gjzc = News::getNews(12);
         $dfzc = News::getNews(14);
         $ks = News::getNews(19);
+        $kc = News::getNews(18);
+        $zd = News::getNews(23);
 
         $this->assign('lblist',$lb);
         $this->assign('gglist',$gg);
@@ -26,13 +28,18 @@ class Index extends Common
         $this->assign('gjzclist',$gjzc);
         $this->assign('dfzclist',$dfzc);
         $this->assign('kslist',$ks);
+        $this->assign('kclist',$kc);
+        $this->assign('zdlist',$zd);
         return $this->fetch();
     }
 
     //资讯中心
     public function newsList(){
-        $cate = Request::instance()->get('cate');
-        $pagelist = News::where()->paginate();
+        $cate = Request::instance()->get('cate/d');
+
+        $pagelist = News::getTopNews($cate?$cate:1,25);
+
+        $this->assign('pagelist',$pagelist);
         return $this->fetch();
     }
 }

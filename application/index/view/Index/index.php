@@ -273,42 +273,14 @@
 							</div>
 							<div class="detailBox">
 								<ul>
+									{volist name="kclist" id="v"}
 									<li>
-										<a href="#">
-											发挥老干部优势 凝聚发展正能量
+										<a href="<{$v.news_id}>">
+											<{$v.title}>
 										</a>
-										<span class="date">2018-12-03</span>
+										<span class="date"><{$v.add_time|date="Y-m-d",###}></span>
 									</li>
-									<li>
-										<a href="#">
-											学习贯彻全国教育大会精神宣讲报告会举行
-										</a>
-										<span class="date">2018-12-03</span>
-									</li>
-									<li>
-										<a href="#">
-											合肥市质监局“十三五”规划实施情况中期评估报告
-										</a>
-										<span class="date">2018-12-03</span>
-									</li>
-									<li>
-										<a href="#">
-											今年以来市文广新局主要工作完成情况
-										</a>
-										<span class="date">2018-12-03</span>
-									</li>
-									<li>
-										<a href="#">
-											今年以来市文广新局主要工作完成情况
-										</a>
-										<span class="date">2018-12-03</span>
-									</li>
-									<li>
-										<a href="#">
-											学习贯彻全国教育大会精神宣讲报告会举行
-										</a>
-										<span class="date">2018-12-03</span>
-									</li>
+									{/volist}
 								</ul>
 							</div>
 						</div>
@@ -322,43 +294,14 @@
 						</div>
 						<div class="detailBox">
 							<ul>
+								{volist name="zdlist" id="v"}
 								<li>
-									<a href="#">
-										[选调信息]巢湖市2018年度第二批部分市直单位面向全省公开选调公务员（工作人员）公告
+									<a href="<{$v.news_id}>">
+										<{$v.title}>
 									</a>
-									<span class="date">2018-12-03</span>
+									<span class="date"><{$v.add_time|date="Y-m-d",###}></span>
 								</li>
-								<li>
-									<a href="#">
-										全市脱贫攻坚民主监督工作协商座谈会召开
-									</a>
-									<span class="date">2018-12-03</span>
-								</li>
-								<li>
-									<a href="#">
-										全市水污染防治暨雨污分流整治工作调度会召开
-									</a>
-									<span class="date">2018-12-03</span>
-								</li>
-								<li>
-									<a href="#">
-										市政府第16次常务会议通报
-									</a>
-									<span class="date">2018-12-03</span>
-								</li>
-								<li>
-									<a href="#">
-										关于合肥市渔稻综合示范基地建设拟奖补项目的公示
-									</a>
-									<span class="date">2018-12-03</span>
-								</li>
-								<li>
-									<a href="#">
-										关于合肥市渔稻综合示范基地建设拟奖补项目的公示
-									</a>
-									<span class="date">2018-12-03</span>
-								</li>
-
+								{/volist}
 							</ul>
 						</div>
 					</div>
