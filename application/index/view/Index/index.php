@@ -340,56 +340,20 @@
 		</div>
 		<div class="recruitCon">
 			<ul class="reBox fl">
-				<li class="recruitLi">
-					<a href="#" class="fl job">行政人事专员</a>
-					<a href="#" class="fr">安徽亿阳通信责任有限公司</a>
-				</li>
-				<li>
-					<a href="#" class="fl job">嵌入式软件开发工程师（成都）</a>
-					<a href="#" class="fr">中国电科三十二所—基础软件部</a>
-				</li>
-				<li class="recruitLi">
-					<a href="#" class="fl job">初中语文教师-2019年校招</a>
-					<a href="#" class="fr">卓越教育集团-中山分校</a>
-				</li>
-				<li>
-					<a href="#" class="fl job">销售实习生</a>
-					<a href="#" class="fr">合创未来智能科技</a>
-				</li>
-				<li class="recruitLi">
-					<a href="#" class="fl job">营运规划储备（网络规划方向）</a>
-					<a href="#" class="fr">顺丰速运—中山</a>
-				</li>
-				<li>
-					<a href="#" class="fl job">职场卓越生</a>
-					<a href="#" class="fr">卓越教育集团-东莞分校</a>
-				</li>
+				{volist name="joblist" id="v" key="i" length="6"}
+					<li class="{if condition="$i%2==1"}recruitLi{/if}">
+						<a href="#" class="fl job"><{$v.job_name}></a>
+						<a href="#" class="fr"><{$v.companyInfo.company_name}></a>
+					</li>
+				{/volist}
 			</ul>
 			<ul class="reBox fr">
+				{volist name="joblist" id="v" offset="7" length="12"}
 				<li class="recruitLi">
-					<a href="#" class="fl job">营销推广</a>
-					<a href="#" class="fr">安徽九乾文化咨询有限公司</a>
+					<a href="#" class="fl job"><{$v.job_name}></a>
+					<a href="#" class="fr"><{$v.companyInfo.company_name}></a>
 				</li>
-				<li>
-					<a href="#" class="fl job">急招钢托打磨大师傅</a>
-					<a href="#" class="fr">合肥六禾义齿有限公司</a>
-				</li>
-				<li class="recruitLi">
-					<a href="#" class="fl job">金融销售助理</a>
-					<a href="#" class="fr">金融销售助理</a>
-				</li>
-				<li>
-					<a href="#" class="fl job">必胜客2018届实习生-合肥</a>
-					<a href="#" class="fr">百胜中国控股有限公司</a>
-				</li>
-				<li class="recruitLi">
-					<a href="#" class="fl job">招生讲师</a>
-					<a href="#" class="fr">北京格伦教育</a>
-				</li>
-				<li>
-					<a href="#" class="fl job">财务实习生</a>
-					<a href="#" class="fr">蒂森克虏伯中国</a>
-				</li>
+				{/volist}
 			</ul>
 		</div>
 	</div>
@@ -405,54 +369,18 @@
 					</div>
 					<div class="bd">
 						<ul class="picList">
+							{volist name="comlist" id="v"}
 							<li>
-								<div class="pic"><a href="#"><img src="<{$img}>/company01.png"/></a></div>
-								<div class="title">科大讯飞股份有限公司</a></div>
+								<div class="pic"><a href="#"><img src="<{$v.logo}>"/></a></div>
+								<div class="title"><{$v.company_name}></a></div>
 							</li>
+							{/volist}
+							{volist name="comlist" id="v"}
 							<li>
-								<div class="pic"><a href="#"><img src="<{$img}>/company02.png"/></a></div>
-								<div class="title">海尔股份有限公司</a></div>
+								<div class="pic"><a href="#"><img src="<{$v.logo}>"/></a></div>
+								<div class="title"><{$v.company_name}></a></div>
 							</li>
-							<li>
-								<div class="pic"><a href="#"><img src="<{$img}>/company01.png"/></a></div>
-								<div class="title">科大讯飞股份有限公司</a></div>
-							</li>
-							<li>
-								<div class="pic"><a href="#"><img src="<{$img}>/company02.png"/></a></div>
-								<div class="title">海尔股份有限公司</a></div>
-							</li>
-							<li>
-								<div class="pic"><a href="#"><img src="<{$img}>/company01.png"/></a></div>
-								<div class="title">科大讯飞股份有限公司</a></div>
-							</li>
-							<li>
-								<div class="pic"><a href="#"><img src="<{$img}>/company02.png"/></a></div>
-								<div class="title">海尔股份有限公司</a></div>
-							</li>
-							<li>
-								<div class="pic"><a href="#"><img src="<{$img}>/company01.png"/></a></div>
-								<div class="title">科大讯飞股份有限公司</a></div>
-							</li>
-							<li>
-								<div class="pic"><a href="#"><img src="<{$img}>/company02.png"/></a></div>
-								<div class="title">海尔股份有限公司</a></div>
-							</li>
-							<li>
-								<div class="pic"><a href="#"><img src="<{$img}>/company01.png"/></a></div>
-								<div class="title">科大讯飞股份有限公司</a></div>
-							</li>
-							<li>
-								<div class="pic"><a href="#"><img src="<{$img}>/company02.png"/></a></div>
-								<div class="title">海尔股份有限公司</a></div>
-							</li>
-							<li>
-								<div class="pic"><a href="#"><img src="<{$img}>/company01.png"/></a></div>
-								<div class="title">科大讯飞股份有限公司</a></div>
-							</li>
-							<li>
-								<div class="pic"><a href="#"><img src="<{$img}>/company02.png"/></a></div>
-								<div class="title">海尔股份有限公司</a></div>
-							</li>
+							{/volist}
 						</ul>
 					</div>
 				</div>
