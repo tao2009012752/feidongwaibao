@@ -4,6 +4,7 @@ namespace app\index\controller;
 use think\Controller;
 use think\Session;
 use think\Request;
+use think\Db;
 /**
  * Description of Common
  *
@@ -34,5 +35,13 @@ class Common extends Controller{
         } else {
             return true;
         }
+    }
+
+    public function pub_function($par_cate_id,$news_cate_id,$limit){
+        $where = [];
+        $where['par_cate_id'] = $par_cate_id;
+        $where['news_cate_id'] = $news_cate_id;
+        $res = Db::name('news')->where($where)->field('title,news_id')->limit($limit)->order('news_id desc')->select();
+        return $res;
     }
 }
