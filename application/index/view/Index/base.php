@@ -41,8 +41,8 @@
 		<div class="navWrap">
 			<div class="navBox contant">
 				<ul>
-					<li class="liAction"><a href="index.html">网站首页</a></li>
-                                        <li><a href="">资讯中心</a></li>
+					<li class="liAction"><a href="/index/index/index.html">网站首页</a></li>
+                                        <li><a href="/index/index/newslist.html">资讯中心</a></li>
 					<li><a href="/index/talent/index.html">人才库</a></li>
 					<li><a href="#">培训信息</a></li>
 					<li><a href="#">人才招聘</a></li>

@@ -1,61 +1,9 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>人才库</title>
-		<link rel="stylesheet" type="text/css" href="<{$css}>/style.css"/>
-		<link rel="stylesheet" type="text/css" href="<{$css}>/font-awesome.min.css"/>
-		<script src="<{$js}>/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="<{$js}>/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
-		<script src="<{$js}>/index.js" type="text/javascript" charset="utf-8"></script>
-		
-	</head>
-	<body>
-		<!--top-->
-		<div class="pageTop">
-			<div class="pageTopBox contant">
-				<div class="fl">
-					2018年5月15日   星期二  肥东服务外包人才信息综合服务平台
-				</div>
-				<div class="fr loginText">
-					<a href="#">登录</a>  |  <a href="#">注册</a>
-				</div>
-			</div>
-		</div>
-		<!--logo-->
-		<div class="headBox">
-			<div class="logosBox contant">
-				<div class="logo fl">
-					<a href="#"><img src="<{$img}>logo.png"/></a>
-				</div>
-				<div class="fr searchBox">
-					<div class="fl">
-						<input type="text" class="searchInput" placeholder="请输入相关文章的关键字" />
-					</div>
-					<div class="fl searchBtnBox">
-						<input type="button" class="searchBtn" value="搜索"/>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-		<!--nav-->
-		<div class="navWrap">
-			<div class="navBox contant">
-				<ul>
-					<li><a href="index.html">网站首页</a></li>
-					<li><a href="newsList.html">资讯中心</a></li>
-					<li  class="liAction"><a href="talent.html">人才库</a></li>
-					<li><a href="#">培训信息</a></li>
-					<li><a href="#">人才招聘</a></li>
-					<li><a href="#">人才考评</a></li>
-					<li><a href="#">在线学习</a></li>
-					<li><a href="#">关于我们</a></li>
-					<li><a href="#">联系我们</a></li>
-				</ul>
-			</div>
-		</div>
-		<!--人才库-->
+{extend name="index/base" /}
+{block name="tdk"}
+	<title>服务外包人才信息综合服务平台</title>
+{/block}
+{block name="content"}
+	<!--人才库-->
 		<div class="talentBox contant gundong">
 			<div class="talentCon borderdc">
 				<div class="txtMarquee-left">
@@ -80,16 +28,16 @@
 				<div class="talentLeft fl">
 					<ul>
 						<li>
-							<a href="#"><img src="<{$img}>talent01.png"/></a>
+							<a href="#"><img src="<{$img}>/talent01.png"/></a>
 						</li>
 						<li>
-							<a href="#"><img src="<{$img}>talent02.png"/></a>
+							<a href="#"><img src="<{$img}>/talent02.png"/></a>
 						</li>
 						<li>
-							<a href="#"><img src="<{$img}>talent03.png"/></a>
+							<a href="#"><img src="<{$img}>/talent03.png"/></a>
 						</li>
 						<li>
-							<a href="#"><img src="<{$img}>talent04.png"/></a>
+							<a href="#"><img src="<{$img}>/talent04.png"/></a>
 						</li>
 					</ul>
 				</div>
@@ -127,7 +75,7 @@
 				<div class="talentRight fl borderdc">
 					<div class="talentLoginBox">
 						<div class="title">
-							<img src="<{$img}>talentLogin.png"/>
+							<img src="<{$img}>/talentLogin.png"/>
 						</div>
 						<div class="talentInput">
 							<div>
@@ -137,7 +85,7 @@
 								<label for="">密&nbsp;码：</label><input type="text" placeholder="请输入密码" />
 							</div>
 							<div class="submitBox">
-								<a href="#"><img src="<{$img}>talentBtn.png"/></a>
+								<a href="#"><img src="<{$img}>/talentBtn.png"/></a>
 							</div>
 						</div>
 						
@@ -159,7 +107,7 @@
 									<li>
 										<div class="pic">
 											<a href="#" target="_blank">
-												<img src="<{$img}>people01.jpg"/>
+												<img src="<{$img}>/people01.jpg"/>
 											</a>
 										</div>
 										<div class="title">
@@ -174,7 +122,7 @@
 									<li>
 										<div class="pic">
 											<a href="#" target="_blank">
-												<img src="<{$img}>people02.jpg"/>
+												<img src="<{$img}>/people02.jpg"/>
 											</a>
 										</div>
 										<div class="title">
@@ -189,7 +137,7 @@
 									<li>
 										<div class="pic">
 											<a href="#" target="_blank">
-												<img src="<{$img}>people01.jpg"/>
+												<img src="<{$img}>/people01.jpg"/>
 											</a>
 										</div>
 										<div class="title">
@@ -204,7 +152,7 @@
 									<li>
 										<div class="pic">
 											<a href="#" target="_blank">
-												<img src="<{$img}>people02.jpg"/>
+												<img src="<{$img}>/people02.jpg"/>
 											</a>
 										</div>
 										<div class="title">
@@ -219,7 +167,7 @@
 									<li>
 										<div class="pic">
 											<a href="#" target="_blank">
-												<img src="<{$img}>people01.jpg"/>
+												<img src="<{$img}>/people01.jpg"/>
 											</a>
 										</div>
 										<div class="title">
@@ -234,7 +182,7 @@
 									<li>
 										<div class="pic">
 											<a href="#" target="_blank">
-												<img src="<{$img}>people02.jpg"/>
+												<img src="<{$img}>/people02.jpg"/>
 											</a>
 										</div>
 										<div class="title">
@@ -249,7 +197,7 @@
 									<li>
 										<div class="pic">
 											<a href="#" target="_blank">
-												<img src="<{$img}>people01.jpg"/>
+												<img src="<{$img}>/people01.jpg"/>
 											</a>
 										</div>
 										<div class="title">
@@ -264,7 +212,7 @@
 									<li>
 										<div class="pic">
 											<a href="#" target="_blank">
-												<img src="<{$img}>people02.jpg"/>
+												<img src="<{$img}>/people02.jpg"/>
 											</a>
 										</div>
 										<div class="title">
@@ -279,7 +227,7 @@
 									<li>
 										<div class="pic">
 											<a href="#" target="_blank">
-												<img src="<{$img}>people01.jpg"/>
+												<img src="<{$img}>/people01.jpg"/>
 											</a>
 										</div>
 										<div class="title">
@@ -294,7 +242,7 @@
 									<li>
 										<div class="pic">
 											<a href="#" target="_blank">
-												<img src="<{$img}>people02.jpg"/>
+												<img src="<{$img}>/people02.jpg"/>
 											</a>
 										</div>
 										<div class="title">
@@ -309,7 +257,7 @@
 									<li>
 										<div class="pic">
 											<a href="#" target="_blank">
-												<img src="<{$img}>people01.jpg"/>
+												<img src="<{$img}>/people01.jpg"/>
 											</a>
 										</div>
 										<div class="title">
@@ -324,7 +272,7 @@
 									<li>
 										<div class="pic">
 											<a href="#" target="_blank">
-												<img src="<{$img}>people02.jpg"/>
+												<img src="<{$img}>/people02.jpg"/>
 											</a>
 										</div>
 										<div class="title">
@@ -449,7 +397,7 @@
 			</div>
 			<div class="adverBox1">
 				<div class="adBox">
-					<a href="#"><img src="<{$img}>adver01.png"/></a>
+					<a href="#"><img src="<{$img}>/adver01.png"/></a>
 				</div>
 				
 			</div>
@@ -529,14 +477,4 @@
 				</div>
 			</div>
 		</div>
-		
-		<!--footer-->
-		<div class="footer">
-			<div class="footerBox contant">
-				<p>Copyright @2013 All Rright Reserve 免责声明 安徽易服商务服务有限公司 版权所有 皖ICP备16008153号 </p>
-				<p>地址：合肥市政务区龙图路与怀宁路交口置地广场C座2403室 </p>
-				<p>电话：0551-63530530</p>
-			</div>
-		</div>
-	</body>
-</html>
+{/block}
