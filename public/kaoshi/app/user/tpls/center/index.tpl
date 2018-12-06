@@ -26,7 +26,7 @@
 								</div>
 							</td>
 							<td width="35%" style="padding:10px;">
-								<h3>{x2;$_user['username']}11</h3>
+								<h3>{x2;$_user['username']}</h3>
 								<p>注册日期：{x2;date:$_user['userregtime'],'Y-m-d'}</p>
 								<p>注册IP：{x2;$_user['userregip']}</p>
 								

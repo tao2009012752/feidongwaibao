@@ -376,12 +376,6 @@
 								<div class="title"><{$v.company_name}></a></div>
 							</li>
 							{/volist}
-							{volist name="comlist" id="v"}
-							<li>
-								<div class="pic"><a href="#"><img src="<{$v.logo}>"/></a></div>
-								<div class="title"><{$v.company_name}></a></div>
-							</li>
-							{/volist}
 						</ul>
 					</div>
 				</div>

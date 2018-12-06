@@ -35,7 +35,7 @@
             </li>
             <li>
                 <label>薪资待遇：</label>
-                <span><{$detail.salary}></span>
+                <span><{$detail.min_salary}>-<{$detail.max_salary}></span>
             </li>
             <li>
                 <label>工作经验：</label>

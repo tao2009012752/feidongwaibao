@@ -26,7 +26,7 @@
 								</div>
 							</td>
 							<td width="35%" style="padding:10px;">
-								<h3><?php echo $this->tpl_var['_user']['username']; ?>11</h3>
+								<h3><?php echo $this->tpl_var['_user']['username']; ?></h3>
 								<p>注册日期：<?php echo date('Y-m-d',$this->tpl_var['_user']['userregtime']); ?></p>
 								<p>注册IP：<?php echo $this->tpl_var['_user']['userregip']; ?></p>
 								
