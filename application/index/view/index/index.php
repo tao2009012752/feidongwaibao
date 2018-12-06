@@ -372,13 +372,7 @@
 						<ul class="picList">
 							{volist name="comlist" id="v"}
 							<li>
-								<div class="pic"><a href="#"><img src="<{$v.logo}>"/></a></div>
-								<div class="title"><{$v.company_name}></a></div>
-							</li>
-							{/volist}
-							{volist name="comlist" id="v"}
-							<li>
-								<div class="pic"><a href="#"><img src="<{$v.logo}>"/></a></div>
+								<div class="pic"><a href="<{:url('Companys/index',['id'=>$v['company_id']])}>"><img src="<{$v.logo}>"/></a></div>
 								<div class="title"><{$v.company_name}></a></div>
 							</li>
 							{/volist}

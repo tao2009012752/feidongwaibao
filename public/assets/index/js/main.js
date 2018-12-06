@@ -37,3 +37,15 @@ News = {
         }
     }
 }
+
+/*公司页面js*/
+Company = {
+    //切换效果
+    Change : function(){
+        $('.nav ul li a').click(function(){
+            var data = $(this).attr('data');
+            $('.rightBox3').hide();
+            $('.right'+data).show();
+        })
+    }
+}
