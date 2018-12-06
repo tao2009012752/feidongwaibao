@@ -71,6 +71,7 @@ class Index extends Common
         $rd = News::getNews(16);
 
         $newsdata = News::get($id);
+	if(!$newsdata)$this->error('文章信息不存在#');
         $catearr = News_cate::getPid($newsdata['news_cate_id'],2);
         $catedata = News_cate::get($catearr[count($catearr)-1]);
 
