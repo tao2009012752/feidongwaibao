@@ -59,8 +59,8 @@
 					<li class="menu col-xs-1 active"><a href="index.php" class="icon">首页</a></li>
 					<li class="menu col-xs-1"><a href="index.php?course">课程</a></li>
 					<li class="menu col-xs-1"><a href="index.php?exam">考试</a></li>
-					<li class="menu col-xs-1"><a href="index.php?docs">文档</a></li>
-					<li class="menu col-xs-1"><a href="index.php?certificate">证书</a></li>
+					<li class="menu col-xs-1"><a href="index.php?docs"></a></li>
+					<li class="menu col-xs-1"><a href="index.php?certificate"></a></li>
 				</ul>
 			</div>
 		</div>
