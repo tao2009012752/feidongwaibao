@@ -3,7 +3,13 @@
 	<title>服务外包人才信息综合服务平台</title>
 {/block}
 {block name="content"}
+
 <!--招聘首页-->
+<div class="zhaoBg contant">
+	<div class="zhaoBgCon">
+		<img src="<{$img}>/zhaoBan.png"/>
+	</div>
+</div>
 <div class="zhaoBox contant">
 	<div class="zhaoCon">
 		<div class="erjiTit">
