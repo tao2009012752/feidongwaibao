@@ -28,13 +28,14 @@
 					<a href="#"><img src="<{$img}>/logo.png"/></a>
 				</div>
 				<div class="fr searchBox">
+					<form id="search" action="<{:url('Index/search')}>" method="post" >
 					<div class="fl">
-						<input type="text" class="searchInput" placeholder="请输入相关文章的关键字" />
+						<input type="text" class="searchInput" name="keywords" value="{if condition='isset($keywords)'}<{$keywords}>{/if}" placeholder="请输入相关文章的关键字" />
 					</div>
 					<div class="fl searchBtnBox">
 						<input type="button" class="searchBtn" value="搜索"/>
 					</div>
-					
+					</form>
 				</div>
 			</div>
 		</div>
@@ -46,7 +47,7 @@
 					<li><a href="<{:url('/index/Index/newslist')}>">资讯中心</a></li>
 					<li><a href="<{:url('/index/Talent/index')}>">人才库</a></li>
 					<li><a href="#">培训信息</a></li>
-					<li><a href="#">人才招聘</a></li>
+					<li><a href="<{:url('/index/Job/index')}>">人才招聘</a></li>
 					<li><a href="/kaoshi/index.php?user-app-login">在线学习</a></li>
 					<li><a href="/kaoshi/index.php?user-app-login">人才考评</a></li>
 					<li><a href="#">关于我们</a></li>
@@ -73,6 +74,7 @@
 		<script>
 			$(function(){
 				Base.Menu(); //导航栏切换效果
+				Base.Search(); //搜索页面
 			})
 		</script>
 	</body>

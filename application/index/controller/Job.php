@@ -1,6 +1,7 @@
 <?php
 
 namespace app\index\controller;
+use app\index\model\Jobs;
 
 /**
  * 职位企业等信息
@@ -8,8 +9,17 @@ namespace app\index\controller;
  * @author mersycle<mersycle@hotmail.com>
  */
 class Job extends Common{
+
+    //招聘
     public function index () {
-        
+
+        $job = Jobs::getRecentJob(28,true);
+        $page = $job->render();
+
+        $this->assign('joblist',$job);
+        $this->assign('page',$page);
+
+        return $this->fetch();
     }
     
     // 职位列表

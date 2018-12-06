@@ -93,5 +93,20 @@ class Index extends Common
         $this->assign('lmlist',$lm);
         return $this->fetch();
     }
+
+    //搜索页
+    public function search(){
+        $keywords = input('keywords');
+
+        $new = News::where("title like '%{$keywords}%'")->order('news_id desc')->paginate(28,false);
+        $page = $new->render();
+        $listnum = count($new);
+
+	$this->assign('keywords',$keywords);
+        $this->assign('newlist',$new);
+        $this->assign('page',$page);
+        $this->assign('num',$listnum);
+        return $this->fetch();
+    }
 }
 

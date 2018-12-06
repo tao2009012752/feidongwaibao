@@ -8,9 +8,21 @@ Base = {
             $('.navBox li').eq(1).addClass('liAction');
         }else if(url.search('Talent/index')>0){
             $('.navBox li').eq(2).addClass('liAction');
+        }else if(url.search('Job')>0){
+            $('.navBox li').eq(4).addClass('liAction');
         }else{
             $('.navBox li').eq(0).addClass('liAction');
         }
+    },
+    //搜索
+    Search : function(){
+        $('.searchBtn').click(function(){
+            var keywords = $('input[name="keywords"]').val();
+            console.log(keywords);
+            if(keywords){
+                $('#search').submit();
+            }
+        })
     }
 }
 
@@ -23,6 +35,5 @@ News = {
         }else{
             $('.leftBox .titBoxs li a').eq(0).addClass('erjiListAction');
         }
-
     }
 }
