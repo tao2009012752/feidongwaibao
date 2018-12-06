@@ -10,6 +10,7 @@ class ginkgo
 	public $I = array('app'=>array(),'core'=>array());
 	public $app;
 	public $defaultApp = 'content';
+//	public $defaultApp = 'certificate';
 
 	//对象工厂
 	public function make($G,$app = NULL)
@@ -60,7 +61,7 @@ class ginkgo
 		ini_set('date.timezone','Asia/Shanghai');
 		date_default_timezone_set("Etc/GMT-8");
 		$ev = $this->make('ev');
-
+                
 		$app = $ev->url(0);
 
 		$this->app = $app;
