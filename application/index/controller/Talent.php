@@ -20,11 +20,10 @@ class Talent extends Common{
         
         // 获取人员信息
         $users = User::getRecentUser(12);
-//        print_r($users->toArray());die;
         
         // 职位
         $jobs = Jobs::getRecentJob(16);
-//        print_r($jobs->toArray());die;
+
         $this->assign('gg',$gg);
         $this->assign('zx',$zx);
         $this->assign('rckjj',$rckjj);
@@ -36,6 +35,7 @@ class Talent extends Common{
         return $this->fetch();
     }
     
+    // 简历信息
     public function userInfo () {
         $uid = input('user_id/d',0);
         $info = User::getUserInfoByID($uid);
