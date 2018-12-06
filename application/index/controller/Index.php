@@ -60,8 +60,8 @@ class Index extends Common
         $catedata = News_cate::get($cate);
         $lm = News_cate::where("is_delete = 0 and parent_id = {$catearr[count($catearr)-1]}")->order('orderby desc')->select();
 
-        $pagelist = News::getNews($cate,25);
-        $page = count($pagelist)>0?false:$pagelist->render();
+        $pagelist = News::getTopNews($cate,25);
+        $page = empty($pagelist)?false:$pagelist->render();
 
         $this->assign('rdlist',$rd);
         $this->assign('lmlist',$lm);

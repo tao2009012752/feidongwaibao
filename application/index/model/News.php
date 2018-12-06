@@ -23,7 +23,7 @@ class News extends Model{
         return self::field('news_id,title,add_time')->where($where)->limit($num)->select();
     }
 
-    /** 获取一级新闻
+    /** 获取新闻(带分页)
      * @param $cate 新闻类型
      * @param int $num $page 数量
      * @return false|\PDOStatement|string|\think\Collection
@@ -33,6 +33,9 @@ class News extends Model{
         $cateid = News_cate::getCid($cate);
         if($cateid){
             $where = " is_delete = 0 and news_cate_id in({$cateid}) ";
+            return self::field('news_id,title,add_time')->where($where)->paginate($num,false);
+        }else{
+            $where = " is_delete = 0 and news_cate_id = {$cate} ";
             return self::field('news_id,title,add_time')->where($where)->paginate($num,false);
         }
         return false;
