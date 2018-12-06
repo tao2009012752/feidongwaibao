@@ -47,8 +47,8 @@
 					<li><a href="<{:url('/index/Talent/index','','html',true)}>">人才库</a></li>
 					<li><a href="#">培训信息</a></li>
 					<li><a href="#">人才招聘</a></li>
-					<li><a href="#">人才考评</a></li>
-					<li><a href="#">在线学习</a></li>
+                                        <li><a href="/kaoshi/index.php?user-app-login">在线学习</a></li>
+					<li><a href="/kaoshi/index.php?user-app-login">人才考评</a></li>
 					<li><a href="#">关于我们</a></li>
 					<li><a href="#">联系我们</a></li>
 				</ul>
