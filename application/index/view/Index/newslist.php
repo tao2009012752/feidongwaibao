@@ -20,14 +20,14 @@
             <ul class="listBox">
                 {volist name = "pagelist" id="v"}
                 <li>
-                    <a href="<{:url('Index/listdetail',['id'=>$v['news_id']],'html',true)}>"><{$v.title}></a>
+                    <a href="<{:url('Index/listdetail',['id'=>$v['news_id']])}>"><{$v.title}></a>
                     <span class="fr date"><{$v.add_time|date="Y-m-d",###}></span>
                 </li>
                 {/volist}
             </ul>
             <!--分页-->
             <div class="pageList">
-                <{$pagelist->render()}>
+                <{$page}>
             </div>
         </div>
         <!-- 列表结束 -->
@@ -35,7 +35,7 @@
 </div>
 <script>
     $(function () {
-        News.Menu(<{$catedata.news_cate_id}>);//左侧导航特效切换
+        News.Menu('<{$catedata.cate_name}>');//左侧导航特效切换
     })
 </script>
 {/block}

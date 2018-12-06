@@ -17,8 +17,12 @@ Base = {
 /*资讯中心js*/
 News = {
     //左侧导航切换效果
-    Menu : function(cate){
-        var info = {1:'0',3:'1',4:'2',6:'3',5:'4'};
-        $('.leftBox .titBoxs li a').eq(info[cate]).addClass('erjiListAction');
+    Menu : function(catename){
+        if($('li[data="'+catename+'"]').length>0){
+            $('li[data="'+catename+'"]').find('a').addClass('erjiListAction');
+        }else{
+            $('.leftBox .titBoxs li a').eq(0).addClass('erjiListAction');
+        }
+
     }
 }

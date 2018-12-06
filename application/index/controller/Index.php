@@ -17,18 +17,17 @@ class Index extends Common
         $lb = Carousels::where(['is_open'=>1])->order('orderby desc')->select();
 
         //新闻
-        $gg = News::getNews(15);
-        $zx = News::getNews(17);
-        $gjzc = News::getNews(12);
-        $dfzc = News::getNews(14);
-        $ks = News::getNews(19);
-        $ksxw = News::getNews(1);
-        $kc = News::getNews(18);
-        $zd = News::getNews(23);
+        $gg = News::getNews(2);
+        $zx = News::getNews(3);
+        $gjzc = News::getNews(10);
+        $dfzc = News::getNews(11);
+        $ks = News::getNews(15);
+        $ksxw = News::getNews(16);
+        $kc = News::getNews(21);
+        $zd = News::getNews(22);
 
         //招聘
         $jobs = Jobs::getRecentJob(12);
-
         //公司
         $com = Company::where('is_open = 1 and is_delete = 0')->limit(6)->order('company_id desc')->select();
         
@@ -51,15 +50,24 @@ class Index extends Common
         $cate = Request::instance()->param('cate/d',1);
 
         //热点新闻
-        $rd = News::getNews(16);
-
+        $rd = News::getNews(4);
+        //左侧导航栏
+        $catearr = News_cate::getPid($cate,2);
+        if(count($catearr)==1){ //如果此id为一级栏目id转换为对应的二级栏目第一个
+            $cate = News_cate::getCid($cate,2);
+            $cate = $cate[0];
+        }
         $catedata = News_cate::get($cate);
+        $lm = News_cate::where("is_delete = 0 and parent_id = {$catearr[count($catearr)-1]}")->order('orderby desc')->select();
+
         $pagelist = News::getTopNews($cate,25);
+        $page = empty($pagelist)?false:$pagelist->render();
 
-
+        $this->assign('rdlist',$rd);
+        $this->assign('lmlist',$lm);
         $this->assign('catedata',$catedata);
         $this->assign('pagelist',$pagelist);
-        $this->assign('rdlist',$rd);
+        $this->assign('page',$page);
         return $this->fetch();
     }
 
@@ -67,14 +75,14 @@ class Index extends Common
     public function listDetail(){
         $id = Request::instance()->param('id/d',1);
 
-        //热点新闻
-        $rd = News::getNews(16);
-
         $newsdata = News::get($id);
-	if(!$newsdata)$this->error('文章信息不存在#');
-        $catearr = News_cate::getPid($newsdata['news_cate_id'],2);
-        $catedata = News_cate::get($catearr[count($catearr)-1]);
 
+        //热点新闻
+        $rd = News::getNews(4);
+        //左侧导航
+        $catearr = News_cate::getPid($newsdata['news_cate_id'],2);
+        $lm = News_cate::where("is_delete = 0 and parent_id = {$catearr[count($catearr)-1]}")->order('orderby desc')->select();
+        $catedata = News_cate::get($newsdata['news_cate_id']);
         //上一篇下一篇
         $prenext = News::preNext($id,$catearr[count($catearr)-1]);
 
@@ -82,6 +90,7 @@ class Index extends Common
         $this->assign('catedata',$catedata);
         $this->assign('newsdata',$newsdata);
         $this->assign('rdlist',$rd);
+        $this->assign('lmlist',$lm);
         return $this->fetch();
     }
 }

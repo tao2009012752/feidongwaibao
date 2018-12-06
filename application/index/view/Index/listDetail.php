@@ -14,7 +14,7 @@
 		<!-- 内容 -->
 		<div class="fr rightBox">
 			<div class="newsDetailBox">
-				<h3>海峡两岸（合肥）健康养老产业合作论坛开幕<{$newsdata.title}></h3>
+				<h3><{$newsdata.title}></h3>
 				<h4><span class="spanLine">来源：<{$newsdata.source}></span><span  class="spanLine">发布时间:<{$newsdata.add_time|date="Y-m-d",###}></span></h4>
 				<div class="neirong">
 					<{$newsdata.content}>
@@ -46,7 +46,7 @@
 </div>
 <script>
 	$(function(){
-		News.Menu(<{$catedata.news_cate_id}>);//左侧导航特效切换
+		News.Menu('<{$catedata.cate_name}>');//左侧导航特效切换
 	})
 </script>
 {/block}

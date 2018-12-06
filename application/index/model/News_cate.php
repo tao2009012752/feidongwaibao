@@ -9,7 +9,7 @@ use think\Model;
  */
 class News_cate extends Model{
 
-    /** 获取当前id下所有子栏目id
+    /** 获取当前id下所有子栏目id(不包括本级)
      * @param $cate 新闻类型id
      * @param int $type 返回类型 1 字符串 2数组
      * @return array|bool|string
@@ -31,20 +31,19 @@ class News_cate extends Model{
         return false;
     }
 
-    /** 获取当前id下所有父栏目id
+    /** 获取当前id下所有父栏目id(包括本级)
      * @param $cate 新闻类型id
      * @param int $type 返回类型 1 字符串 2数组
      * @return array|bool|string
      */
     static function getPid($cate,$type=1){
 
-        $cateid = '';
+        $cateid = $cate;
         do{
             $catedata = self::where(['news_cate_id'=>$cate])->find();
             if($catedata['parent_id'])$cateid .= ','.$catedata['parent_id'];
             $cate = $catedata['parent_id'];
         }while($cate>0);
-        $cateid = substr($cateid,1);
 
         if($type!=1){
             return explode(',',$cateid);
