@@ -84,7 +84,7 @@ class Index extends Common
         $lm = News_cate::where("is_delete = 0 and parent_id = {$catearr[count($catearr)-1]}")->order('orderby desc')->select();
         $catedata = News_cate::get($newsdata['news_cate_id']);
         //上一篇下一篇
-        $prenext = News::preNext($id,$catearr[count($catearr)-1]);
+        $prenext = News::preNext($id,$newsdata['news_cate_id']);
 
         $this->assign('prenext',$prenext);
         $this->assign('catedata',$catedata);

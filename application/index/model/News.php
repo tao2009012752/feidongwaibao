@@ -48,12 +48,7 @@ class News extends Model{
      */
     static function preNext($news_id,$cate=''){
         $result = array();
-        $where = 'is_delete = 0 ';
-
-        if($cate){
-            $cateid = News_cate::getCid($cate);
-            if($cateid)$where .= " and news_cate_id in({$cateid}) ";
-        }
+        $where = " is_delete = 0 and news_cate_id = {$cate} ";
 
         $pre = self::field('news_id,title,add_time')->where($where.' and news_id <'.$news_id)->order('news_id desc')->limit(1)->select();
         $next = self::field('news_id,title,add_time')->where($where.' and news_id >'.$news_id)->order('news_id asc')->limit(1)->select();
