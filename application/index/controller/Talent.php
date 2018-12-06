@@ -42,3 +42,4 @@ class Talent extends Common{
         $this->assign('rcklc',$info);
     }
 }
+

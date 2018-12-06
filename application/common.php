@@ -51,3 +51,9 @@ function getIp() {
     $res =  preg_match ( '/[\d\.]{7,15}/', $ip, $matches ) ? $matches [0] : '';
     return $res;
 }
+
+
+
+
+
+
