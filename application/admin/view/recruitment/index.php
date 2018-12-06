@@ -42,7 +42,7 @@
                     <td><{$v.need_num}></td>
                     <td><{$v.degree}></td>
                     <td><{$v.sex_value}></td>
-                    <td><{$v.salary}></td>
+                    <td><{$v.min_salary}>-<{$v.max_salary}></td>
                     <td>
                         <a href="javascript:void(0);"
                            class="table_btn table_info detail_btn"
