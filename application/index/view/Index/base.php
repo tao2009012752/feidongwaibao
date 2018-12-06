@@ -42,12 +42,12 @@
 		<div class="navWrap">
 			<div class="navBox contant">
 				<ul>
-					<li><a href="<{:url('/'}>">网站首页</a></li>
-                                        <li><a href="<{:url('/index/Index/newslist')}>">资讯中心</a></li>
+					<li><a href="<{:url('/')}>">网站首页</a></li>
+					<li><a href="<{:url('/index/Index/newslist')}>">资讯中心</a></li>
 					<li><a href="<{:url('/index/Talent/index')}>">人才库</a></li>
 					<li><a href="#">培训信息</a></li>
 					<li><a href="#">人才招聘</a></li>
-                                        <li><a href="/kaoshi/index.php?user-app-login">在线学习</a></li>
+					<li><a href="/kaoshi/index.php?user-app-login">在线学习</a></li>
 					<li><a href="/kaoshi/index.php?user-app-login">人才考评</a></li>
 					<li><a href="#">关于我们</a></li>
 					<li><a href="#">联系我们</a></li>

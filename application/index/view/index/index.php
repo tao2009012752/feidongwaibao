@@ -27,6 +27,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="fr">
 				<div class="newsTap">
 					<div class="slideTxtBox">
