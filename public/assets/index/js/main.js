@@ -23,6 +23,26 @@ Base = {
     }
 }
 
+/*首页*/
+Index = {
+    Login : function(){
+        $('.loginBtn').click(function(){
+            var username = $('input[name="username"]').val();
+            var password = $('input[name="password"]').val();
+
+            if(!username||!password)alert('用户名或密码不能为空！');
+            $.post('index/Login/loginAjax',{'username':username,'password':password},function(a){
+                var data = $.parseJSON(a);
+                if(data.code){
+                    alert(data.msg);
+                }else{
+                    history.go(0);
+                }
+            })
+        })
+    }
+}
+
 /*资讯中心js*/
 News = {
     //左侧导航切换效果
@@ -43,6 +63,27 @@ Company = {
             var data = $(this).attr('data');
             $('.rightBox3').hide();
             $('.right'+data).show();
+        })
+    }
+}
+
+/*人才招聘*/
+Job = {
+    //投递简历
+    Apply : function(){
+        $('.apply').click(function(){
+            var jid = $(this).attr('data');
+            $.post('/index/Job/applyAjax',{'jid':jid},function(a){
+                var data = $.parseJSON(a);
+                if(data.code == 1){
+                    alert(data.msg);
+                }else if(data.code == 2){
+                    location.href = '/index/Login/index';
+                }else{
+                    alert(data.msg);
+                    history.go(0);
+                }
+            })
         })
     }
 }

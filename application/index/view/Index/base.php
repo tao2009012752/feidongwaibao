@@ -16,9 +16,15 @@
 				<div class="fl">
 					2018年5月15日   星期二  肥东服务外包人才信息综合服务平台
 				</div>
+				{if condition="$userdata"}
+				<div class="fr loginText">
+					欢迎您 <a href="#"><{$userdata.account}></a>
+				</div>
+				{else /}
 				<div class="fr loginText">
 					<a href="#">登录</a>  |  <a href="#">注册</a>
 				</div>
+				{/if}
 			</div>
 		</div>
 		<!--logo-->

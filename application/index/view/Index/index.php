@@ -68,10 +68,10 @@
 							<form action="" method="post">
 								<div class="fl">
 									<div class="inputLine">
-										<label for="" class="leftName">用户名：</label><input type="text" class="formInputs" placeholder="请输入用户名或者手机号"/>
+										<label for="" class="leftName">用户名：</label><input type="text" name="username" class="formInputs" placeholder="请输入用户名或者手机号"/>
 									</div>
 									<div class="inputLine">
-										<label for="" class="leftName">密码：</label><input type="text" class="formInputs" placeholder="请输入密码"/>
+										<label for="" class="leftName">密码：</label><input type="text" name="password" class="formInputs" placeholder="请输入密码"/>
 									</div>
 								</div>
 								<div class="fr loginBtn">
@@ -382,4 +382,9 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		$(function(){
+			Index.Login();
+		})
+	</script>
 {/block}

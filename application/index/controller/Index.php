@@ -6,7 +6,9 @@ use app\index\model\Company;
 use app\index\model\Jobs;
 use app\index\model\News;
 use app\index\model\News_cate;
+use app\index\model\User;
 use think\Request;
+use think\Session;
 
 class Index extends Common
 {
@@ -102,7 +104,7 @@ class Index extends Common
         $page = $new->render();
         $listnum = count($new);
 
-	$this->assign('keywords',$keywords);
+	    $this->assign('keywords',$keywords);
         $this->assign('newlist',$new);
         $this->assign('page',$page);
         $this->assign('num',$listnum);
