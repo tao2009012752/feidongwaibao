@@ -11,7 +11,7 @@
     <h2><span></span>招聘信息列表</h2>
     <div class="count">
         <div class="left">
-<!--            <button type="button" class="btn btn_info" mini="show" data-url="<{:url('Recruitment/create')}>" /><i class="fa fa-plus"></i> 新增招聘 </button>-->
+            <!--<button type="button" class="btn btn_info" mini="show" data-url="<{:url('Recruitment/create')}>" /><i class="fa fa-plus"></i> 新增招聘 </button>-->
             <button type="button" class="btn btn_dsure" mini="deletesome" pk_name="job_id" data-url="<{:url('Recruitment/deleteSome')}>" data-title="确定删除这些招聘信息么"  /><i class="fa fa-trash-o"></i> 批量删除</button>
         </div>
         <div class="right">共搜出 <{$count}> 条数据</div>
@@ -28,7 +28,7 @@
                 <th>招聘人数</th>
                 <th>学历要求</th>
                 <th>性别</th>
-                <th>薪资</th>
+                <th>薪资（元）</th>
                 <th width="268">操作</th>
             </tr>
             </thead>

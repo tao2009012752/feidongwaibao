@@ -13,13 +13,8 @@
 							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								新闻 <span class="caret"></span>
 							</button>
-							<ul class="dropdown-menu">
-								<li><a href="index.php?content-app">新闻</a></li>
-								<li><a href="index.php?course-app">课程</a></li>
-								<li><a href="index.php?docs-app">资料</a></li>
-							</ul>
 						</div>
-						<input type="text" style="width:380px;" class="form-control" id="keyword" placeholder="搜索新闻">
+						<input type="text" style="width:380px;" class="form-control" id="keyword" placeholder="请输入搜索内容">
 					</div>
 					<button type="button" class="btn btn-primary" onclick="javascript:window.location='index.php?content-app-search&keyword='+$('#keyword').val();"> 搜 索 </button>
 				</div>
