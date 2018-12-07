@@ -1176,6 +1176,252 @@ input:focus{outline:0;}
 	width: 100%;
 	display: block;
 }
+.zhaoDetailBox .leftBox1{
+	width: 740px;
+	padding: 30px;
+	border: 1px solid #dcdcdc;
+}
+.zhaoDetailBox .rightBox1{
+	width: 300px;
+
+
+}
+.zhaoDetailBox  .rightBox2{
+	padding: 15px;
+	border: 1px solid #dcdcdc;
+}
+.zhaoDetailBox{
+	overflow: hidden;
+	margin-top: 20px;
+
+}
+.zhaoDetailBox .jobName{
+	font-size: 24px;
+	font-weight: bold;
+}
+.zhaoDetailBox .companyName{
+	font-size: 16px;
+	margin: 15px 0
+}
+.zhaoDetailBox .requireds{
+	font-size: 14px;
+	color: #666;
+}
+.zhaoDetailBox .xinzi{
+	font-size: 24px;
+	font-weight: bold;
+	color: #fe9312;
+	margin: 10px 0;
+
+}
+.zhaoDetailBox .companyName a{
+	color: #333;
+	text-decoration: none;
+}
+.zhaoDetailBox .companyName a:hover{
+	color: #026ec6;
+}
+.yingping{
+	width: 150px;
+	height: 40px;
+	background: #fe9312;
+	border: none;
+	color: #fff;
+	border-radius: 2px;
+	margin: 30px 0;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.yingping:hover{
+	background: #e8850d;
+}
+.zhaoDetailBox .top{
+	overflow: hidden;
+}
+.zhaoDetailBox .yaoqiu h5{
+	font-size: 16px;
+	border-top: 1px solid #dcdcdc;
+	padding-top: 20px;
+}
+.zhaoDetailBox .jobContent{
+	margin: 20px 0;
+}
+.zhaoDetailBox .jobContent p{
+	text-indent: 2em;
+	font-size: 14px;
+	line-height: 1.8;
+	margin: 10px 0;
+}
+.zhaoDetailBox .rightBox1 h5{
+	font-size: 16px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #dcdcdc;
+}
+.zhaoDetailBox  .companyText{
+	margin: 15px 0;
+}
+.zhaoDetailBox .rightBox1 .name a{
+	font-size: 16px;
+	color: #026ec6;
+	text-decoration: none;
+
+}
+.zhaoDetailBox .rightBox1 .name{
+	margin: 10px 0;
+}
+.zhaoDetailBox .rightBox1 .yewu{
+	margin: 10px 0;
+	font-size: 14px;
+}
+.zhaoDetailBox .rightBox1 .contactUs{
+	font-size: 14px;
+}
+.companyText ul li{
+	line-height: 1.8;
+}
+.companyText ul li a{
+	text-decoration: none;
+	color: #333;
+}
+.companyText ul li a:hover{
+	color: #026ec6;
+}
+.companyText ul li{
+	border-bottom: 1px dashed #dcdcdc;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.companyText .jobListName a{
+	color: #026ec6;
+}
+.companyPage .companys ul li{
+	float: left;
+	margin-left: 10px;
+
+}
+.companyPage .companys ul li a{
+	color: #333;
+	text-decoration: none;
+}
+.companyWrap .top{
+	height: 200px;
+	margin-top: 15px;
+	overflow: hidden;
+}
+.companyTit{
+	margin-top: 67px;
+	font-size: 40px;
+	font-weight: bold;
+	color: #fff;
+	font-family: "微软雅黑";
+	margin-left: 30px;
+	text-shadow: 0.05em 0.1em #034678
+}
+.companyWrap .nav{
+	height: 36px;
+	width: 100%;
+	margin-top: 10px;
+}
+.companyWrap .nav ul{
+	margin-left: 20px;
+}
+.companyWrap .nav li{
+	float: left;
+	margin-left: 10px;
+	line-height: 36px;
+}
+.companyWrap .nav li a{
+	color: #fff;
+	font-size: 14px;
+	text-decoration: none;
+	font-weight: bold;
+
+}
+.ge1{
+	margin:  0 18px;
+	color: #fff;
+}
+.companyDetail .leftBox3{
+	width: 250px;
+
+}
+.companyDetail{
+	overflow: hidden;
+	width: 100%;
+	margin-top: 10px;
+	font-size: 14px;
+}
+.companyDetail .rightBox3{
+	width: 890px;
+
+	border: 1px solid #dcdcdc;
+}
+.companyDetail .jibenBox{
+	overflow: hidden;
+	border: 1px solid #dcdcdc;
+}
+.companyDetail h5{
+	color: #333;
+	height: 36px;
+	border-top: 2px solid #026ec6;
+	line-height: 36px;
+	padding-left: 10px;
+	border-bottom: 1px solid #dcdcdc;
+	font-size: 14px;
+}
+.companyDetail .jibenBox .jibenText{
+	padding: 20px;
+}
+.companyDetail .jibenBox .jibenText li{
+	line-height: 2;
+	border-bottom: 1px dashed #dcdcdc;
+}
+.jibenText ul li{
+	width: 210px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.jibenText ul li a{
+	color: #026ec6;
+	text-decoration: none;
+}
+.jianjie{
+	padding: 20px;
+}
+.jianjie p{
+	text-indent: 2em;
+	line-height: 2;
+	margin: 10px 0;
+}
+.jianjie .companyImg{
+	text-align: center;
+}
+.jianjie .companyImg img{
+	width: 100%;
+	height: 453px;
+}
+.jianjie .hotzhao li{
+	height: 36px;
+	border-bottom: 1px dashed #dcdcdc;
+	line-height: 36px;
+}
+.jianjie .hotzhao li span{
+	float: right;
+}
+.jianjie .hotzhao li a{
+	color: #333;
+	text-decoration: none;
+}
+.jianjie .hotzhao li a:hover{
+	color: #025AA3;
+}
+.jianjie table td{
+	height: 36px;
+	padding-left: 10px;
+}
+
 /*分页函数*/
 .pageList{
 	margin-right: 16px;
