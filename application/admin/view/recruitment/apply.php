@@ -49,7 +49,7 @@
                         <a href="javascript:void(0);"
                            class="table_btn table_info detail_btn"
                            mini="show"
-                           data-url="<{:url('Recruitment/viewDetail',['job_id' => $v['job_id']])}>"
+                           data-url="<{:url('user/viewResume',['info_id' => $v['user_id']])}>"
                         >
                             <i class="fa fa-reorder"></i>
                             <span>查看详情</span>

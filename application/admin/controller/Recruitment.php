@@ -112,9 +112,6 @@ class Recruitment extends Common
         //将对象转换成数组
         $list_array = $list->all();
         
-        
-
-
         $this->assign('count', $count);
         $this->assign('list', $list);
         $this->assign('list_array', $list_array);
