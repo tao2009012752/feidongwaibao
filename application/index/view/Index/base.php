@@ -34,7 +34,7 @@
 					<a href="#"><img src="<{$img}>/logo.png"/></a>
 				</div>
 				<div class="fr searchBox">
-					<form id="search" action="<{:url('Index/search')}>" method="post" >
+					<form id="search" action="<{:url('Newsinfo/search')}>" method="post" >
 					<div class="fl">
 						<input type="text" class="searchInput" name="keywords" value="{if condition='isset($keywords)'}<{$keywords}>{/if}" placeholder="请输入相关文章的关键字" />
 					</div>
