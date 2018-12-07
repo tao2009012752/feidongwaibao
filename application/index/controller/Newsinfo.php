@@ -1,54 +1,14 @@
 <?php
 namespace app\index\controller;
 
-use app\index\model\Carousels;
-use app\index\model\Company;
-use app\index\model\Jobs;
 use app\index\model\News;
 use app\index\model\News_cate;
-use app\index\model\User;
 use think\Request;
-use think\Session;
 
-class Index extends Common
+class Newsinfo extends Common
 {
-    //首页
-    public function index()
-    {
-        //轮播
-        $lb = Carousels::where(['is_open'=>1])->order('orderby desc')->select();
-
-        //新闻
-        $gg = News::getNews(2);
-        $zx = News::getNews(3);
-        $gjzc = News::getNews(10);
-        $dfzc = News::getNews(11);
-        $ks = News::getNews(15);
-        $ksxw = News::getNews(16);
-        $kc = News::getNews(21);
-        $zd = News::getNews(22);
-
-        //招聘
-        $jobs = Jobs::getRecentJob(12);
-        //公司
-        $com = Company::where('is_open = 1 and is_delete = 0')->limit(6)->order('company_id desc')->select();
-        
-        $this->assign('lblist',$lb);
-        $this->assign('gglist',$gg);
-        $this->assign('zxlist',$zx);
-        $this->assign('gjzclist',$gjzc);
-        $this->assign('dfzclist',$dfzc);
-        $this->assign('kslist',$ks);
-        $this->assign('ksxwlist',$ksxw);
-        $this->assign('kclist',$kc);
-        $this->assign('zdlist',$zd);
-        $this->assign('joblist',$jobs);
-        $this->assign('comlist',$com);
-        return $this->fetch();
-    }
-
     //资讯中心
-    public function newsList(){
+    public function index(){
         $cate = Request::instance()->param('cate/d',1);
 
         //热点新闻

@@ -7,7 +7,7 @@
 <div class="zhaoBox contant">
 	<div class="zhaoCon">
 		<div class="erjiTit">
-			<span class="rightnow">搜索结果（<{$num}>）：</span>
+			<span class="rightnow">搜索结果（<{$num}>）:</span>
 		</div>
 		<div class="zhaoList search">
 			<div class="zhaoListTit">
@@ -22,7 +22,7 @@
 					{volist name="newlist" id="v" key="i"}
 					<li {if condition="$i%2==1"} class="recruitLi" {/if}>
 						<ul class="jobList">
-							<li class="search-title"><a href="#"><{$v.title}></a></li>
+							<li class="search-title"><a href="<{:url('Newsinfo/listDetail',['id'=>$v['news_id']])}>"><{$v.title}></a></li>
 							<li class="search-source"><{$v.source}></li>
 							<li class="search-time"><span><{$v.add_time|date="Y-m-d",###}></span></li>
 						</ul>

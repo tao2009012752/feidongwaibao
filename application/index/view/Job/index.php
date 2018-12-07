@@ -38,7 +38,12 @@
 							<li class="money"><span><{$v.min_salary}>-<{$v.max_salary}></span></li>
 							<li class="gengTime"><{$v.update_time|substr=0,10}></li>
 							<li class="toudi">
-								<input type="button" value="投递简历" />
+								{if condition="$userjob&&in_array($v.job_id,$userjob)"}
+								<input type="button" value="已投递" />
+								{else /}
+								<input data="<{$v.job_id}>" class="apply" type="button" value="投递简历" />
+								{/if}
+
 							</li>
 						</ul>
 					</li>
@@ -51,5 +56,10 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		$(function(){
+			Job.Apply();
+		})
+	</script>
 </div>
 {/block}

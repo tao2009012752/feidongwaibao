@@ -16,9 +16,15 @@
 				<div class="fl">
 					2018年5月15日   星期二  肥东服务外包人才信息综合服务平台
 				</div>
+				{if condition="$userdata"}
 				<div class="fr loginText">
-					<a href="#">登录</a>  |  <a href="#">注册</a>
+					欢迎您 <a href="#"><{$userdata.account}></a> | <a href="<{:url('Login/loginOut')}>">退出</a>
 				</div>
+				{else /}
+				<div class="fr loginText">
+					<a href="<{:url('Login/index')}>">登录</a>  |  <a href="<{:url('Reg/index')}>">注册</a>
+				</div>
+				{/if}
 			</div>
 		</div>
 		<!--logo-->
@@ -28,7 +34,7 @@
 					<a href="#"><img src="<{$img}>/logo.png"/></a>
 				</div>
 				<div class="fr searchBox">
-					<form id="search" action="<{:url('Index/search')}>" method="post" >
+					<form id="search" action="<{:url('Newsinfo/search')}>" method="post" >
 					<div class="fl">
 						<input type="text" class="searchInput" name="keywords" value="{if condition='isset($keywords)'}<{$keywords}>{/if}" placeholder="请输入相关文章的关键字" />
 					</div>
@@ -44,7 +50,7 @@
 			<div class="navBox contant">
 				<ul>
 					<li><a href="<{:url('/')}>">网站首页</a></li>
-					<li><a href="<{:url('/index/Index/newslist')}>">资讯中心</a></li>
+					<li><a href="<{:url('/index/Newsinfo/index')}>">资讯中心</a></li>
 					<li><a href="<{:url('/index/Talent/index')}>">人才库</a></li>
 					<li><a href="#">培训信息</a></li>
 					<li><a href="<{:url('/index/Job/index')}>">人才招聘</a></li>

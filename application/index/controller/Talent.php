@@ -71,7 +71,7 @@ class Talent extends Common{
 
 
 
-    
+
 
 }
 

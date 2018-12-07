@@ -23,6 +23,9 @@ class Common extends Controller{
         $this->assign('js',$static['js']);
         $this->assign('font',$static['font']);
         $this->assign('img',$static['img']);
+
+        /*登录信息*/
+        $this->assign('userdata',Session::get('user'));
     }
 
     public function isLogin () {
