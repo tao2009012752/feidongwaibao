@@ -42,9 +42,9 @@
 <!--                        <td><input  type="text"  style="width:100px !important;" name="old[<{$v['job_id']}>][menu_name]" value="<{$v['job_name']}>" /></td>-->
                         <td style="width:100px !important;"><{$v['job_name']}></td>
                         <td><{$v['need_num']}></td>
-                        <td><{$v['sex_value']}></td>
+                        <td><{$v['sex']}></td>
                         <td><{$v['degree']}></td>
-                        <td><{$v['salary']}></td>
+                        <td><{$v.min_salary}>-<{$v.max_salary}></td>
                         <td>
                             <a href="javascript:void(0);"
                                class="table_btn table_info detail_btn"
@@ -69,6 +69,7 @@
                 <?php } ?>
                 </tbody>
             </table>
+            <{$list->render()}>
         </div>
         <div class="count">
             <div class="left">

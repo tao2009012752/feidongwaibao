@@ -36,6 +36,7 @@ class Company extends Common
         $this->assign('list', $list);
         $this->assign('search', $search);
 
+
         return $this->fetch();
     }
 
@@ -143,27 +144,29 @@ class Company extends Common
         
 
         $where = [];
-        $where['is_delete'] = 0;
-        $where['company_id'] = $companyId;
+        $where['j.is_delete'] = 0;
+        $where['j.company_id'] = $companyId;
 
 
-        $count = Db::name('jobs')->where($where)->count();
-        $jobsInfo = Db::name('jobs')->where($where)->order("job_id desc")->select();
+        $count = Db::name('jobs')
+            ->alias('j')
+            ->where($where)
+            ->count();
+        $list = Db::name('jobs')
+            ->alias('j')
+            ->field("j.*,c.company_name,CASE j.sex WHEN 1 THEN '男' WHEN 2 THEN '女' WHEN 3 THEN '未知' END as sex")
+            ->join('company c','j.company_id = c.company_id')
+            ->order('job_id desc')
+            ->where($where)
+            ->paginate(2);
 
-        if(!empty($jobsInfo)){
-            foreach($jobsInfo as $key=>$val){
-                if($val['sex'] == '1'){
-                    $jobsInfo[$key]['sex_value'] = '男';
-                }else if($val['sex'] == '2'){
-                    $jobsInfo[$key]['sex_value'] = '女';
-                }else{
-                    $jobsInfo[$key]['sex_value'] = '不限';
-                }
-            }
-        }
+        //将对象转换成数组
+        $list_array = $list->all();
+
 
         $this->assign('count', $count);
-        $this->assign('list',$jobsInfo);
+        $this->assign('list',$list_array);
+        $this->assign('list',$list);
 
         return $this->fetch();
     }
