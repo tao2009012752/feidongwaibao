@@ -39,7 +39,7 @@
 								{volist name="gglist" id="v"}
 								<li>
 									<span class="date"><{$v.add_time|date='Y-m-d',###}></span>
-									<a href="<{:url('Index/listdetail',['id'=>$v['news_id']])}>" target="_blank"><{$v.title}></a>
+									<a href="<{:url('Newsinfo/listdetail',['id'=>$v['news_id']])}>" target="_blank"><{$v.title}></a>
 								</li>
 								{/volist}
 								</ul>
@@ -47,7 +47,7 @@
 								{volist name="zxlist" id="v"}
 								<li>
 									<span class="date"><{$v.add_time|date='Y-m-d',###}></span>
-									<a href="<{:url('Index/listdetail',['id'=>$v['news_id']])}>" target="_blank"><{$v.title}></a>
+									<a href="<{:url('Newsinfo/listdetail',['id'=>$v['news_id']])}>" target="_blank"><{$v.title}></a>
 								</li>
 								{/volist}
 							</ul>
@@ -120,13 +120,13 @@
 					<div class="titBox">
 						<div class="titleBox">
 							<div class="fl tits">国家政策</div>
-							<div class="fr more"><a href="<{:url('Index/newslist',['cate'=>10])}>">更多>></a></div>
+							<div class="fr more"><a href="<{:url('Newsinfo/index',['cate'=>10])}>">更多>></a></div>
 						</div>
 						<div class="detailBox">
 							<ul>
 								{volist name="gjzclist" id="v"}
 								<li>
-									<a href="<{:url('Index/listdetail',['id'=>$v['news_id']])}>">
+									<a href="<{:url('Newsinfo/listdetail',['id'=>$v['news_id']])}>">
 										<{$v.title}>
 									</a>
 									<span class="date"><{$v.add_time|date="Y-m-d",###}></span>
@@ -140,13 +140,13 @@
 					<div class="titBox">
 						<div class="titleBox">
 							<div class="fl tits">地方政策</div>
-							<div class="fr more"><a href="<{:url('Index/newslist',['cate'=>11])}>">更多>></a></div>
+							<div class="fr more"><a href="<{:url('Newsinfo/index',['cate'=>11])}>">更多>></a></div>
 						</div>
 						<div class="detailBox">
 							<ul>
 								{volist name="dfzclist" id="v"}
 								<li>
-									<a href="<{:url('Index/listdetail',['id'=>$v['news_id']])}>">
+									<a href="<{:url('Newsinfo/listdetail',['id'=>$v['news_id']])}>">
 										<{$v.title}>
 									</a>
 									<span class="date"><{$v.add_time|date="Y-m-d",###}></span>
@@ -229,13 +229,13 @@
 					<div class="titBox">
 						<div class="titleBox">
 							<div class="fl tits">考试信息</div>
-							<div class="fr more"><a href="<{:url('Index/newslist',['cate'=>15])}>">更多>></a></div>
+							<div class="fr more"><a href="<{:url('Newsinfo/index',['cate'=>15])}>">更多>></a></div>
 						</div>
 						<div class="detailBox">
 							<ul>
 								{volist name="kslist" id="v"}
 								<li>
-									<a href="<{:url('Index/listdetail',['id'=>$v['news_id']],'html',true)}>">
+									<a href="<{:url('Newsinfo/listdetail',['id'=>$v['news_id']],'html',true)}>">
 										<{$v.title}>
 									</a>
 									<span class="date"><{$v.add_time|date="Y-m-d",###}></span>
@@ -270,13 +270,13 @@
 						<div class="titBox">
 							<div class="titleBox">
 								<div class="fl tits">热门课程</div>
-								<div class="fr more"><a href="<{:url('Index/newslist',['cate'=>21])}>">更多>></a></div>
+								<div class="fr more"><a href="<{:url('Newsinfo/index',['cate'=>21])}>">更多>></a></div>
 							</div>
 							<div class="detailBox">
 								<ul>
 									{volist name="kclist" id="v"}
 									<li>
-										<a href="<{:url('Index/listdetail',['id'=>$v['news_id']])}>">
+										<a href="<{:url('Newsinfo/listdetail',['id'=>$v['news_id']])}>">
 											<{$v.title}>
 										</a>
 										<span class="date"><{$v.add_time|date="Y-m-d",###}></span>
@@ -291,13 +291,13 @@
 					<div class="titBox">
 						<div class="titleBox">
 							<div class="fl tits">人才指导</div>
-							<div class="fr more"><a href="<{:url('Index/newslist',['cate'=>22])}>">更多>></a></div>
+							<div class="fr more"><a href="<{:url('Newsinfo/index',['cate'=>22])}>">更多>></a></div>
 						</div>
 						<div class="detailBox">
 							<ul>
 								{volist name="zdlist" id="v"}
 								<li>
-									<a href="<{:url('Index/listdetail',['id'=>$v['news_id']])}>">
+									<a href="<{:url('Newsinfo/listdetail',['id'=>$v['news_id']])}>">
 										<{$v.title}>
 									</a>
 									<span class="date"><{$v.add_time|date="Y-m-d",###}></span>
@@ -314,7 +314,7 @@
 					<div class="shizi">
 						<div class="titleBox">
 							<div class="fl tits">师资力量</div>
-							<div class="fr more"><a href="<{:url('Index/newslist',['cate'=>23])}>">更多>></a></div>
+							<div class="fr more"><a href="<{:url('Newsinfo/index',['cate'=>23])}>">更多>></a></div>
 						</div>
 						<div class="shiziBox">
 							<div class="fl shiziImg">
