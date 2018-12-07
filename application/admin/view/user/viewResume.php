@@ -43,7 +43,7 @@
             <td width="64" height="33">姓名</td>
             <td width="109"><{$detail.name}></td>
             <td width="73">性别</td>
-            <td width="109"><{$detail.sex_value}></td>
+            <td width="109"><{$detail.sex}></td>
             <td>年龄</td>
             <td><{$detail.age}></td>
             <td width="154" rowspan="4"><p ><img src="<{$detail.pic}>" width="154" height="203" /></p></td>
@@ -54,7 +54,7 @@
             <td>民族</td>
             <td><{$detail.nationality}></td>
             <td>婚姻状况</td>
-            <td><{$detail.marital_status_value}></td>
+            <td><{$detail.marital_status}></td>
         </tr>
         <tr>
             <td height="31">毕业院校</td>
@@ -68,7 +68,7 @@
             <td height="31">手机</td>
             <td><{$detail.phone}></td>
             <td>出生年月</td>
-            <td><{$detail.birthday}></td>
+            <td><{$detail.birthday|date="Y-m-d",###}></td>
             <td>电子邮箱</td>
             <td><{$detail.email}></td>
         </tr>

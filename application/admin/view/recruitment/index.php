@@ -41,7 +41,7 @@
                     <td><{$v.job_name}></td>
                     <td><{$v.need_num}></td>
                     <td><{$v.degree}></td>
-                    <td><{$v.sex_value}></td>
+                    <td><{$v.sex}></td>
                     <td><{$v.min_salary}>-<{$v.max_salary}></td>
                     <td>
                         <a href="javascript:void(0);"

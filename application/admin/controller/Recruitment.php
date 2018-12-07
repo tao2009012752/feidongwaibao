@@ -16,36 +16,25 @@ class Recruitment extends Common
     public function index ()
     {
         $where = [];
-        $where['is_delete'] = 0;
+        $where['j.is_delete'] = 0;
 
         $count = Db::name($this->_tableName)
+            ->alias('j')
             ->where($where)
             ->count();
         $list = Db::name($this->_tableName)
+            ->alias('j')
+            ->field("j.*,c.company_name,CASE j.sex WHEN 1 THEN '男' WHEN 2 THEN '女' WHEN 3 THEN '未知' END as sex")
+            ->join('company c','j.company_id = c.company_id')
             ->where($where)
             ->paginate(20);
 
         //将对象转换成数组
         $list_array = $list->all();
 
-        if(!empty($list_array)){
-            foreach($list_array as $key=>$val){
-                $list_array[$key]['company_name'] = Db::name('company')->where('company_id',$val['company_id'])->value('company_name');
-                if($val['sex'] == '1'){
-                    $list_array[$key]['sex_value'] = '男';
-                }else if($val['sex'] == '2'){
-                    $list_array[$key]['sex_value'] = '女';
-                }else{
-                    $list_array[$key]['sex_value'] = '不限';
-                }
-            }
-        }
-
-
         $this->assign('count', $count);
         $this->assign('list', $list);
         $this->assign('list_array', $list_array);
-
 
         return $this->fetch();
     }
@@ -63,15 +52,13 @@ class Recruitment extends Common
         }
 
 
-        if($jobInfo['sex'] == '1'){
-            $jobInfo['sex_value'] = '男';
-        }else if($jobInfo['sex'] == '2'){
-            $jobInfo['sex_value'] = '女';
-        }else{
-            $jobInfo['sex_value'] = '不限';
-        }
+        $jobInfo = Db::name($this->_tableName)
+            ->alias('j')
+            ->field("j.*,c.company_name,CASE j.sex WHEN 1 THEN '男' WHEN 2 THEN '女' WHEN 3 THEN '未知' END as sex")
+            ->join('company c','j.company_id = c.company_id')
+            ->where(['job_id' => $jobId])
+            ->find();
 
-        $jobInfo['company_name'] = Db::name('company')->where('company_id',$jobInfo['company_id'])->value('company_name');
 
         $this->assign('detail', $jobInfo);
         return $this->fetch();
