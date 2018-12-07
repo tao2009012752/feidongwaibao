@@ -155,21 +155,11 @@ class User extends Common{
             $this->error('用户简历不存在#');
         }
 
-        if($userInfo['sex'] == 1){
-            $userInfo['sex_value'] = '男';
-        }else if($userInfo['sex'] == 0){
-            $userInfo['sex_value'] = '女';
-        }else{
-            $userInfo['sex_value'] = '保密';
-        }
+        $userInfo = Db::name('user_info')
+            ->where(['userinfo_id' => $infoId])
+            ->field("*,CASE sex WHEN 1 THEN '男' WHEN 2 THEN '女' WHEN 3 THEN '未知' END as sex,CASE marital_status WHEN 0 THEN '保密' WHEN 1 THEN '已婚' WHEN 2 THEN '未婚' END as marital_status")
+            ->find();
 
-        if($userInfo['marital_status'] == 1){
-            $userInfo['marital_status_value'] = '已婚';
-        }else{
-            $userInfo['marital_status_value'] = '未婚';
-        }
-
-        $userInfo['birthday'] = date('Y-m-d',$userInfo['birthday']);
 
         $this->assign('detail', $userInfo);
 
