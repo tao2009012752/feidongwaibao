@@ -21,17 +21,13 @@
                 <label>招聘人数：</label>
                 <span><{$detail.need_num}>&nbsp;人</span>
             </li>
-            <!--<li>
-                <label>招聘人数：</label>
-                <span><{$detail.job_name}></span>
-            </li>-->
             <li>
                 <label>学历要求：</label>
                 <span><{$detail.degree}></span>
             </li>
             <li>
                 <label>性别要求：</label>
-                <span><{$detail.sex_value}></span>
+                <span><{$detail.sex}></span>
             </li>
             <li>
                 <label>薪资待遇：</label>
