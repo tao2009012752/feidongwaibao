@@ -22,7 +22,7 @@
 					{volist name="newlist" id="v" key="i"}
 					<li {if condition="$i%2==1"} class="recruitLi" {/if}>
 						<ul class="jobList">
-							<li class="search-title"><a href="#"><{$v.title}></a></li>
+							<li class="search-title"><a href="<{:url('Newsinfo/listDetail',['id'=>$v['id']])}>"><{$v.title}></a></li>
 							<li class="search-source"><{$v.source}></li>
 							<li class="search-time"><span><{$v.add_time|date="Y-m-d",###}></span></li>
 						</ul>

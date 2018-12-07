@@ -9,7 +9,7 @@
     <div class="newsListBox">
 
         <!-- 左侧导航 -->
-        {include file='Index/newsListLeft'/}
+        {include file='Newsinfo/left'/}
         <!-- 左侧导航结束 -->
 
         <!-- 列表 -->
@@ -20,7 +20,7 @@
             <ul class="listBox">
                 {volist name = "pagelist" id="v"}
                 <li>
-                    <a href="<{:url('Index/listdetail',['id'=>$v['news_id']])}>"><{$v.title}></a>
+                    <a href="<{:url('Newsinfo/listdetail',['id'=>$v['news_id']])}>"><{$v.title}></a>
                     <span class="fr date"><{$v.add_time|date="Y-m-d",###}></span>
                 </li>
                 {/volist}

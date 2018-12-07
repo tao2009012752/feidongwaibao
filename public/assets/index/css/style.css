@@ -1422,6 +1422,147 @@ input:focus{outline:0;}
 	padding-left: 10px;
 }
 
+/*登录界面*/
+.loginPage{
+	background: url(../img/loginBg1.jpg) no-repeat center;
+	height: 608px;
+}
+.loginPageBox .loginCons{
+	width: 380px;
+	height: 360px;
+	background: #fff;
+	float: right;
+	margin-top: 90px;
+	margin-right: 80px;
+	box-shadow: 0px 0px 30px rgba(3,70,120,0.4);
+	border-radius: 4px;
+}
+.loginPageBox .loginCons h5{
+	font-size: 22px;
+	color: #22699f;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	text-align: center;
+	padding-top: 30px;
+	border-bottom: 1px solid #dcdcdc;
+	padding-bottom: 20px;
+
+}
+.loginWrap{
+	width: 334px;
+	margin: 35px auto;
+
+}
+.loginWrap .userName,.loginWrap .passWord{
+	margin-bottom: 20px;
+	font-size: 14px;
+	color: #333;
+}
+.loginWrap .userName input ,.loginWrap .passWord input{
+	height: 40px;
+	background: #f0f5fb;
+	border: 1px solid #dcdcdc;
+	border-radius: 4px;
+	padding-left: 10px;
+	width: 240px;
+}
+.loginWrap .userName input:focus {
+	outline: none;
+	border-color: #9ecaed;
+	box-shadow: 0 0 10px #9ecaed;
+}
+.loginWrap .passWord input:focus{
+	outline: none;
+	border-color: #9ecaed;
+	box-shadow: 0 0 10px #9ecaed;
+}
+.loginWrap .userName label,.loginWrap .passWord label{
+	width: 70px;
+	display: inline-block;
+	text-align: right;
+}
+.loginWrap .submitBox{
+	width: 100%;
+	margin-top:20px;
+	height: 45px;
+}
+.loginWrap .submitBox input{
+	width: 100%;
+	background: #265a94;
+	border-radius: 4px;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	display: inline-block;
+	height: 45px;
+	cursor: pointer;
+	border: none;
+}
+.noUser{
+	margin-top: 20px;
+	font-size: 14px;
+}
+.noUser a{
+	color: #265a94;
+	font-weight: bold;
+}
+.registerBox{
+	border-top: 1px solid #026ec6;
+	margin-top: 20px;
+	background: #fff;
+	padding-bottom: 50px;
+}
+.registerBox .top{
+	width: 575px;
+	margin: 60px auto;
+}
+.registerBox .center{
+	width: 130px;
+	font-size: 18px;
+	color: #000;
+	margin: 0 auto;
+	font-weight: bold;
+}
+.registerBox .registerCompany, .registerBox .registerPeople{
+	width: 250px;
+	height: 250px;
+	border: 1px solid #8aadd2;
+	background: #f4f7fa;
+	border-radius: 4px;
+	text-decoration: none;
+
+
+}
+.registerBox .bottom{
+	width: 600px;
+	margin: 40px auto;
+	overflow: hidden;
+}
+.registerBox .registerCompany:hover{
+	border: 1px solid #2965a4;
+}
+.registerBox .registerPeople:hover{
+	border: 1px solid #2965a4;
+}
+.registerBox  .title{
+	text-align: center;
+	margin: 20px 0;
+	font-size: 18px;
+	color: #2965a4;
+	font-weight: bold;
+
+}
+.registerBox .title img{
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.registerBox .registerComText{
+	padding: 0 30px;
+	color: #2965a4;
+	font-size: 14px;
+	line-height: 2;
+}
+
 /*分页函数*/
 .pageList{
 	margin-right: 16px;

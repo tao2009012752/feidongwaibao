@@ -4,15 +4,15 @@ namespace app\index\controller;
 use app\index\model\User;
 use think\Session;
 
-class Login extends Common
+class Reg extends Common
 {
-    //登录
+    //注册
     public function index(){
         return $this->fetch();
     }
 
-    //登录处理
-    public function loginAjax(){
+    //注册处理
+    public function regAjax(){
         $account = input('username');
         $pwd = input('password');
         $mpwd = md5(md5($pwd));
@@ -24,10 +24,5 @@ class Login extends Common
         ajax_return(['code'=>1,'msg'=>'用户名或密码错误']);
     }
 
-    //退出登录
-    public function loginOut(){
-        Session::delete('user');
-        $this->redirect('/');
-    }
 }
 

@@ -4,7 +4,7 @@ Base = {
     //导航切换效果
     Menu : function(){
         var url = window.location.href;
-        if(url.search('newslist')>0||url.search('listdetail')>0){
+        if(url.search('Newsinfo')>0||url.search('listdetail')>0){
             $('.navBox li').eq(1).addClass('liAction');
         }else if(url.search('Talent/index')>0){
             $('.navBox li').eq(2).addClass('liAction');
@@ -25,18 +25,23 @@ Base = {
 
 /*首页*/
 Index = {
-    Login : function(){
+    Login : function(url){
         $('.loginBtn').click(function(){
             var username = $('input[name="username"]').val();
             var password = $('input[name="password"]').val();
 
             if(!username||!password)alert('用户名或密码不能为空！');
-            $.post('index/Login/loginAjax',{'username':username,'password':password},function(a){
+            $.post('/index/Login/loginAjax',{'username':username,'password':password},function(a){
                 var data = $.parseJSON(a);
                 if(data.code){
                     alert(data.msg);
                 }else{
-                    history.go(0);
+                    if(url){
+                        location.href = url;
+                    }else{
+                        history.go(0);
+                    }
+
                 }
             })
         })

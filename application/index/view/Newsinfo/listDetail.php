@@ -8,7 +8,7 @@
 	<div class="newsListBox">
 
 		<!-- 左侧导航 -->
-		{include file='Index/newsListLeft'/}
+		{include file='Newsinfo/left'/}
 		<!-- 左侧导航结束 -->
 
 		<!-- 内容 -->

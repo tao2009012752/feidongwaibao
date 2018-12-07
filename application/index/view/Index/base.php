@@ -18,11 +18,11 @@
 				</div>
 				{if condition="$userdata"}
 				<div class="fr loginText">
-					欢迎您 <a href="#"><{$userdata.account}></a>
+					欢迎您 <a href="#"><{$userdata.account}></a> | <a href="<{:url('Login/loginOut')}>">退出</a>
 				</div>
 				{else /}
 				<div class="fr loginText">
-					<a href="#">登录</a>  |  <a href="#">注册</a>
+					<a href="<{:url('Login/index')}>">登录</a>  |  <a href="<{:url('Reg/index')}>">注册</a>
 				</div>
 				{/if}
 			</div>
@@ -50,7 +50,7 @@
 			<div class="navBox contant">
 				<ul>
 					<li><a href="<{:url('/')}>">网站首页</a></li>
-					<li><a href="<{:url('/index/Index/newslist')}>">资讯中心</a></li>
+					<li><a href="<{:url('/index/Newsinfo/index')}>">资讯中心</a></li>
 					<li><a href="<{:url('/index/Talent/index')}>">人才库</a></li>
 					<li><a href="#">培训信息</a></li>
 					<li><a href="<{:url('/index/Job/index')}>">人才招聘</a></li>
