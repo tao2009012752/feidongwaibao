@@ -18,10 +18,7 @@ Base = {
     Search : function(){
         $('.searchBtn').click(function(){
             var keywords = $('input[name="keywords"]').val();
-            console.log(keywords);
-            if(keywords){
-                $('#search').submit();
-            }
+            if(keywords)$('#search').submit();
         })
     }
 }
