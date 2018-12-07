@@ -24,7 +24,7 @@
 					<div>
 						<a href="
 						{if condition="$prenext['pre']"}
-						<{:url('Index/listdetail',['id'=>$prenext['pre']['news_id']],'html',true)}>
+						<{:url('Newsinfo/listdetail',['id'=>$prenext['pre']['news_id']],'html',true)}>
 						{else /}
 						javascript:void(0)
 						{/if}">上一篇：{if condition="$prenext['pre']"}<{$prenext['pre']['title']}>{else /}没有了{/if}</a>
@@ -32,7 +32,7 @@
 					<div>
 						<a href="
 						{if condition="$prenext['next']"}
-						<{:url('Index/listdetail',['id'=>$prenext['next']['news_id']],'html',true)}>
+						<{:url('Newsinfo/listdetail',['id'=>$prenext['next']['news_id']],'html',true)}>
 						{else /}
 						javascript:void(0)
 						{/if}">下一篇：{if condition="$prenext['next']"}<{$prenext['next']['title']}>{else /}没有了{/if}</a>
