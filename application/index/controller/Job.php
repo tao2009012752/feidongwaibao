@@ -3,6 +3,7 @@
 namespace app\index\controller;
 use app\index\model\Apply;
 use app\index\model\Jobs;
+use app\index\model\UserInfo;
 use think\Session;
 
 /**
@@ -37,6 +38,8 @@ class Job extends Common{
         $job_id = input('jid/d');
         if(!Session::get('user'))ajax_return(['code' => 2, 'msg' => '未登录']);
         $user_id = Session::get('user')['user_id'];
+        $userdata = UserInfo::where("uid = {$user_id}")->find();
+        if(empty($userdata))ajax_return(['code' => 1, 'msg' => '您还没创建简历']);
         if($job_id && $user_id){
             $jobdata = Jobs::get($job_id);
             $data = [
