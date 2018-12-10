@@ -1,6 +1,6 @@
 {extend name="index/base" /}
 {block name="tdk"}
-	<title>服务外包人才信息综合服务平台</title>
+	<title>人才库-服务外包人才信息综合服务平台</title>
 {/block}
 {block name="content"}
 	<!--人才库-->
@@ -136,7 +136,7 @@
         </div>
         <div class="talentPic borderdc">
             <div class="talentPicBox">
-                <h4><span class="shu"></span>推荐职位 <a class="more1" href="#">更多></a></h4>
+                <h4><span class="shu"></span>推荐职位 <a class="more1" href="<{:url('Job/index')}>">更多></a></h4>
                 <div class="recruitCon recruitCon1">
                     {volist name="jobs" id="v"}
                         <ul class="reBox fl">

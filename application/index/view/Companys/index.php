@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <title>企业详情-服务外包人才信息综合服务平台</title>
     <link rel="stylesheet" type="text/css" href="<{$css}>/style.css"/>
     <script src="<{$js}>/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="<{$js}>/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>

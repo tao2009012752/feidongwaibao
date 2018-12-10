@@ -63,27 +63,18 @@
                             <td width="12%" class="blueBg">工作经验</td>
                             <td colspan="7">
                                 <div><{$userInfo.work_exprience}></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
                             </td>
                         </tr>
                         <tr>
                             <td width="12%" class="blueBg">项目经验</td>
                             <td colspan="7">
                                 <div><{$userInfo.project_exprience}></div>
-                                <div>项目经验1</div>
-                                <div>项目经验1</div>
-                                <div>项目经验1</div>
                             </td>
                         </tr>
                         <tr>
                             <td width="12%" class="blueBg">个人评价</td>
                             <td colspan="7">
                                 <div><{$userInfo.evaluate}></div>
-                                <div>个人评价1</div>
-                                <div>个人评价1</div>
-                                <div>个人评价1</div>
                             </td>
                         </tr>
                     </table>
