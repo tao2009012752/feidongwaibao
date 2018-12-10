@@ -52,7 +52,7 @@
 					<li><a href="<{:url('/')}>">网站首页</a></li>
 					<li><a href="<{:url('/index/Newsinfo/index')}>">资讯中心</a></li>
 					<li><a href="<{:url('/index/Talent/index')}>">人才库</a></li>
-					<li><a href="#">培训信息</a></li>
+					<li><a href="<{:url('/index/Train/index')}>">培训信息</a></li>
 					<li><a href="<{:url('/index/Job/index')}>">人才招聘</a></li>
 					<li><a href="/kaoshi/index.php?user-app-login">在线学习</a></li>
 					<li><a href="/kaoshi/index.php?user-app-login">人才考评</a></li>

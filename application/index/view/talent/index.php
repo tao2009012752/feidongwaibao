@@ -11,10 +11,10 @@
 						<div class="fl newsText"><i class="fa fa-bullhorn"> 最新消息：</i></div>
 						<div class="fl">
 							<ul class="infoList">
-                                {volist name="jobs" id="v"}
-                                <li><a href="<{:url('Companys/index',['id'=>$v['companyInfo']['company_id']])}>"><{$v.companyInfo.company_name}></a> 发布了：<a href="<{:url('Job/jobDetail',['job_id'=>$v['job_id']])}>"><{$v.job_name}></a></li>
-                                {/volist}
-                            </ul>
+                                                            {volist name="jobs" id="v"}
+                                                            <li><a href="<{:url('Companys/index',['id'=>$v['companyInfo']['company_id']])}>"><{$v.companyInfo.company_name}></a> 发布了：<a href="<{:url('Job/jobDetail',['job_id'=>$v['job_id']])}>"><{$v.job_name}></a></li>
+                                                            {/volist}
+                                                        </ul>
 						</div>
 					</div>
 				</div>
@@ -23,7 +23,7 @@
 				<div class="talentLeft fl">
 					<ul>
 						<li>
-                            <a href="<{:url('Talent/index',['type'=>'talent_introduction'])}>"><img src="<{$img}>/talent01.png"/></a>
+                                                        <a href="<{:url('Talent/index',['type'=>'talent_introduction'])}>"><img src="<{$img}>/talent01.png"/></a>
 						</li>
 						<li>
 							<a href="<{:url('Talent/index',['type'=>'storage_standard'])}>"><img src="<{$img}>/talent02.png"/></a>
@@ -44,12 +44,12 @@
 							</div>
 							<div class="bd">
 								<ul>
-                                    {volist name="gg" id="v"}
+                                                                        {volist name="gg" id="v"}
 									    <li><span class="date"><{$v.add_time|date='Y-m-d',###}></span><a href="<{:url('/index/index/listdetail',['id'=>$v['news_id']])}>" target="_blank"><{$v.title}></a></li>
 									{/volist}
 								</ul>
 								<ul>
-                                    {volist name="zx" id="v"}
+                                                                        {volist name="zx" id="v"}
 									    <li><span class="date"><{$v.add_time|date='Y-m-d',###}></span><a href="<{:url('/index/index/listdetail',['id'=>$v['news_id']])}>" target="_blank"><{$v.title}></a></li>
 									{/volist}
 								</ul>
@@ -89,11 +89,11 @@
 							</div>
 							<div class="bd">
 								<ul class="picList">
-                                    {volist name="users" id="v"}
+                                                                        {volist name="users" id="v"}
 									<li>
 										<div class="pic">
-                                            <a href="<{:url('Talent/index',['userinfo_id'=>$v.userinfo_id])}>" target="_blank">
-                                                <img src="<{$v.pic}>"/>
+                                                                                        <a href="<{:url('Talent/index',['userinfo_id'=>$v.userinfo_id])}>" target="_blank">
+                                                                                            <img src="<{$v.pic}>"/>
 											</a>
 										</div>
 										<div class="title">
@@ -105,8 +105,7 @@
 											</p>
 										</div>
 									</li>
-                                    {/volist}
-                                                                        
+                                                                        {/volist}
 								</ul>
 							</div>
 						</div>
@@ -142,7 +141,7 @@
                         {volist name="jobs" id="v"}
                             <ul class="reBox fl">
                                 <li class="recruitLi nomarr">
-                                        <a href="<{:url('Job/jobDetail',['job_id'=>$v['job_id']])}>" class="fl job"><{$v.job_name}></a>
+                                        <a href="<{:url('Job/jobDetail',['id'=>$v['job_id']])}>" class="fl job"><{$v.job_name}></a>
                                         <a href="<{:url('Companys/index',['id'=>$v['companyInfo']['company_id']])}>" class="fr"><{$v.companyInfo.company_name}></a>
                                 </li>
                             </ul>

@@ -4,7 +4,6 @@ namespace app\index\controller;
 use app\index\model\Apply;
 use app\index\model\Jobs;
 use app\index\model\UserInfo;
-use app\index\model\Company;
 use think\Session;
 
 /**
