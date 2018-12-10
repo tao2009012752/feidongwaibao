@@ -10,6 +10,10 @@ Base = {
             $('.navBox li').eq(2).addClass('liAction');
         }else if(url.search('Job')>0){
             $('.navBox li').eq(4).addClass('liAction');
+        }else if(url.search('About')>0){
+            $('.navBox li').eq(7).addClass('liAction');
+        }else if(url.search('Contact')>0){
+            $('.navBox li').eq(8).addClass('liAction');
         }else{
             $('.navBox li').eq(0).addClass('liAction');
         }
