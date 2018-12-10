@@ -17,7 +17,7 @@ class Companys extends Common{
     {
         parent::_initialize();
         $data = Company::get(Session::get('com')['company_id']);
-        if(!Session::get('com')||$data)$this->redirect('Login/index');
+        if(!Session::get('com')||!$data)$this->redirect('Login/index');
         $this->assign('com',$data);
     }
 
