@@ -1,6 +1,6 @@
 {extend name="index/base" /}
 {block name="tdk"}
-	<title>服务外包人才信息综合服务平台</title>
+	<title>首页-服务外包人才信息综合服务平台</title>
 {/block}
 {block name="content"}
 	<!--资讯-->
@@ -343,8 +343,8 @@
 			<ul class="reBox fl">
 				{volist name="joblist" id="v" key="i" length="6"}
 					<li class="{if condition="$i%2==1"}recruitLi{/if}">
-						<a href="#" class="fl job"><{$v.job_name}></a>
-						<a href="#" class="fr"><{$v.companyInfo.company_name}></a>
+						<a href="<{:url('Job/jobDetail',['job_id'=>$v['job_id']])}>" class="fl job"><{$v.job_name}></a>
+						<a href="<{:url('Companys/index',['id'=>$v['companyInfo']['company_id']])}>" class="fr"><{$v.companyInfo.company_name}></a>
 					</li>
 				{/volist}
 			</ul>

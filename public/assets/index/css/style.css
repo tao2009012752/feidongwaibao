@@ -1687,6 +1687,9 @@ input:focus{outline:0;}
 	background: #265a94;
 	color: #fff;
 }
+.trainDetail{
+	width: 100% !important;
+}
 .trainDetail .newsDetailBox h4{
 	background: #edf5fb;
 	border-bottom: none;
@@ -2037,3 +2040,4 @@ input:focus{outline:0;}
 .search-time,.search-source{
 	width:160px;
 }
+

@@ -29,15 +29,15 @@ class Talent extends Common{
             if($type == ''){
                 //默认人才库首页
                 // 资讯
-                $gg = News::getNews(15);
-                $zx = News::getNews(17);
+                $gg = News::getNews(2);
+                $zx = News::getNews(3);
 
                 // 获取人员信息
                 $users = UserInfo::getRecentUserInfo(12);
 
+
                 // 职位
                 $jobs = Jobs::getRecentJob(16);
-
 
                 $this->assign('gg',$gg);
                 $this->assign('zx',$zx);

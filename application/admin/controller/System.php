@@ -34,7 +34,8 @@ class System extends Common{
                 'last_time' => time(),
                 'last_ip' => $request->ip()
             ];
-            $where = ['system_id' => (int) $request->param('system_id'),];
+            $where = ['system_id' => (int) $request->param('system_id',1),];
+            
             if (!$where) {
                 ajax_return(['code' => 1000, 'msg' => '修改内容不存在，请重试']);
             }
@@ -66,7 +67,7 @@ class System extends Common{
                 ajax_return(['code' => 2000, 'msg' => '修改失败']);
             }
         } else {
-            $systemInfo = Db::table('system')->where($request->param())->find();
+            $systemInfo = Db::table('system')->where('system_id='.input('system_id',1))->find();
         
             if (!$systemInfo) {
                 $this->error('此信息有误#');

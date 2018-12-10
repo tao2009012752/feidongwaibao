@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <title>企业详情-服务外包人才信息综合服务平台</title>
     <link rel="stylesheet" type="text/css" href="<{$css}>/style.css"/>
     <script src="<{$js}>/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="<{$js}>/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
@@ -20,18 +21,18 @@
             <li><a href="<{:url('/index/Job/index')}>">人才招聘</a><span class="ge">|</span></li>
             <li><a href="/kaoshi/index.php?user-app-login">人才考评</a><span class="ge">|</span></li>
             <li><a href="/kaoshi/index.php?user-app-login">在线学习</a><span class="ge">|</span></li>
-            <li><a href="#">关于我们</a><span class="ge">|</span></li>
-            <li><a href="#">联系我们</a></li>
+            <li><a href="<{:url('/index/About/index')}>">关于我们</a><span class="ge">|</span></li>
+            <li><a href="<{:url('/index/Contact/index')}>">联系我们</a></li>
         </ul>
     </div>
 </div>
 <div class="companyWrap contant">
-    <div class="top" style="background: url(<{$img}>/companyBg.jpg) no-repeat center;">
+    <div class="top" style="background: url('<{$img}>/companyBg.jpg') no-repeat center;">
         <div class="companyTit">
             <{$com.company_name}>
         </div>
     </div>
-    <div class="nav" style="background: url(<{$img}>/companyLine.jpg) repeat-x;">
+    <div class="nav" style="background: url('<{$img}>/companyLine.jpg') repeat-x;">
         <ul>
             <li><a data="1" href="javascript:void(0)">公司首页</a><span class="ge1">|</span></li>
             <li><a data="2" href="javascript:void(0)">核心业务</a><span class="ge1">|</span></li>
@@ -59,7 +60,7 @@
                 <div class="jibenText">
                     <ul>
                         {volist name= "comjob" id="v"}
-                        <li><a href="#"><{$v.job_name}></a></li>
+                        <li><a href="<{:url('job/jobDetail',['id'=>$v['job_id']])}>"><{$v.job_name}></a></li>
                         {/volist}
                     </ul>
                 </div>
@@ -82,7 +83,7 @@
             <div class="jianjie">
                 <ul class="hotzhao">
                     {volist name= "comjob" id="v"}
-                    <li><a href="#"><{$v.job_name}></a><span><{$v.update_time|substr=10}></span></li>
+                    <li><a href="<{:url('job/jobDetail',['id'=>$v['job_id']])}>"><{$v.job_name}></a><span><{$v.update_time|substr=10}></span></li>
                     {/volist}
                 </ul>
             </div>
@@ -93,11 +94,11 @@
                 <table border="1" cellspacing="0" cellpadding="0" width="100%">
                     <tr>
                         <td width="25%"  class="blueBg">地址</td>
-                        <td><{$com.contact}></td>
+                        <td><{$com.location}></td>
                     </tr>
                     <tr>
                         <td width="25%" class="blueBg">联系人</td>
-                        <td>张女士</td>
+                        <td><{$com.contact}></td>
                     </tr>
                     <tr>
                         <td width="25%" class="blueBg">电话</td>

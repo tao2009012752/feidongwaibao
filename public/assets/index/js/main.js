@@ -8,8 +8,14 @@ Base = {
             $('.navBox li').eq(1).addClass('liAction');
         }else if(url.search('Talent/index')>0){
             $('.navBox li').eq(2).addClass('liAction');
+        }else if(url.search('Train')>0){
+            $('.navBox li').eq(3).addClass('liAction');
         }else if(url.search('Job')>0){
             $('.navBox li').eq(4).addClass('liAction');
+        }else if(url.search('About')>0){
+            $('.navBox li').eq(7).addClass('liAction');
+        }else if(url.search('Contact')>0){
+            $('.navBox li').eq(8).addClass('liAction');
         }else{
             $('.navBox li').eq(0).addClass('liAction');
         }
@@ -37,8 +43,8 @@ Index = {
                 var password = $('input[name="cpassword"]').val();
             }
 
-            if(!username||!password)alert('用户名或密码不能为空！');
-            $.post('/index/Login/loginAjax',{'username':username,'password':password,'type':type},function(a){
+            if(!username||!password){alert('用户名或密码不能为空！');return false;}
+            $.post('/index/Login/loginAjax',{'username':username,'password':password},function(a){
                 var data = $.parseJSON(a);
                 if(data.code){
                     alert(data.msg);

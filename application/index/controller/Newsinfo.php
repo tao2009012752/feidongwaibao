@@ -34,7 +34,7 @@ class Newsinfo extends Common
     }
 
     //新闻详细页
-    public function listDetail(){
+    public function listdetail(){
         $id = Request::instance()->param('id/d',1);
 
         $newsdata = News::get($id);

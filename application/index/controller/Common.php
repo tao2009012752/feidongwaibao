@@ -5,6 +5,7 @@ use think\Config;
 use think\Controller;
 use think\Session;
 use think\Request;
+use think\Db;
 /**
  * Description of Common
  *
@@ -23,7 +24,11 @@ class Common extends Controller{
         $this->assign('js',$static['js']);
         $this->assign('font',$static['font']);
         $this->assign('img',$static['img']);
-
+        $res_ = Db::table('system')
+        ->where('system_id','=',1)
+        ->find(); 
+        $this->assign('system', $res_);
+        
         /*登录信息*/
         $this->assign('userdata',Session::get('user')?Session::get('user'):Session::get('com'));
     }

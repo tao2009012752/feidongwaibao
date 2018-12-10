@@ -14,7 +14,7 @@
 		<div class="pageTop">
 			<div class="pageTopBox contant">
 				<div class="fl">
-					2018年5月15日   星期二  肥东服务外包人才信息综合服务平台
+					<?php echo date('Y年m月d日',time());?>  <{$system.webname}>
 				</div>
 				{if condition="$userdata"}
 				<div class="fr loginText">
@@ -55,12 +55,12 @@
 					<li><a href="<{:url('/')}>">网站首页</a></li>
 					<li><a href="<{:url('/index/Newsinfo/index')}>">资讯中心</a></li>
 					<li><a href="<{:url('/index/Talent/index')}>">人才库</a></li>
-					<li><a href="#">培训信息</a></li>
+					<li><a href="<{:url('/index/Train/index')}>">培训信息</a></li>
 					<li><a href="<{:url('/index/Job/index')}>">人才招聘</a></li>
 					<li><a href="/kaoshi/index.php?user-app-login">在线学习</a></li>
 					<li><a href="/kaoshi/index.php?user-app-login">人才考评</a></li>
-					<li><a href="#">关于我们</a></li>
-					<li><a href="#">联系我们</a></li>
+					<li><a href="<{:url('/index/About/index')}>">关于我们</a></li>
+					<li><a href="<{:url('/index/Contact/index')}>">联系我们</a></li>
 				</ul>
 			</div>
 		</div>

@@ -1,3 +1,4 @@
+
 $(function(){
 	if($(".indexPage").length>0){
 		//	轮播图
@@ -61,4 +62,3 @@ $(function(){
 
 
 })
-

@@ -9,7 +9,7 @@
     <div class="newsListBox">
 
         <!-- 左侧导航 -->
-        {include file='Newsinfo/left'/}
+        {include file='newsinfo/left'/}
         <!-- 左侧导航结束 -->
 
         <!-- 列表 -->
