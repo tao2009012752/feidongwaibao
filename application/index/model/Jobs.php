@@ -20,4 +20,11 @@ class Jobs extends Model{
         }
         return $res_;
     }
+
+    //通过招聘职位获取公司信息
+    public static function getCompanyInfo($job_id) {
+        $res_ = self::with('companyInfo')->where("is_delete=0 and job_id=$job_id")->find();
+        return $res_;
+    }
+
 }

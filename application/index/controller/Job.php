@@ -4,6 +4,7 @@ namespace app\index\controller;
 use app\index\model\Apply;
 use app\index\model\Jobs;
 use app\index\model\UserInfo;
+use app\index\model\Company;
 use think\Session;
 
 /**
@@ -59,6 +60,7 @@ class Job extends Common{
 
     // 职位详情
     public function jobDetail () {
+
         $jobId = input('id/d');
         
         // 职位详情
@@ -69,7 +71,7 @@ class Job extends Common{
                 ->toArray();
         // 最新职位
         $rencentJob = Jobs::alias('a') ->join('company c','a.company_id = c.company_id')->order('job_id desc')->limit(0,5)->select();
-        
+
         $this->assign('detail',$detail);
         $this->assign('rencentJob',$rencentJob);
         return $this->fetch();

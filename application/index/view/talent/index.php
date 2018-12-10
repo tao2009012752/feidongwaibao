@@ -12,7 +12,7 @@
 						<div class="fl">
 							<ul class="infoList">
                                 {volist name="jobs" id="v"}
-                                <li><a href=""><{$v.companyInfo.company_name}></a> 发布了：<a href="#"><{$v.job_name}></a></li>
+                                <li><a href="<{:url('Companys/index',['id'=>$v['companyInfo']['company_id']])}>"><{$v.companyInfo.company_name}></a> 发布了：<a href="<{:url('Job/jobDetail',['job_id'=>$v['job_id']])}>"><{$v.job_name}></a></li>
                                 {/volist}
                             </ul>
 						</div>
@@ -98,10 +98,10 @@
 										</div>
 										<div class="title">
 											<p>
-												<a href="#" target="_blank"><{$v.name}></a>
+												<a href="<{:url('Talent/index',['userinfo_id'=>$v.userinfo_id])}>" target="_blank"><{$v.name}></a>
 											</p>
 											<p>
-												<a href="#"><{$v.major}></a>
+												<a href="<{:url('Talent/index',['userinfo_id'=>$v.userinfo_id])}>"><{$v.major}></a>
 											</p>
 										</div>
 									</li>
@@ -121,7 +121,7 @@
                             <ul>
                                 {volist name="users" id="v"}
                                     <li>
-                                        <div><a href="#"><{$v.name}></a><span class="time"><{$v.add_time|date='Y-m-d',###}></span></div>
+                                        <div><a href="<{:url('Talent/index',['userinfo_id'=>$v.userinfo_id])}>"><{$v.name}></a><span class="time"><{$v.add_time|date='Y-m-d',###}></span></div>
                                         <div><span><{$v.degree}></span><span class="ge">|</span><span><{$v.work_exprience}></span><span class="ge">|</span><span>技能：<{$v.skill}></span></div>
                                     </li>
                                 {/volist}
@@ -142,8 +142,8 @@
                         {volist name="jobs" id="v"}
                             <ul class="reBox fl">
                                 <li class="recruitLi nomarr">
-                                        <a href="#" class="fl job"><{$v.job_name}></a>
-                                        <a href="#" class="fr"><{$v.companyInfo.company_name}></a>
+                                        <a href="<{:url('Job/jobDetail',['job_id'=>$v['job_id']])}>" class="fl job"><{$v.job_name}></a>
+                                        <a href="<{:url('Companys/index',['id'=>$v['companyInfo']['company_id']])}>" class="fr"><{$v.companyInfo.company_name}></a>
                                 </li>
                             </ul>
                         {/volist}
