@@ -8,6 +8,8 @@ Base = {
             $('.navBox li').eq(1).addClass('liAction');
         }else if(url.search('Talent/index')>0){
             $('.navBox li').eq(2).addClass('liAction');
+        }else if(url.search('Train')>0){
+            $('.navBox li').eq(3).addClass('liAction');
         }else if(url.search('Job')>0){
             $('.navBox li').eq(4).addClass('liAction');
         }else if(url.search('About')>0){

@@ -14,7 +14,7 @@
 		<div class="pageTop">
 			<div class="pageTopBox contant">
 				<div class="fl">
-					2018年5月15日   星期二  肥东服务外包人才信息综合服务平台
+					<?php echo date('Y年m月d日',time());?>  <{$system.webname}>
 				</div>
 				{if condition="$userdata"}
 				<div class="fr loginText">
