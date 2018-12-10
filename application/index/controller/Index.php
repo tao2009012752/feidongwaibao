@@ -6,9 +6,7 @@ use app\index\model\Company;
 use app\index\model\Jobs;
 use app\index\model\News;
 use app\index\model\News_cate;
-use app\index\model\User;
 use think\Request;
-use think\Session;
 
 class Index extends Common
 {

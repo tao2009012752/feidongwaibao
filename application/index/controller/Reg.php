@@ -11,6 +11,16 @@ class Reg extends Common
         return $this->fetch();
     }
 
+    //公司注册
+    public function comreg(){
+        return $this->fetch();
+    }
+
+    //个人注册
+    public function perreg(){
+        return $this->fetch();
+    }
+
     //注册处理
     public function regAjax(){
         $account = input('username');
