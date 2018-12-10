@@ -44,7 +44,7 @@ Index = {
             }
 
             if(!username||!password){alert('用户名或密码不能为空！');return false;}
-            $.post('/index/Login/loginAjax',{'username':username,'password':password},function(a){
+            $.post('/index/Login/loginAjax',{'username':username,'password':password,'type':type},function(a){
                 var data = $.parseJSON(a);
                 if(data.code){
                     alert(data.msg);
