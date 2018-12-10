@@ -18,7 +18,7 @@
 				</div>
 				{if condition="$userdata"}
 				<div class="fr loginText">
-					欢迎您 <a href="#"><{$userdata.account}></a> | <a href="<{:url('Login/loginOut')}>">退出</a>
+					欢迎您 <a href="<{:url('User/pindex')}>"><{$userdata.account}></a> | <a href="<{:url('Login/loginOut')}>">退出</a>
 				</div>
 				{else /}
 				<div class="fr loginText">
