@@ -31,13 +31,13 @@
 					{volist name="joblist" id="v" key="i"}
 					<li {if condition="$i%2==1"} class="recruitLi" {/if}>
 						<ul class="jobList">
-							<li class="job"><a href="#"><{$v.job_name}></a></li>
-							<li class="company2"><a href="#"><{$v.companyInfo.company_name}></a></li>
-							<li class="locations"><span><{$v.work_place}></span></li>
-							<li class="peopleNum"><{$v.need_num}></li>
-							<li class="money"><span><{$v.min_salary}>-<{$v.max_salary}></span></li>
-							<li class="gengTime"><{$v.update_time|substr=0,10}></li>
-							<li class="toudi">
+                            <li class="job"><a href="<{:url('Job/jobDetail',['job_id'=>$v['job_id']])}>"><{$v.job_name}></a></li>
+                            <li class="company2"><a href="#"><{$v.companyInfo.company_name}></a></li>
+                            <li class="locations"><span><{$v.work_place}></span></li>
+                            <li class="peopleNum"><{$v.need_num}></li>
+                            <li class="money"><span><{$v.min_salary}>-<{$v.max_salary}></span></li>
+                            <li class="gengTime"><{$v.update_time|substr=0,10}></li>
+                            <li class="toudi">
 								{if condition="$userjob&&in_array($v.job_id,$userjob)"}
 								<input type="button" value="已投递" />
 								{else /}

@@ -4,6 +4,7 @@ namespace app\index\controller;
 use app\index\model\Apply;
 use app\index\model\Jobs;
 use app\index\model\UserInfo;
+use app\index\model\Company;
 use think\Session;
 
 /**
@@ -29,7 +30,7 @@ class Job extends Common{
 
         $this->assign('joblist',$job);
         $this->assign('page',$page);
-        $this->assign('userjob',$userjoblist);
+//        $this->assign('userjob',$userjoblist);
         return $this->fetch();
     }
     
@@ -57,7 +58,20 @@ class Job extends Common{
 
     // 职位详情
     public function jobDetail () {
-        
+        $job_id = input('job_id/d');
+
+        //找屁岗位的具体信息
+        $job_info = Jobs::getCompanyInfo($job_id);
+
+        //当前公司的热门招聘
+        $hot_jobs = Company::geCompanyJobs($job_info['companyInfo']['company_id']);
+        $hot_jobs_info = $hot_jobs->jobs_info;
+        //对数组进行倒叙排列
+        arsort($hot_jobs_info);
+
+        $this->assign('job_info',$job_info);
+        $this->assign('hot_jobs',$hot_jobs_info);
+        return $this->fetch();
     }
     
     // 企业列表
