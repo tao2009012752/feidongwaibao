@@ -56,7 +56,7 @@
                 <div class="jibenText">
                     <ul>
                         {volist name= "comjob" id="v"}
-                        <li><a href="#"><{$v.job_name}></a></li>
+                        <li><a href="<{:url('job/jobDetail',['id'=>$v['job_id']])}>"><{$v.job_name}></a></li>
                         {/volist}
                     </ul>
                 </div>
@@ -79,7 +79,7 @@
             <div class="jianjie">
                 <ul class="hotzhao">
                     {volist name= "comjob" id="v"}
-                    <li><a href="#"><{$v.job_name}></a><span><{$v.update_time|substr=10}></span></li>
+                    <li><a href="<{:url('job/jobDetail',['id'=>$v['job_id']])}>"><{$v.job_name}></a><span><{$v.update_time|substr=10}></span></li>
                     {/volist}
                 </ul>
             </div>
@@ -90,11 +90,11 @@
                 <table border="1" cellspacing="0" cellpadding="0" width="100%">
                     <tr>
                         <td width="25%"  class="blueBg">地址</td>
-                        <td><{$com.contact}></td>
+                        <td><{$com.location}></td>
                     </tr>
                     <tr>
                         <td width="25%" class="blueBg">联系人</td>
-                        <td>张女士</td>
+                        <td><{$com.contact}></td>
                     </tr>
                     <tr>
                         <td width="25%" class="blueBg">电话</td>
