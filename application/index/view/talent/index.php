@@ -64,13 +64,13 @@
 						</div>
 						<div class="talentInput">
 							<div>
-								<label for="">用户名：</label><input type="text" placeholder="请输入用户名" />
+								<label for="">用户名：</label><input type="text" name="username" placeholder="请输入用户名" />
 							</div>
 							<div>
-								<label for="">密&nbsp;码：</label><input type="text" placeholder="请输入密码" />
+								<label for="">密&nbsp;码：</label><input type="password" name="password" placeholder="请输入密码" />
 							</div>
 							<div class="submitBox">
-								<a href="#"><img src="<{$img}>/talentBtn.png"/></a>
+								<a href="##"><img  class="loginBtn" src="<{$img}>/talentBtn.png"/></a>
 							</div>
 						</div>
 						
@@ -150,4 +150,9 @@
 				</div>
 			</div>
 		</div>
+    <script>
+        $(function(){
+            Index.Login();
+        })
+    </script>
 {/block}
