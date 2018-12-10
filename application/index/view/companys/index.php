@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <title>企业详情-服务外包人才信息综合服务平台</title>
     <link rel="stylesheet" type="text/css" href="<{$css}>/style.css"/>
     <script src="<{$js}>/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="<{$js}>/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
@@ -56,7 +57,7 @@
                 <div class="jibenText">
                     <ul>
                         {volist name= "comjob" id="v"}
-                        <li><a href="#"><{$v.job_name}></a></li>
+                        <li><a href="<{:url('job/jobDetail',['id'=>$v['job_id']])}>"><{$v.job_name}></a></li>
                         {/volist}
                     </ul>
                 </div>
@@ -79,7 +80,7 @@
             <div class="jianjie">
                 <ul class="hotzhao">
                     {volist name= "comjob" id="v"}
-                    <li><a href="#"><{$v.job_name}></a><span><{$v.update_time|substr=10}></span></li>
+                    <li><a href="<{:url('job/jobDetail',['id'=>$v['job_id']])}>"><{$v.job_name}></a><span><{$v.update_time|substr=10}></span></li>
                     {/volist}
                 </ul>
             </div>
@@ -90,11 +91,11 @@
                 <table border="1" cellspacing="0" cellpadding="0" width="100%">
                     <tr>
                         <td width="25%"  class="blueBg">地址</td>
-                        <td><{$com.contact}></td>
+                        <td><{$com.location}></td>
                     </tr>
                     <tr>
                         <td width="25%" class="blueBg">联系人</td>
-                        <td>张女士</td>
+                        <td><{$com.contact}></td>
                     </tr>
                     <tr>
                         <td width="25%" class="blueBg">电话</td>
