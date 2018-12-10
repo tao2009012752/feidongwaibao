@@ -26,12 +26,12 @@
     </div>
 </div>
 <div class="companyWrap contant">
-    <div class="top" style="background: url(<{$img}>/companyBg.jpg) no-repeat center;">
+    <div class="top" style="background: url('<{$img}>/companyBg.jpg') no-repeat center;">
         <div class="companyTit">
             <{$com.company_name}>
         </div>
     </div>
-    <div class="nav" style="background: url(<{$img}>/companyLine.jpg) repeat-x;">
+    <div class="nav" style="background: url('<{$img}>/companyLine.jpg') repeat-x;">
         <ul>
             <li><a data="1" href="javascript:void(0)">公司首页</a><span class="ge1">|</span></li>
             <li><a data="2" href="javascript:void(0)">核心业务</a><span class="ge1">|</span></li>

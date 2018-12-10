@@ -25,6 +25,8 @@ class Job extends Common{
             array_walk($userjob, function($value, $key) use (&$userjoblist){
                 $userjoblist[] = $value['job_id'];
             });
+        } else {
+            $userjoblist = array();
         }
 
         $this->assign('joblist',$job);
@@ -57,17 +59,19 @@ class Job extends Common{
 
     // 职位详情
     public function jobDetail () {
+        $jobId = input('id/d');
         
-    }
-    
-    // 企业列表
-    public function comList () {
+        // 职位详情
+        $detail = Jobs::where('job_id='.$jobId)
+                ->alias('a')
+                ->join('company c','a.company_id = c.company_id')
+                ->find()
+                ->toArray();
+        // 最新职位
+        $rencentJob = Jobs::alias('a') ->join('company c','a.company_id = c.company_id')->order('job_id desc')->limit(0,5)->select();
         
+        $this->assign('detail',$detail);
+        $this->assign('rencentJob',$rencentJob);
+        return $this->fetch();
     }
-    
-    // 企业详情
-    public function comDetail () {
-        
-    }
-    
 }
