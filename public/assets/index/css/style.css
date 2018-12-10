@@ -1698,3 +1698,68 @@ input:focus{outline:0;}
 	background: #265a94;
 	color: #fff;
 }
+.trainDetail{
+	width: 100% !important;
+}
+.trainDetail .newsDetailBox h4{
+	background: #edf5fb;
+	border-bottom: none;
+	text-align: center;
+	color: #333;
+	line-height: 30px;
+	padding-bottom: 0;
+	font-weight: bold;
+}
+.biaoti{
+	font-size: 14px;
+	font-weight: bold;
+}
+.rightBoxNew{
+	width: 840px !important;
+}
+.leftBoxNew{
+	width: 260px !important;
+}
+.leftBoxNew img{
+	width: 100%;
+	margin-bottom: 6px;
+}
+.ncsoTabel{
+	width: 660px;
+	margin: 20px auto;
+}
+.ncsoTabel td,.ncsoTabel th{
+	height: 26px;
+	text-align: center;
+}
+.zheng{
+	width: 600px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.zheng img{
+	width: 100%;
+}
+.aboutUs img{
+	width: 100%;
+
+}
+.contactUs{
+	margin: 20px 0;
+}
+.contactBox{
+	
+	margin: 20px auto;
+
+}
+.aboutUsBox{
+	padding: 20px;
+}
+.contactImg{
+	margin: 20px 0;
+}
+.contactWrap{
+	margin: 20px 0;
+}

@@ -35,9 +35,9 @@ class Talent extends Common{
                 // 获取人员信息
                 $users = UserInfo::getRecentUserInfo(12);
 
+
                 // 职位
                 $jobs = Jobs::getRecentJob(16);
-
 
                 $this->assign('gg',$gg);
                 $this->assign('zx',$zx);
