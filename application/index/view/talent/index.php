@@ -12,7 +12,7 @@
 						<div class="fl">
 							<ul class="infoList">
                                 {volist name="jobs" id="v"}
-                                <li><a href="<{:url('Companys/index',['id'=>$v['companyInfo']['company_id']])}>"><{$v.companyInfo.company_name}></a> 发布了：<a href="<{:url('Job/jobDetail',['job_id'=>$v['job_id']])}>"><{$v.job_name}></a></li>
+                                <li><a href="<{:url('Companys/index',['id'=>$v['companyInfo']['company_id']])}>"><{$v.companyInfo.company_name}></a> 发布了：<a href="<{:url('Job/jobDetail',['id'=>$v['job_id']])}>"><{$v.job_name}></a></li>
                                 {/volist}
                             </ul>
 						</div>
@@ -64,16 +64,47 @@
 						</div>
 						<div class="talentInput">
 							<div>
-								<label for="">用户名：</label><input type="text" placeholder="请输入用户名" />
+								<label for="">用户名：</label><input type="text" id="account" placeholder="请输入用户名" />
 							</div>
 							<div>
-								<label for="">密&nbsp;码：</label><input type="text" placeholder="请输入密码" />
+								<label for="">密&nbsp;码：</label><input type="password" id="pwd" placeholder="请输入密码" />
 							</div>
 							<div class="submitBox">
-								<a href="#"><img src="<{$img}>/talentBtn.png"/></a>
+								<a href="##" id="talent_login"><img src="<{$img}>/talentBtn.png"/></a>
 							</div>
 						</div>
-						
+
+                        <!-- 用户登录验证-->
+                        <script>
+                            $('#talent_login').click(function(){
+                                var account = $('#account').val(),
+                                    pwd = $('#pwd').val();
+                                if(account == ''){
+                                    alert('用户名不能为空');return false;
+                                }
+                                if(pwd == ''){
+                                    alert('密码不能为空');return false;
+                                }
+
+                                $.ajax({
+                                    url:"/Index/Login/loginAjax",
+                                    type:'post',
+                                    data:{username:account,password:pwd},
+                                    dataType:'json',
+                                    success:function(res){
+                                        if(res.code == 0){
+                                            alert(res.msg);
+                                            //跳转到制定网址
+//                                            location.href = '';
+                                        }else{
+                                            alert(res.msg);
+                                        }
+                                    }
+                                });
+
+                            });
+                        </script>
+
 					</div>
 				</div>
 			</div>
@@ -142,7 +173,7 @@
                         {volist name="jobs" id="v"}
                             <ul class="reBox fl">
                                 <li class="recruitLi nomarr">
-                                        <a href="<{:url('Job/jobDetail',['job_id'=>$v['job_id']])}>" class="fl job"><{$v.job_name}></a>
+                                        <a href="<{:url('Job/jobDetail',['id'=>$v['job_id']])}>" class="fl job"><{$v.job_name}></a>
                                         <a href="<{:url('Companys/index',['id'=>$v['companyInfo']['company_id']])}>" class="fr"><{$v.companyInfo.company_name}></a>
                                 </li>
                             </ul>
