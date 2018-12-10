@@ -47,22 +47,22 @@
             <h5><i class="fa fa-file-text-o"></i>基本资料</h5>
             <ul>
                 <li><a href="<{:url('companys/edit')}>">资料修改</a></li>
-                <li><a href="passwordXiu.html">修改密码</a></li>
+                <li><a href="<{:url('companys/pwdEdit')}>">修改密码</a></li>
             </ul>
         </div>
         <div class="jiben">
             <h5><i class="fa fa-file-text-o"></i>职位列表</h5>
             <ul>
-                <li><a href="companyFa.html">发布招聘</a></li>
-                <li><a href="companyShou.html">收到简历</a></li>
+                <li><a href="<{:url('companys/publish')}>">发布招聘</a></li>
+                <li><a href="<{:url('companys/shou')}>">收到简历</a></li>
             </ul>
         </div>
         <div class="jiben">
             <h5><i class="fa fa-file-text-o"></i>快速入口</h5>
             <ul>
-                <li><a href="recruit.html">企业招聘</a></li>
-                <li><a href="talent.html">人才库</a></li>
-                <li><a href="training.html">培训信息</a></li>
+                <li><a href="<{:url('Job/index',['company_id'=><{$com.company_id}>])}>">企业招聘</a></li>
+                <li><a href="<{:url('Talent/index',['company_id'=><{$com.company_id}>])}>">人才库</a></li>
+                <li><a href="<{:url('Train/index',['company_id'=><{$com.company_id}>])}>">培训信息</a></li>
             </ul>
         </div>
     </div>

@@ -1,6 +1,7 @@
 <?php
 
 namespace app\index\controller;
+use app\index\model\Apply;
 use app\index\model\Company;
 use app\index\model\Jobs;
 use think\Session;
@@ -85,10 +86,76 @@ class Companys extends Common{
     }
 
     //密码修改
-    public function password(){
+    public function pwdEdit(){
+        return $this->fetch();
+    }
+
+    //密码修改chu处理
+    public function passWordEdit(){
         $pwd = input('password');
         if(!$pwd)ajax_return(['code'=>1,'msg'=>'密码不能为空！']);
+        $mpwd = sha1(config('passsalt').$pwd);
+        if(Company::update(['pwd'=>$mpwd],['company_id'=>Session::get('com')['company_id']])){
+            ajax_return(['code'=>0,'msg'=>'修改成功']);
+        }else{
+            ajax_return(['code'=>1,'msg'=>'更新失败，请重试！']);
+        }
+    }
 
+    //发布职位
+    public function publish(){
+        return $this->fetch();
+    }
+
+    //发布职位处理
+    public function publishAdd(){
+
+        $job_name = input('name');
+        $need_num = input('num');
+        $work_place = input('place');
+        $due = input('due');
+        $degree = input('degree');
+        $requirements = input('require');
+        $min_salary = input('minsalary');
+        $max_salary = input('maxsalary');
+
+        if(!$job_name)ajax_return(['code'=>1,'msg'=>'工作名不能为空!']);
+        if(!$need_num)ajax_return(['code'=>1,'msg'=>'需求人数不能为空!']);
+        if(!$work_place)ajax_return(['code'=>1,'msg'=>'工作地点不能为空!']);
+        if(!$due)ajax_return(['code'=>1,'msg'=>'责任不能为空!']);
+        if(!$degree)ajax_return(['code'=>1,'msg'=>'学历不能为空!']);
+        if(!$requirements)ajax_return(['code'=>1,'msg'=>'工作需求不能为空!']);
+        if($min_salary>$max_salary || $min_salary<0)ajax_return(['code'=>1,'msg'=>'最大薪资不能小于最小薪资!']);
+
+        $data = [
+            'job_name'=>$job_name,
+            'company_id'=>Session::get('com')['company_id'],
+            'need_num'=>$need_num,
+            'work_place'=>$work_place,
+            'due'=>$due,
+            'sex'=>3,
+            'degree'=>$degree,
+            'requirements'=>$requirements,
+            'min_salary'=>$min_salary,
+            'max_salary'=>$max_salary,
+            'update_time'=>time(),
+        ];
+
+        if(Jobs::create($data)){
+            ajax_return(['code'=>0,'msg'=>'修改成功']);
+        }else{
+            ajax_return(['code'=>1,'msg'=>'添加失败，请重试！']);
+        }
+    }
+
+    //接收简历
+    public function shou(){
+        $id = Session::get('com')['company_id'];
+        $list = Apply::alias('a')
+            ->join('user_info u','a.user_id = u.uid')
+            ->where("a.company_id = {$id} and a.is_delete = 0")->select();
+        $this->assign('list',$list);
+        return $this->fetch();
     }
 
 }

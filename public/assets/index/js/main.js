@@ -81,6 +81,50 @@ Company = {
             $('.rightBox3').hide();
             $('.right'+data).show();
         })
+    },
+    PassEdit : function(){
+        $('.sub').click(function(){
+            var password = $('input[name="password"]').val();
+            var cpassword = $('input[name="cpassword"]').val();
+            if(password != cpassword){alert('两次密码输入的不一致！');return false;}
+            $.post('/index/Companys/passWordEdit',{'password':password},function(a){
+                var data = $.parseJSON(a);
+                alert(data.msg);
+            })
+        })
+    },
+    Publish : function(){
+        $('.sub').click(function(){
+            var name = $('input[name="name"]').val();
+            var num = $('input[name="num"]').val();
+            var place = $('input[name="place"]').val();
+            var degree = $('select[name="degree"]').val();
+            var location = $('input[name="location"]').val();
+            var maxsalary = $('input[name="maxsalary"]').val();
+            var minsalary = $('input[name="minsalary"]').val();
+            var require = $('textarea[name="require"]').val();
+            var due = $('textarea[name="due"]').val();
+            var data = {'name':name,'num':num,'place':place,'degree':degree,'location':location,'maxsalary':maxsalary,'minsalary':minsalary,
+                'require':require, 'due':due};
+            console.log(data);
+            if(!name){alert('工作名不能为空！');return false;}
+            if(!num){alert('需求人数不能为空！');return false;}
+            if(!place){alert('工作地点不能为空！');return false;}
+            if(!location){alert('所在地不能为空！');return false;}
+            if(maxsalary < minsalary || minsalary<0){alert('最大薪资不能小于最小薪资！');return false;}
+            if(!require){alert('需求不能为空！');return false;}
+            if(!due){alert('职责不能为空！');return false;}
+
+            $.post('/index/Companys/publishAdd',data,function(a){
+                var data = $.parseJSON(a);
+                if(data.code){
+                    alert(data.msg);
+                }else{
+                    location.href = '';
+                }
+            })
+
+        })
     }
 }
 
