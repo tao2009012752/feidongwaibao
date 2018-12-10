@@ -1429,7 +1429,7 @@ input:focus{outline:0;}
 }
 .loginPageBox .loginCons{
 	width: 380px;
-	height: 360px;
+	height: 390px;
 	background: #fff;
 	float: right;
 	margin-top: 90px;
@@ -1443,7 +1443,7 @@ input:focus{outline:0;}
 	font-family: "微软雅黑";
 	font-weight: bold;
 	text-align: center;
-	padding-top: 30px;
+	padding-top: 20px;
 	border-bottom: 1px solid #dcdcdc;
 	padding-bottom: 20px;
 
@@ -1452,6 +1452,27 @@ input:focus{outline:0;}
 	width: 334px;
 	margin: 35px auto;
 
+}
+.changeLogin{
+	overflow: hidden;
+	width: 246px;
+	height: 36px;
+	margin: 10px auto;
+}
+.changeLoginAction{
+	border-bottom: 2px solid #22699f;
+	color: #22699f !important;
+	font-weight: bold;
+
+}
+.changeLogin li{
+	float: left;
+	width: 100px;
+	text-align: center;
+	line-height: 34px;
+	font-size: 14px;
+	margin-right: 46px;
+	cursor: pointer;
 }
 .loginWrap .userName,.loginWrap .passWord{
 	margin-bottom: 20px;
@@ -1562,6 +1583,112 @@ input:focus{outline:0;}
 	font-size: 14px;
 	line-height: 2;
 }
+.registerWrap{
+	width: 500px;
+	margin: 40px auto;
+}
+.registerWrap input{
+	border: 1px solid #dcdcdc;
+	height: 34px;
+	width: 356px;
+	padding-left: 10px;
+}
+.registerWrap label{
+	font-size: 16px;
+	width: 100px;
+	text-align: right;
+	display: inline-block;
+}
+.registerWrap div{
+	margin-bottom: 20px;
+}
+.registerWrap input:focus{
+	outline: none;
+	border-color: #9ecaed;
+	box-shadow: 0 0 2px #9ecaed;
+}
+.red{
+	color: red;
+}
+.xieyiBox{
+	width: 18px !important;
+	height: 18px !important;
+	vertical-align: middle;
+}
+.tong{
+	font-size: 14px;
+	color: #2965a4;
+	text-decoration: none;
+}
+.tong1{
+	font-size: 14px;
+}
+.tijiaoBtn a{
+	text-align: center;
+	font-size: 16px;
+	line-height: 40px;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	height: 40px;
+	background: #016ec5;
+	border-radius: 2px;
+	color:#fff ;
+	border: none;
+	cursor: pointer;
+
+}
+.tijiaoBtn a:hover{
+	background-color: #265a94;
+}
+.registerWrapCom .upImg{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	vertical-align: top;
+	margin-bottom: 0;
+}
+.registerWrapCom .upImg img{
+	width: 100px;
+	height: 100px;
+}
+.registerWrapCom .retro textarea{
+	vertical-align: top;
+}
+.registerCon1{
+	width: 100%;
+	height: 300px;
+	margin: 50px auto;
+	text-align: center;
+	font-size: 24px;
+}
+.registerCon1 i{
+	font-size: 46px;
+	color: #016ec5;
+	margin-bottom: 20px;
+}
+.registerCon1 .backBtn{
+	margin-top: 40px;
+}
+.registerCon1 .backHome ,.registerCon1 .backLogin{
+	width: 200px;
+	border: 1px solid #265a94;
+	padding: 10px;
+	text-decoration: none;
+	border-radius: 4px;
+	color: #265a94;
+	font-size: 18px;
+	font-weight: bold;
+}
+.registerCon1 .backHome:hover{
+	background: #265a94;
+	color: #fff;
+}
+.registerCon1 .backLogin:hover{
+	background: #265a94;
+	color: #fff;
+}
+
 
 /*分页函数*/
 .pageList{

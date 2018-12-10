@@ -25,7 +25,7 @@ class Common extends Controller{
         $this->assign('img',$static['img']);
 
         /*登录信息*/
-        $this->assign('userdata',Session::get('user'));
+        $this->assign('userdata',Session::get('user')?Session::get('user'):Session::get('com'));
     }
 
     public function isLogin () {

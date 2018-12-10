@@ -7,27 +7,43 @@
 <div class="registerBox  contant">
 	<div class="registerCon">
 		<div class="top">
-			<img src="<{$img}>/registerStep.png"/>
+			<img src="<{$img}>/registerStep2.png"/>
 		</div>
 		<div class="center">
-			请选择注册类型
+			个人注册
 		</div>
-		<div class="bottom">
-			<a class="fl registerCompany" href="#">
-				<div class="title"><img src="<{$img}>/companyIcon.png" alt="" />企业</div>
-				<div class="registerComText">
-					<p>1、多元化企业推广模式，有效提高企业知名度；</p>
-					<p>1、提供丰富人才资源，免费发布最新招聘信息；</p>
-				</div>
-			</a>
-			<a class="fr registerPeople" href="#">
-				<div class="title"><img src="<{$img}>/gerenIcon.png" alt="" />个人</div>
-				<div class="registerComText">
-					<p>1、提供大量专业对口职位快速检索，及时获取最新培训、招聘信息</p>
-					<p>2、支持在线应聘，发送简历到达对口企业；</p>
-				</div>
-			</a>
+		<div class="registerWrap">
+			<div class="user">
+				<label><span class="red">*</span>用户名：</label>
+				<input type="text" name="username" placeholder="请输入用户名"/>
+			</div>
+			<div class="user">
+				<label><span class="red">*</span>手机号：</label>
+				<input type="text" name="phone" placeholder="请输入手机号"/>
+			</div>
+			<div class="user">
+				<label><span class="red">*</span>密码：</label>
+				<input type="password" name="password" placeholder="请输入密码"/>
+			</div>
+			<div class="user">
+				<label><span class="red">*</span>确认密码：</label>
+				<input type="password" name="cpassword" placeholder="请输入确认密码"/>
+			</div>
+			<div>
+				<label for=""></label>
+				<input type="checkbox" name="agree" value=""  class="xieyiBox"/>
+				<span class="tong1">我同意</span><a href="#" class="tong">《服务外包人才信息综合服务平台用户协议》</a>
+			</div>
+			<div class="tijiaoBtn">
+				<a href="javascript:void(0)" class="regBtn">注册</a>
+			</div>
 		</div>
+
 	</div>
 </div>
+<script>
+	$(function(){
+		Reg.Perreg("<{:url('Reg/regSuccess')}>"); //个人注册
+	})
+</script>
 {/block}

@@ -13,14 +13,14 @@
 			请选择注册类型
 		</div>
 		<div class="bottom">
-			<a class="fl registerCompany" href="#">
+			<a class="fl registerCompany" href="<{:url('Reg/comReg')}>">
 				<div class="title"><img src="<{$img}>/companyIcon.png" alt="" />企业</div>
 				<div class="registerComText">
 					<p>1、多元化企业推广模式，有效提高企业知名度；</p>
 					<p>1、提供丰富人才资源，免费发布最新招聘信息；</p>
 				</div>
 			</a>
-			<a class="fr registerPeople" href="#">
+			<a class="fr registerPeople" href="<{:url('Reg/perReg')}>">
 				<div class="title"><img src="<{$img}>/gerenIcon.png" alt="" />个人</div>
 				<div class="registerComText">
 					<p>1、提供大量专业对口职位快速检索，及时获取最新培训、招聘信息</p>
