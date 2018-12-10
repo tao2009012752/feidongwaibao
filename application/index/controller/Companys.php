@@ -16,8 +16,9 @@ class Companys extends Common{
     public function _initialize()
     {
         parent::_initialize();
-        if(!Session::get('com'))$this->redirect('Login/index');
-        $this->assign('com',Company::get(Session::get('com')['company_id']));
+        $data = Company::get(Session::get('com')['company_id']);
+        if(!Session::get('com')||$data)$this->redirect('Login/index');
+        $this->assign('com',$data);
     }
 
     //企业详情

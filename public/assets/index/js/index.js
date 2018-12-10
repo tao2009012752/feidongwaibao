@@ -59,6 +59,4 @@ $(function(){
 		$(".loginWrap").eq(indexs).css("display","block").siblings(".loginWrap").css("display","none")
 
 	})
-
-
 })

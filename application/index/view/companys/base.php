@@ -60,9 +60,9 @@
         <div class="jiben">
             <h5><i class="fa fa-file-text-o"></i>快速入口</h5>
             <ul>
-                <li><a href="<{:url('Job/index',['company_id'=><{$com.company_id}>])}>">企业招聘</a></li>
-                <li><a href="<{:url('Talent/index',['company_id'=><{$com.company_id}>])}>">人才库</a></li>
-                <li><a href="<{:url('Train/index',['company_id'=><{$com.company_id}>])}>">培训信息</a></li>
+                <li><a href="<{:url('Job/index',['company_id'=>$com['company_id']])}>">企业招聘</a></li>
+                <li><a href="<{:url('Talent/index',['company_id'=>$com['company_id']])}>">人才库</a></li>
+                <li><a href="<{:url('Train/index',['company_id'=>$com['company_id']])}>">培训信息</a></li>
             </ul>
         </div>
     </div>
