@@ -26,13 +26,13 @@
                                                         <a href="<{:url('Talent/index',['type'=>'talent_introduction'])}>"><img src="<{$img}>/talent01.png"/></a>
 						</li>
 						<li>
-							<a href="#"><img src="<{$img}>/talent02.png"/></a>
+							<a href="<{:url('Talent/index',['type'=>'storage_standard'])}>"><img src="<{$img}>/talent02.png"/></a>
 						</li>
 						<li>
-							<a href="#"><img src="<{$img}>/talent03.png"/></a>
+							<a href="<{:url('Talent/index',['type'=>'storage_process'])}>"><img src="<{$img}>/talent03.png"/></a>
 						</li>
 						<li>
-							<a href="#"><img src="<{$img}>/talent04.png"/></a>
+							<a href="<{:url('Talent/index',['type'=>'storage_join'])}>"><img src="<{$img}>/talent04.png"/></a>
 						</li>
 					</ul>
 				</div>
@@ -98,10 +98,10 @@
 										</div>
 										<div class="title">
 											<p>
-												<a href="#" target="_blank"><{$v.info.name}></a>
+												<a href="<{:url('Talent/index',['userinfo_id'=>$v.userinfo_id])}>" target="_blank"><{$v.name}></a>
 											</p>
 											<p>
-												<a href="#"><{$v.info.major}></a>
+												<a href="<{:url('Talent/index',['userinfo_id'=>$v.userinfo_id])}>"><{$v.major}></a>
 											</p>
 										</div>
 									</li>
@@ -120,8 +120,8 @@
                                                             <ul>
                                                                 {volist name="users" id="v"}
 								<li>
-									<div><a href="#"><{$v.info.name}></a><span class="time"><{$v.add_time|date='Y-m-d',###}></span></div>
-									<div><span><{$v.info.degree}></span><span class="ge">|</span><span><{$v.info.work_exprience}></span><span class="ge">|</span><span>技能：<{$v.info.skill}></span></div>
+                                        <div><a href="<{:url('Talent/index',['userinfo_id'=>$v.userinfo_id])}>"><{$v.name}></a><span class="time"><{$v.add_time|date='Y-m-d',###}></span></div>
+                                        <div><span><{$v.degree}></span><span class="ge">|</span><span><{$v.work_exprience}></span><span class="ge">|</span><span>技能：<{$v.skill}></span></div>
 								</li>
                                                                 {/volist}
                                                             </ul>
