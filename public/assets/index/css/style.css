@@ -7,7 +7,7 @@ body {
 	color: #000;
 	font-size: 12px;
 }
-ul,li,div,a,h1,h2,p,span,h3,h5,input{
+ul,li,div,a,h1,h2,p,span,h3,h5,input,h6{
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -1762,4 +1762,248 @@ input:focus{outline:0;}
 }
 .contactWrap{
 	margin: 20px 0;
+}
+/*个人中心*/
+.centerLogo{
+	height: 100px;
+	background: #fff;
+	border-bottom: 1px solid #bfbfbf;
+}
+.centerTop{
+	margin-top: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	
+}
+.centerTop span{
+	margin-top: 6px;
+	display: inline-block;
+}
+.centerTop img{
+	vertical-align: top;
+	
+}
+.centerPersonalBox{
+	margin-top: 20px;
+	overflow: hidden;
+}
+.centerPersonalBox .leftBox{
+	width: 270px;
+	background: #fff;
+	border: 1px solid #bfbfbf;
+	padding-bottom: 50px;
+}
+.centerPersonalBox .rightBox{
+	width: 874px;
+	
+}
+.centerPersonalBox .rightWrap{
+	background: #fff;
+	margin-bottom: 20px;
+	border: 1px solid #bfbfbf;
+}
+.centerImgBox img{
+	width: 74px;
+	height: 74px;
+}
+.centerImg{
+	width: 150px;
+	height: 150px;
+	margin: 30px auto 0;
+	text-align: center;
+}
+.centerPersonalBox .userBox{
+	margin-top: 10px;
+}
+.centerPersonalBox .userBox .user{
+	font-size: 14px;
+	width: 90px;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display: inline-block;
+}
+.centerPersonalBox .userBox .qian{
+	background: #cf2120;
+	width: 70px;
+	height: 24px;
+	padding: 2px;
+	color: #fff;
+	border-radius: 2px;
+}
+.centerPersonalBox .jiben h5{
+	padding: 20px 60px;
+	font-size: 14px;
+	color: #1765b0;
+	border-bottom: 1px solid #bfbfbf;
+}
+.centerPersonalBox .jiben h5 i{
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.centerPersonalBox .jiben ul  li{
+	height: 46px;
+	padding-left:80px;
+	font-size: 14px;
+	line-height: 46px;
+}
+.centerPersonalBox .jiben ul  li a{
+	text-decoration: none;
+	color: #333;
+}
+.centerPersonalBox .jiben ul  li a:hover{
+	color: #cf2120;
+}
+.centerPersonalBox .rightWrap h6{
+	height: 46px;
+	border-bottom: 1px solid #1866a8;
+	line-height: 46px;
+	font-size: 16px;
+	color: #1866a8;
+	font-weight: bold;
+}
+.centerPersonalBox .rightWrap{
+	padding: 20px;
+	font-size: 14px;
+	font-weight: bold;
+
+}
+.centerPersonalBox .personalText{
+	margin: 20px 0;
+}
+.centerPersonalBox .tishi{
+	width: 100%;
+	background: #f4f9ff;
+	
+	font-weight: normal;
+}
+.centerPersonalBox .tishiBox{
+	padding: 20px;
+	line-height: 1.8;
+}
+.centerPersonalBox .jibenTit{
+	height: 46px;
+	background: #f4f9ff;
+	line-height: 46px;
+	margin: 20px 0;
+	padding: 0 20px;
+	border-radius: 10px;
+	
+}
+.centerPersonalBox .jibenCon{
+	width: 720px;
+	margin: 0 auto;
+}
+.centerPersonalBox .userJiBen{
+	width: 720px;
+	margin: 20px auto;
+}
+.centerPersonalBox .tableCon{
+	font-size: 14px;
+	font-weight: normal;
+}
+.centerPersonalBox .tableCon p{
+	margin-bottom:20px;
+
+}
+.centerPersonalBox .tableCon p input{
+	height: 26px;
+	width: 500px;
+	padding-left: 10px;
+	
+}
+.centerPersonalBox .tableCon p label{
+	width: 100px;
+	text-align: right;
+	display: inline-block;
+}
+.centerPersonalBox .jianliUl{
+	margin: 30px auto;
+	border: 1px solid #bfbfbf;
+	padding: 20px;
+	overflow: hidden;
+}
+.centerPersonalBox .jianliUl li{
+	height: 36px;
+	line-height: 36px;
+	border-bottom: 1px dashed #dcdcdc;
+	padding: 10px;
+	border-radius: 10px;
+}
+.centerPersonalBox .jianliUl li a{
+	color: #2769a6;
+	text-decoration: none;
+}
+.centerPersonalBox .nameText{
+	font-size: 20px;
+	background: #f4f9ff;
+	font-family: "微软雅黑";
+	
+
+}
+.submitBoxCenter{
+	text-align: center;
+}
+.submitBoxCenter a{
+	width: 120px;
+	color: #fff;
+	height: 36px;
+	display: inline-block;
+	background: #1765b0;
+	border-radius: 4px;
+	line-height: 36px;
+	text-decoration: none;
+}
+.submitBoxCenter a:hover{
+	background: #025aa3;
+}
+.sucessfull{
+	text-align: center;
+	margin-top: 100px;
+	font-size: 24px;
+}
+.sucessfull .gou{
+	font-size: 32px;
+	color: #025aa3;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.backCenter a{
+	width: 120px;
+	color: #fff;
+	height: 36px;
+	display: inline-block;
+	background: #1765b0;
+	border-radius: 4px;
+	line-height: 36px;
+	text-decoration: none;
+	margin-top: 20px;
+	font-size: 16px;
+}
+.jianliXiu .rightWrap .radios{
+	width: 20px !important;
+	height: 20px !important;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+.jianliXiu select{
+	width: 515px;
+	height: 30px;
+}
+.comXiu .comImgbox{
+	width: 100px;
+	vertical-align: top;
+}
+.comShou{
+	overflow: hidden;
+}
+.comShou li{
+	border-bottom: 1px dashed #dcdcdc;
+	overflow: hidden;
+	height: 36px;
+	line-height: 36px;
+}
+.comShou li a{
+	color: #333;
+	text-decoration: none;
 }

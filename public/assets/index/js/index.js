@@ -22,7 +22,7 @@ $(function(){
 		}
 	})
 
-/*if($(".pageJs").length>0){
+if($(".pageJs").length>0){
 	//分页
 	$("#pagination3").pagination({
 		currentPage: 4,
@@ -37,7 +37,7 @@ $(function(){
 			$("#current3").text(current)
 		}
 	});
-}*/
+}
 //新闻滚动
 if($(".gundong").length>0){
 	jQuery(".txtMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",interTime:50,trigger:"click"});
@@ -51,7 +51,14 @@ if($(".talentPic").length>0){
 		jQuery(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:8,trigger:"click",delayTime:500});
 }
 
-
+//登录选项卡
+$(".changeLogin li").click(function(){
+	$(this).addClass("changeLoginAction").siblings().removeClass("changeLoginAction");
+	var indexs = $(this).index();
+	$(".loginWrap").eq(indexs).css("display","block").siblings(".loginWrap").css("display","none")
+	
+})
 
 
 })
+
