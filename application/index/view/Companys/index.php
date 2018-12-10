@@ -49,6 +49,9 @@
                         <li>所在地：<{$com.location}></li>
                         <li>核心业务：<{$com.core_business}></li>
                     </ul>
+                    <div class="companyImg">
+                        <img src="<{$com.image}>"/>
+                    </div>
                 </div>
             </div>
             <div class="jibenBox" style="margin-top: 10px;">

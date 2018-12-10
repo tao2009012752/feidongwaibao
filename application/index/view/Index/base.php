@@ -18,7 +18,10 @@
 				</div>
 				{if condition="$userdata"}
 				<div class="fr loginText">
-					欢迎您 <a href="#"><{$userdata.account}></a> | <a href="<{:url('Login/loginOut')}>">退出</a>
+					欢迎您
+					<a href="{if condition="isset($userdata['company_name'])"}
+					 <{:url('Companys/center')}>
+					  {/if}"><{$userdata.account}></a> | <a href="<{:url('Login/loginOut')}>">退出</a>
 				</div>
 				{else /}
 				<div class="fr loginText">

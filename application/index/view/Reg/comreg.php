@@ -81,7 +81,7 @@
 </div>
 <script>
 	$(function(){
-		Reg.Comreg("<{:url('Reg/regSuccess')}>"); //公司注册
+		Reg.Comreg("<{:url('Reg/regSuccess')}>",1); //公司注册修改
 		Common.ImgUpload();//图片上传
 	})
 </script>

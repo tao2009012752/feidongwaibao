@@ -129,7 +129,7 @@ Reg = {
     },
 
     //企业注册
-    Comreg : function(url){
+    Comreg : function(url,type){
         $('.regBtn').click(function(){
             var username = $('input[name="username"]').val();
             var password = $('input[name="password"]').val();
@@ -145,9 +145,9 @@ Reg = {
             var location = $('input[name="location"]').val();
             var agree = $('input[name="agree"]').prop('checked');
 
-            if(!username){alert('用户名不能为空！');return false;}
-            if(!password){alert('密码不能为空！');return false;}
-            if(password != cpassword){alert('两次密码输入不一致');return false;}
+            if(!username && type==1){alert('用户名不能为空！');return false;}
+            if(!password && type==1){alert('密码不能为空！');return false;}
+            if(password != cpassword && type==1){alert('两次密码输入不一致');return false;}
             if(logo.indexOf("upload.png") >= 0){alert('公司logo不能为空');return false;}
             if(!name){alert('公司名称不能为空！');return false;}
             if(!core){alert('核心业务不能为空！');return false;}
@@ -157,15 +157,22 @@ Reg = {
             if(!phone && phone.length != 11){alert('手机号不能为空！');return false;}
             if(!email){alert('邮箱不能为空！');return false;}
             if(!location){alert('地址不能为空！');return false;}
-            if(!agree){alert('请在协议处点击我同意！');return false;}
+            if(!agree && type==1){alert('请在协议处点击我同意！');return false;}
 
             var data = {'username':username,'password':password,'cpassword':cpassword,'logo':logo,'name':name,'core':core,
                 'image':image,'intro':intro,'contact':contact,'phone':phone,'email':email,'location':location};
-            $.post('/index/Reg/comRegAjax',data,function(a){
+            var url = '';
+            if(type==1){
+                url = '/index/reg/comRegAjax';
+            }else{
+                url = '/index/companys/editsub';
+            }
+            $.post(url,data,function(a){
                 var data = $.parseJSON(a);
                 if(data.code){
                     alert(data.msg);
                 }else{
+                    if(type==2)alert(data.msg);
                     location.href = url;
                 }
             })
