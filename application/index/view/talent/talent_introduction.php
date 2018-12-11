@@ -35,7 +35,7 @@
                         <ul>
                             {volist name="resumeInfo" id="v"}
                             <li>
-                                <div><a href="#"><{$v.name}></a><span class="time"><{$v.update_time}></span></div>
+                                <div><a href="<{:url('/index/Talent/get_resume_info',['userinfo_id'=>$v.userinfo_id])}>"><{$v.name}></a><span class="time"><{$v.update_time}></span></div>
                                 <div><span><{$v.degree}></span><span class="ge">|</span><span><{$v.working_years}>年</span><span class="ge">|</span><span>意向：<{$v.intentional_position}></span></div>
                             </li>
                             {/volist}
