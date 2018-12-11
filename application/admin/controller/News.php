@@ -40,7 +40,7 @@ class News extends Common
         $list = Db::name($this->_tableName)
             ->where($where)
             ->order('add_time DESC')
-            ->paginate(20);
+            ->paginate(10);
         $cates = Db::name('news_cate')
             ->where(['is_delete' => 0])
             ->select();

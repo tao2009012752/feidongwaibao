@@ -17,7 +17,7 @@
             <li><a href="/">网站首页</a><span class="ge">|</span></li>
             <li><a href="<{:url('/index/Index/newslist')}>">资讯中心</a><span class="ge">|</span></li>
             <li><a href="<{:url('/index/Talent/index')}>">人才库</a><span class="ge">|</span></li>
-            <li><a href="#">培训信息</a><span class="ge">|</span></li>
+            <li><a href="<{:url('/index/Train/index')}>">培训信息</a><span class="ge">|</span></li>
             <li><a href="<{:url('/index/Job/index')}>">人才招聘</a><span class="ge">|</span></li>
             <li><a href="/kaoshi/index.php?user-app-login">人才考评</a><span class="ge">|</span></li>
             <li><a href="/kaoshi/index.php?user-app-login">在线学习</a><span class="ge">|</span></li>
@@ -50,9 +50,7 @@
                         <li>所在地：<{$com.location}></li>
                         <li>核心业务：<{$com.core_business}></li>
                     </ul>
-                    <div class="companyImg">
-                        <img src="<{$com.image}>"/>
-                    </div>
+                    
                 </div>
             </div>
             <div class="jibenBox" style="margin-top: 10px;">
@@ -68,6 +66,9 @@
         </div>
         <div class="fr rightBox3 right1">
             <h5>公司简介</h5>
+            <div class="companyImg">
+                <img src="<{$com.image}>"/>
+            </div>
             <div class="jianjie">
                 <{$com.intro}>
             </div>

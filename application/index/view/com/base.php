@@ -17,12 +17,12 @@
             <li><a href="/">网站首页</a><span class="ge">|</span></li>
             <li><a href="<{:url('/index/index/newslist')}>">资讯中心</a><span class="ge">|</span></li>
             <li><a href="<{:url('/index/talent/index')}>">人才库</a><span class="ge">|</span></li>
-            <li><a href="#">培训信息</a><span class="ge">|</span></li>
+            <li><a href="<{:url('/index/Train/index')}>">培训信息</a><span class="ge">|</span></li>
             <li><a href="<{:url('/index/job/index')}>">人才招聘</a><span class="ge">|</span></li>
             <li><a href="/kaoshi/index.php?user-app-login">人才考评</a><span class="ge">|</span></li>
             <li><a href="/kaoshi/index.php?user-app-login">在线学习</a><span class="ge">|</span></li>
-            <li><a href="#">关于我们</a><span class="ge">|</span></li>
-            <li><a href="#">联系我们</a></li>
+            <li><a href="<{:url('/index/About/index')}>">关于我们</a><span class="ge">|</span></li>
+            <li><a href="<{:url('/index/Contact/index')}>">联系我们</a></li>
         </ul>
     </div>
 </div>
