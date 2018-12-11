@@ -1,0 +1,2172 @@
+body {
+	
+	margin: 0px;
+	padding: 0px;
+	background: #f3f3f3;
+	font-family: "宋体";
+	color: #000;
+	font-size: 12px;
+}
+ul,li,div,a,h1,h2,p,span,h3,h5,input,h6{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+.contant{
+	width: 1160px !important;
+	margin: 0 auto;
+}
+input:focus{outline:0;}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #999999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #999999;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #909;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #909;
+}
+.disnone{
+	display: none;
+}
+/*首页*/
+.pageTop{
+	height: 34px;
+	background:#f4f4f4 ;
+	border-bottom: 1px solid #bfbfbf;
+}
+.pageTop{
+	color: #000;
+	font-size: 12px;
+	line-height: 34px;
+}
+.pageTop .loginText a{
+	color: #666;
+	text-decoration: none;
+}
+.pageTop .loginText a:hover{
+	color: #e60012;
+}
+.headBox{
+	height: 110px;
+	background: #fff;
+}
+.headBox .logo{
+	margin-top: 30px;
+}
+.searchBox .searchInput{
+	height:30px ;
+	width: 320px;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+.searchBox .searchBtn{
+	width: 90px;
+	height: 34px;
+	background: #016ec5;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
+.searchBox .searchBtn:hover{
+	background:#025aa3 ;
+}
+
+.searchBox{
+	margin-top: 34px;
+}
+.navWrap{
+	width: 100%;
+	height: 45px;
+	background: url(../img/navLine.png) repeat-x;
+}
+.navBox ul li{
+	float: left;
+	width: 128px;
+	text-align: center;
+	line-height: 43px;
+	cursor: pointer;
+}
+.navBox ul li a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+	display: inline-block;
+}
+.navBox ul li:hover{
+	background: #e8850d;
+}
+.liAction{
+	background: #e8850d;
+}
+
+.news{
+	
+	background: #fff;
+	margin-top: 20px;
+}
+.newsBox{
+	padding: 20px;
+	overflow: hidden;
+}
+.mySlider{
+	width: 690px;
+	height: 487px;
+	background: #eee;
+}
+
+/*首页slider*/
+
+.slideBox{ width:690px; height:487px; overflow:hidden; position:relative; border:1px solid #ddd;  }
+.slideBox .hd{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:12px; z-index:1; }
+.slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
+.slideBox .hd ul li{ float:left; margin-right:6px;  width:12px; height:12px; line-height:14px; text-align:center; background:#fff; cursor:pointer;border-radius: 50%; }
+.slideBox .hd ul li.on{ background:#016ec5; color:#fff; }
+.slideBox .bd{ position:relative; height:100%; z-index:0;   }
+.slideBox .bd li{ zoom:1; vertical-align:middle; }
+.slideBox .bd img{ width:690px; height:487px; display:block;  }
+
+.sliTit{
+	position: absolute;
+	bottom: 0;
+	background-color:rgba(0,0,0,0.5);
+	color: #fff;
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+}
+.sliTit p{
+	padding-left: 20px;
+}
+.newsTap{
+	width: 410px;
+	height: 310px;
+}
+/*选项卡*/
+.slideTxtBox{ width:410px; border:1px solid #bfbfbf; text-align:left;  }
+.slideTxtBox .hd{ height:35px; line-height:35px; background:#f4f4f4; padding:0 10px 0 20px;   border-bottom:1px solid #ddd;  position:relative; }
+.slideTxtBox .hd ul{ float:left;  position:absolute; left:0px; top:-1px; height:35px;   }
+.slideTxtBox .hd ul li{ float:left; padding:0 26px; cursor:pointer;}
+.slideTxtBox .hd ul li.on{ height:34px;  background:#fff; border:1px solid #ddd; border-bottom:2px solid #fff; border-top: 2px solid #016ec5; color: #016ec5; font-weight: bold;}
+.slideTxtBox .bd ul{ padding:15px;  zoom:1;  }
+.slideTxtBox .bd li{ height:30px; line-height:30px;  border-bottom: 1px dashed #dcdcdc;   }
+.slideTxtBox .bd li .date{ float:right; color:#999;  }
+.newsTap li a{
+	font-size: 14px;
+	color: #000;
+	text-decoration: none;
+	width: 290px;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display: inline-block;
+}
+.newsTap li a:hover{
+	color: #e60012;
+}
+.newsTap li span{
+	font-size: 14px;
+}
+.newsTap .tapUl{
+	font-size: 16px;
+}
+.loginBox .loginTit{
+	height: 32px;
+	background: #f4f4f4;
+	border-bottom: 1px solid #ddd;
+}
+.loginBox{
+	width: 100%;
+	margin-top: 15px;
+	border: 1px solid #bfbfbf;
+	border-top-left-radius: 4px;
+}
+.loginBox .loginForm{
+	width: 100%;
+	background: #edf5fb;
+	overflow: hidden;
+	height: 128px;
+}
+.loginBox .loginText{
+	
+	margin: 10px auto;
+	
+	width: 167px;
+}
+.loginBox .loginText a{
+	display: inline-block;
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
+	
+}
+.liActions{
+	color: #2965a4 !important;
+	font-weight: bold;
+}
+.loginCon{
+	width: 344px;
+	margin: 0 auto;
+}
+.loginCon .formInputs{
+	height: 26px;
+	width: 190px;
+	padding-left: 10px;
+
+}
+.loginCon .leftName{
+	font-size: 14px;
+	text-align: right;
+	width: 60px;
+	display: inline-block;
+}
+.loginCon .inputLine{
+	margin-bottom: 10px;
+	margin-top: 3px;
+}
+.dividing{
+	margin: 0 6px;
+}
+.loginBtn{
+	cursor: pointer;
+}
+/*系统集合*/
+.nomarl{
+	margin-left: 0 !important;
+}
+.systemBox{
+	background: #fff;
+	margin: 20px auto;
+
+}
+.systemCon{
+	padding: 20px 20px 10px;
+	
+}
+.systemCon ul{
+	overflow: hidden;
+}
+.systemCon ul li{
+	float: left;
+	margin-left: 17px;
+}
+.conBox{
+	background: #fff;
+	border-top: 1px solid #016ec5;
+	overflow: hidden;
+}
+.conCon{
+	padding: 10px 20px;
+	overflow: hidden;
+	background: #fff;
+}
+.conCon h3{
+	
+	font-size: 16px;
+	font-weight: bold;
+	color: #026ec6;
+	border-bottom: 1px solid #ddd;
+
+}
+.conCon h3 span{
+	display: inline-block;
+	border-bottom: 2px solid #016ec5;
+	padding-bottom: 10px;
+}
+.zhengBox{
+	margin-top: 20px;
+}
+.titBox{
+	border: 1px solid #bfbfbf;
+}
+.style1{
+	width: 300px;
+}
+
+.titleBox{
+	height: 32px;
+	line-height: 32px;
+	border-bottom: 1px solid #ddd;
+	overflow: hidden;
+	background: #f4f4f4;
+}
+.tits{
+	font-size: 16px;
+	position: absolute;
+	z-index: 999;
+	margin-top: -1px;
+	color: #026ec6;
+	font-weight: bold;
+	border-top: 2px solid #026ec6;
+	padding: 0 20px;
+	background: #fff;
+	border-right: 1px solid #ddd;
+}
+.detailBox .date{
+	font-size: 14px;
+	color: #999;
+	display: inline-block;
+	float: right;
+}
+.detailBox{
+	padding: 15px;
+	overflow: hidden;
+}
+.detailBox li{
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px dashed #ddd;
+}
+.detailBox li a{
+	float: left;
+	width: 70%;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+.detailBox li a:hover{
+	color: #e60012;
+}
+.more{
+	font-size: 14px;
+	font-weight: bold;
+	padding-right: 10px;
+	display: inline-block;
+
+}
+.more a{
+	color: #000;
+	text-decoration: none;
+}
+.style2{
+	width: 450px;
+	margin-left: 20px;
+}
+.conCon1{
+	padding: 10px 0;
+	width: 100%;
+}
+.conCon1 h3 span{
+	border-bottom: 2px solid #026ec6;
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	color: #026ec6;
+	display: inline-block;
+}
+.conCon1 h3{
+	font-size: 16px;
+	font-weight: bold;
+	color: #026ec6;
+	border-bottom: 1px solid #ddd;
+}
+.platBox img{
+	margin-top: 17px;
+}
+.zhenceBox{
+	width: 770px;
+}
+.pingtaiBox{
+	width: 334px;
+}
+.adver{
+	margin: 20px auto;
+	background: #fff;
+}
+.adverBox{
+	padding: 20px;
+}
+.exam{
+	border-top: 1px solid #026ec6;
+}
+.kaoNews{
+	margin-top: 20px;
+}
+.examIcons img{
+	margin-bottom: 15px;
+}
+.nomarb{
+	margin-bottom: 0 !important;
+}
+.examNews{
+	width: 450px;
+	border: 1px sold #bfbfbf;
+	margin-left: 20px;
+
+}
+.examIcons{
+	width: 300px;
+}
+.examxin{
+	width: 335px;
+
+}
+.examxin .topImg{
+	height: 156px;
+	overflow: hidden;
+	position: relative;
+}
+.examxin .topImg img{
+	width: 100%;
+}
+.examxin .imgTit{
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	height: 26px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 26px;
+	padding-left: 10px;
+}
+.examxin .chenLine{
+	margin-top: 7px;
+}
+.examxin .biaoLine{
+	margin-top: 2px;
+}
+.train{
+	margin-top: 20px;
+	border-top: 1px solid #026ec6;
+}
+.peiBox{
+	margin-top: 20px;
+}
+.peiRight{
+	width: 336px;
+}
+.shizi{
+	margin-top: 10px;
+	border: 1px solid #bfbfbf;
+}
+.shiziBox{
+	overflow: hidden;
+}
+.shiziBox .shiziImg{
+	width: 101px;
+	height: 106px;
+	margin: 17px 10px;
+}
+.shiziBox .shiziText{
+	width: 190px;
+	font-size: 14px;
+	margin: 17px 10px;
+}
+.shiziBox .shiziText a{
+	color: #000;
+	text-decoration: none;
+}
+.colorBlue{
+	color: #026ec6;
+}
+.recruit{
+	margin-top: 20px;
+	border-top: 1px solid #026ec6;
+	overflow: hidden;
+	background: #fff;
+}
+.recruitCon{
+	overflow: hidden;
+	background: #fff;
+	padding: 0px 20px;
+	font-size: 14px;
+	margin-top: 8px;
+	
+}
+
+.reBox li{
+	height: 32px;
+	line-height: 32px;
+	padding: 0 10px;
+	width: 520px;
+	float: left;
+	margin-right: 25px;
+}
+.nomarr{
+	margin-right: 0 !important;
+}
+.reBox li a{
+	color: #000;
+	text-decoration: none;
+}
+.reBox li a:hover{
+	color: #e60012;
+}
+.recruitLi{
+	background:#f4f4f4;;
+}
+.reBox li .job{
+	color: #026ec6;
+	text-decoration: none;
+}
+.company{
+	margin-top: 20px;
+	border-top: 1px solid #026ec6;
+	overflow: hidden;
+	background: #fff;
+}
+/*滚动条*/
+/* 本例子css */
+.picMarquee-left{ width:100%;  overflow:hidden; position:relative;}
+.picMarquee-left .bd{ padding:10px 0;   }
+.picMarquee-left .bd ul{ overflow:hidden; zoom:1; }
+.picMarquee-left .bd ul li{ margin:0 8px; float:left; _display:inline; overflow:hidden; text-align:center;  }
+.picMarquee-left .bd ul li .pic{ text-align:center; }
+.picMarquee-left .bd ul li .pic img{ width:226px; height:110px; display:block; padding:2px; border:1px solid #ccc; }
+.picMarquee-left .bd ul li .pic a:hover img{ border-color:#999;  }
+.picMarquee-left .bd ul li .title{ line-height:24px; font-size: 14px;  }
+/*footer*/
+.footer{
+	height: 124px;
+	background: #999;
+	margin-top: 20px;
+	border-top: 1px solid #0071d0;
+}
+.footerBox{
+	padding-top: 35px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	line-height: 1.8;
+}
+/*新闻列表*/
+.newsList{
+	border-top: 1px solid #0071d0;
+	margin-top: 20px;
+	background: #fff;
+	overflow: hidden;
+
+}
+.newsList .leftBox{
+	width: 300px;
+	margin-top: 20px;
+}
+.erjiTit{
+	border-bottom: 1px solid #ddd;
+	font-size: 16px;
+}
+.newsList .newsListBox{
+	padding: 20px;
+	overflow: hidden;
+}
+.erjiTit{
+	padding-bottom: 10px;
+	color: #016ec5;
+	font-weight: bold;
+}
+.newsList .leftBox .titBoxs li{
+	font-size: 14px;
+	height: 45px;
+	line-height: 45px;
+	color: #fff;
+	background: #f4f4f4;
+	margin-bottom: 6px;
+	text-align: center;
+	border-radius: 4px;
+}
+.newsList .leftBox .titBoxs li a{
+	color: #000;
+	text-decoration: none;
+	width: 100%;
+	display: inline-block;
+	border-radius: 4px;
+	
+}
+.newsList .leftBox .titBoxs li a:hover{
+	background: #016ec5 !important;
+	color: #fff !important;
+}
+.rightnow{
+	border-bottom: 1px solid #026ec6;
+	padding-bottom: 10px;
+	color: #000;
+	
+}
+.rightnow a{
+	color: #026ec6;
+	text-decoration: none;
+}
+.erjiListAction{
+	background: #016ec5 !important;
+	color: #fff !important;
+}
+.newsList .rightArrow{
+	padding-right: 10px;
+}
+.hotNews{
+	border: 1px solid #bfbfbf;
+	margin-top: 20px;
+}
+.titleEx{
+	height: 34px;
+	background: #f4f4f4;
+	border-bottom: 1px solid #ddd;
+}
+.titleEx span{
+	background: #fff;
+	display: inline-block;
+	height: 34px;
+	border-top: 2px solid #026ec6;
+	padding:  0 20px;
+	line-height: 34px;
+	font-size: 16px;
+	border-right: 1px solid #ddd;
+	
+}
+.hotBox{
+	padding: 20px;
+}
+.hotBox li{
+	width: 90%;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    height: 30px;
+    line-height: 30px;
+}
+.hotBox li a{
+	color: #333;
+	text-decoration: none;
+}
+.hotBox li a:hover{
+	color: #e60012;
+}
+.hotCons{
+	margin-top: 20px;
+}
+.aboutLink{
+	margin-top: 20px;
+}
+.newsList .rightBox{
+	width: 790px;
+	border: 1px solid #bfbfbf;
+	margin-top: 20px;
+}
+.newsList .rightBox .listBox{
+	padding: 20px;
+}
+.newsList .rightBox .listBox li{
+	height: 34px;
+	border-bottom: 1px dashed #dcdcdc;
+	line-height: 34px;
+
+}
+.newsList .rightBox .listBox li a{
+	color: #000;
+	text-decoration: none;
+	font-size: 14px;
+	width: 550px;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display: inline-block;
+	
+}
+.newsList .rightBox .listBox li a:hover{
+	color: #e60012;
+}
+.newsList .rightBox .listBox .date{
+	font-size: 14px;
+	color: #999;
+}
+.pageList{
+	width: 560px;
+	margin: 0 auto;
+	text-align: center;
+
+}
+.newsList .rightBox{
+	padding-bottom: 20px;
+}
+.newsDetailBox{
+	padding: 30px 20px;
+}
+.newsDetailBox h3{
+	text-align: center;
+	font-size: 22px;
+	margin: 20px 0 30px;
+}
+.newsDetailBox h4{
+	font-weight: normal;
+	font-size: 14px;
+	color: #999;
+	border-bottom: 1px solid #bfbfbf;
+	padding-bottom: 10px;
+	text-align: right;
+}
+.spanLine{
+	margin-right: 20px;
+}
+.duan{
+	color: #333;
+	font-size: 14px;
+	line-height: 2;
+	text-indent: 2em;
+	margin: 10px 0;
+}
+.newsDetailBox  .next{
+	border-top: 1px solid #bfbfbf;
+	padding-top: 20px;
+}
+.newsDetailBox  .next div{
+	margin-top: 10px;
+}
+.newsDetailBox  .next a{
+	color: #333;
+	text-decoration: none;
+}
+.newsDetailBox  .next a:hover{
+	color: #e60012;
+}
+.newsDetailBox  .neirong{
+	margin: 30px 0;
+}
+/*人才库*/
+.talentCon{
+	padding: 10px;
+	background: #fff;
+	margin: 15px 0;
+	overflow: hidden;
+}
+.infoList a{
+	color: #e8850d;
+	text-decoration: none;
+}
+/* 本例子css */
+.txtMarquee-left{ width:100%;  position:relative;  overflow: hidden;  }
+.txtMarquee-left .hd{ overflow:hidden;  height:30px; background:#f4f4f4; padding:0 10px;  }
+.txtMarquee-left .bd .tempWrap{ width:920px !important; }/* 用 !important覆盖SuperSlide自动生成的宽度，这样就可以手动控制可视宽度。 */
+.txtMarquee-left .bd ul{ overflow:hidden; zoom:1; }
+.txtMarquee-left .bd ul li{ margin-right:20px;  float:left; height:24px; line-height:24px;  text-align:left; _display:inline; width:auto !important;  }/* 用 width:auto !important 覆盖SuperSlide自动生成的宽度，解决文字不衔接问题 */
+
+
+.txtMarquee-left .bd ul li span{ color:#999;  }
+.newsText{
+	line-height: 24px;
+	margin: 0 10px;
+}
+.talentTop{
+	background: #fff;
+	overflow: hidden;
+}
+.talentTop .talentLeft{
+	background: #fff;
+	width: 290px;
+	padding: 15px 0 0px 15px;
+}
+.talentTop .talentCenter{
+	background: #fff;
+	width: 470px;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+.talentTop .talentRight{
+	background: #fff;
+	width: 330px;
+	margin-left: 15px;
+	margin-top: 15px;
+	background: #edf5fb;
+	height: 283px;
+}
+
+.borderdc{
+	border: 1px solid #dcdcdc;
+}
+.talentLeft li{
+	margin-bottom: 10px;
+}
+.talentBox{
+	overflow: hidden;
+}
+.talentTop .newsTap1{
+	width: 470px;
+}
+.talentTop .slideTxtBox{
+	width: 470px;
+}
+.talentLoginBox .title{
+	text-align: center;
+	margin: 30px 0;
+}
+.talentLoginBox .talentInput{
+	width:240px;
+	margin: 20px auto;
+}
+.talentLoginBox .talentInput div{
+	margin-bottom: 15px;
+}
+.talentLoginBox .talentInput input{
+	height: 24px;
+	padding-left: 10px;
+}
+.talentLoginBox .submitBox{
+	width: 98px;
+	height: 36px;
+	margin: 20px auto 20px;
+}
+.talentPic{
+	background: #fff;
+	margin-top: 15px;
+}
+.talentPicBox{
+	padding: 15px;
+
+}
+.shu{
+	width: 4px;
+	height: 16px;
+	background: #e8850d;
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+.shu1{
+	width: 4px;
+	height: 16px;
+	background: #026ec6;
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+.talentPicBox h4{
+	margin: 0;
+	font-size: 16px;
+	color: #333;
+	border-bottom: 1px solid #bfbfbf;
+	padding-bottom: 10px;
+	
+}
+/* 本例子css */
+		.picScroll-left{ width:97%;  overflow:hidden; position:relative;  }
+		.picScroll-left .hd{ overflow:hidden;  height:20px;padding:0 10px;  }
+		.picScroll-left .hd .prev,.picScroll-left .hd .next{ display:block;  width:5px; height:9px; float:right; margin-right:5px; margin-top:10px;  overflow:hidden;
+			 cursor:pointer; background:url("../img/arrow.png") no-repeat;}
+		.picScroll-left .hd .next{ background-position:0 -50px;  }
+		.picScroll-left .hd .prevStop{ background-position:-60px 0; }
+		.picScroll-left .hd .nextStop{ background-position:-60px -50px; }
+		.picScroll-left .hd ul{ float:right; overflow:hidden; zoom:1; margin-top:10px; zoom:1; }
+		.picScroll-left .hd ul li{ float:left;  width:9px; height:9px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer; background:url("../img/icoCircle.gif") 0 -9px no-repeat; }
+		.picScroll-left .hd ul li.on{ background-position:0 0; }
+		.picScroll-left .bd{ padding:10px;   }
+		.picScroll-left .bd ul{ overflow:hidden; zoom:1; }
+		.picScroll-left .bd ul li{ margin:0 12px; float:left; _display:inline; overflow:hidden; text-align:center;  }
+		.picScroll-left .bd ul li .pic{ text-align:center; }
+		.picScroll-left .bd ul li .pic img{ width:126px; height:130px; display:block;  padding:2px; border:1px solid #ccc; }
+		.picScroll-left .bd ul li .pic a:hover img{ border-color:#999;  }
+		.picScroll-left .bd ul li .title{ line-height:18px;   }
+.talentPicBox .title{
+	
+	padding: 4px;
+}
+.talentPicBox .title p a{
+	text-decoration: none;
+	color: #000;	
+}
+.talentPicBox .jian span{
+	color: #333;
+}
+
+.jianliBox .jian li a{
+	text-decoration: none;
+	color: #026ec6;
+	font-size: 14px;
+}
+.jianliBox .jian ul{
+	padding-left: 10px;
+}
+.jianliBox .jian li{
+	line-height: 1.8;
+	height: 50px;
+	border-bottom: 1px dashed #dcdcdc;
+	padding: 6px 0 6px 0;
+	float: left;
+	margin-right: 46px;
+	margin-top: 6px;
+}
+.jianliBox {
+	overflow: hidden;
+	margin-top: 10px;
+}
+.jianliBox .ge{
+	margin: 0 5px;
+}
+.jianliBox .time{
+	color: #999 !important;
+	margin-left: 10px;
+}
+.more1{
+	float: right;
+	text-decoration: none;
+	color: #026ec6;
+	font-size: 14px;
+	
+}
+.recruitCon1{
+	padding: 0;
+}
+.talentPic .reBox li {
+	padding: 2px 15px;
+}
+.adverBox1{
+	border: 1px solid #dcdcdc;
+	background: #fff;
+	margin-top: 15px;
+}
+
+/*人才库详细*/
+.talentDetail{
+	margin-top: 20px;
+}
+.talentDetailBox{
+	padding: 15px;
+	background: #fff;
+	border-top: 1px solid #0071d0;
+	overflow: hidden;
+}
+.talentDetailBox .leftBox{
+	width: 863px;
+	border: 1px solid #dcdcdc;
+	
+}
+.talentDetailBox .rightBox{
+	width: 250px;
+
+
+}
+.talentDetailCon{
+	margin-top: 20px;
+}
+.talentDetailCon .huangTit{
+	background: url(../img/titBg.png) no-repeat left #f6f6f6;
+	height: 30px;
+	margin: 0;
+	font-size: 16px;
+	color: #fff;
+	line-height: 30px;
+	padding-left: 15px;
+	border-bottom: 1px solid #dcdcdc;
+	
+}
+.talentText{
+	padding: 15px;
+	font-size: 14px;
+}
+.talentText p{
+	margin: 10px 0;
+	line-height: 1.8;
+	text-indent: 2em;
+}
+.talentTextRight img{
+	width: 100%;
+	margin-top: 10px;
+}
+.talentTextRight .rightCon{
+	padding: 10px;
+}
+.talentTextRight .one{
+	border: 1px solid #dcdcdc;
+}
+.talentTextRight .two{
+	margin-top: 15px;
+	border: 1px solid #dcdcdc;
+}
+.talentTextRight .rightCon ul li{
+	line-height: 1.5;
+	padding-bottom: 10px;
+	border-bottom: 1px dashed #dcdcdc;
+	padding-top: 10px;
+}
+.ge{
+	margin: 0 5px;
+}
+.talentTextRight .rightCon ul li .time{
+	margin-left: 5px;
+
+}
+.talentTextRight .rightCon ul li a{
+	color: #025aa3;
+}
+/*个人简历*/
+.resumeBox{
+	margin-top: 20px;
+}
+.refumeCon{
+	padding: 20px;
+	background: #fff;
+	overflow: hidden;
+}
+.resumeBox .resumeImg{
+	width: 130px;
+	height: 160px;
+	border: 1px solid #dcdcdc;
+	padding: 2px;
+	background: #fff;
+}
+.resumeBox .resumeImg img{
+	width: 100%;
+	height: 100%;
+}
+.xinxiBox{
+	
+	padding: 15px 60px;
+	overflow: hidden;
+}
+.xinxiBox h5{
+	font-size: 18px;
+	text-align: center;
+	
+	background: #f8f8f8;
+}
+.xinxiBox table td{
+	height: 46px;
+	text-align: center;
+	font-size: 14px;
+}
+.xinxiBox table td{
+	line-height: 3;
+}
+.xinxiBox .jianliImg{
+	width: 120px;
+	height: 164px;
+	margin-top: 10px;
+}
+.tableBox{
+	background: #f8f8f8;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.tableBox table{
+	background: #fff;
+	width: 90%;
+	margin: 0 auto;
+}
+.blueBg{
+	background: #f2f2f2;
+}
+.zhaoBox {
+	background: #fff;
+	border-top: 1px solid #026ec6;
+	margin-top: 20px;
+}
+.zhaoCon{
+	padding: 20px;
+}
+.zhaoListTit{
+	background: #e7eff8;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	border-bottom: 1px solid #dcdcdc;
+	font-weight: bold;
+}
+.zhaoListTit ul li{
+	float: left;
+
+	padding-left: 10px;
+}
+.zhaoList{
+	overflow: hidden;
+}
+.locations{
+	width: 150px;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+.locations span{
+	color: #333;
+}
+.job, .company2{
+	width:220px;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+.job a{
+	color: #026ec6;
+	text-decoration: none;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+.company2 a{
+	color: #333;
+	text-decoration: none;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+.peopleNum{
+	width: 100px;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+.gengTime{
+	width: 100px;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+.money{
+	width: 134px;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+.toudi{
+	width: 120px;
+}
+.toudi input{
+	width: 76px;
+	height: 28px;
+	background: #fe9312;
+	border: none;
+	border-radius: 2px;
+	color: #fff;
+	cursor: pointer;
+}
+.toudi input:hover{
+	background:#e8850d ;
+}
+.zhaoListTit{
+	margin-top: 15px;
+}
+.zhaoJobList{
+	padding-bottom: 20px;
+}
+.zhaoJobList .jobList{
+	overflow: hidden;
+}
+.zhaoJobList .jobList li{
+	float: left;
+}
+.jobList li{
+	padding-left: 10px;
+	line-height: 42px;
+	height: 42px;
+	border-bottom: 1px dashed #dcdcdc;
+	font-size: 14px;
+	font-family: "宋体";
+	
+}
+.money span{
+	color: #fd3708;
+}
+.zhaoBg{
+	margin-top: 10px;
+	
+}
+.zhaoBgCon{
+	padding: 10px;
+	background: #fff;
+	border: 1px solid #dcdcdc;
+}
+.zhaoBgCon img{
+	width: 100%;
+	display: block;
+}
+.zhaoDetailBox .leftBox1{
+	width: 740px;
+	padding: 30px;
+	border: 1px solid #dcdcdc;
+}
+.zhaoDetailBox .rightBox1{
+	width: 300px;
+
+	
+}
+.zhaoDetailBox  .rightBox2{
+	padding: 15px;
+	border: 1px solid #dcdcdc;
+}
+.zhaoDetailBox{
+	overflow: hidden;
+	margin-top: 20px;
+
+}
+.zhaoDetailBox .jobName{
+	font-size: 24px;
+	font-weight: bold;
+}
+.zhaoDetailBox .companyName{
+	font-size: 16px;
+	margin: 15px 0
+}
+.zhaoDetailBox .requireds{
+	font-size: 14px;
+	color: #666;
+}
+.zhaoDetailBox .xinzi{
+	font-size: 24px;
+	font-weight: bold;
+	color: #fe9312;
+	margin: 10px 0;
+
+}
+.zhaoDetailBox .companyName a{
+	color: #333;
+	text-decoration: none;
+}
+.zhaoDetailBox .companyName a:hover{
+	color: #026ec6;
+}
+.yingping{
+	width: 150px;
+	height: 40px;
+	background: #fe9312;
+	border: none;
+	color: #fff;
+	border-radius: 2px;
+	margin: 30px 0;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.yingping:hover{
+	background: #e8850d;
+}
+.zhaoDetailBox .top{
+	overflow: hidden;
+}
+.zhaoDetailBox .yaoqiu h5{
+	font-size: 16px;
+	border-top: 1px solid #dcdcdc;
+	padding-top: 20px;
+}
+.zhaoDetailBox .jobContent{
+	margin: 20px 0;
+}
+.zhaoDetailBox .jobContent p{
+	text-indent: 2em;
+	font-size: 14px;
+	line-height: 1.8;
+	margin: 10px 0;
+}
+.zhaoDetailBox .rightBox1 h5{
+	font-size: 16px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #dcdcdc;
+}
+.zhaoDetailBox  .companyText{
+	margin: 15px 0;
+}
+.zhaoDetailBox .rightBox1 .name a{
+	font-size: 16px;
+	color: #026ec6;
+	text-decoration: none;
+
+}
+.zhaoDetailBox .rightBox1 .name{
+	margin: 10px 0;
+}
+.zhaoDetailBox .rightBox1 .yewu{
+	margin: 10px 0;
+	font-size: 14px;
+}
+.zhaoDetailBox .rightBox1 .contactUs{
+	font-size: 14px;
+}
+.companyText ul li{
+	line-height: 1.8;
+}
+.companyText ul li a{
+	text-decoration: none;
+	color: #333;
+}
+.companyText ul li a:hover{
+	color: #026ec6;
+}
+.companyText ul li{
+	border-bottom: 1px dashed #dcdcdc;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.companyText .jobListName a{
+	color: #026ec6;
+}
+.companyPage .companys ul li{
+	float: left;
+	margin-left: 10px;
+	
+}
+.companyPage .companys ul li a{
+	color: #333;
+	text-decoration: none;
+}
+.companyWrap .top{
+	height: 200px;
+	background: url(../img/companyBg.jpg) no-repeat center;
+	margin-top: 15px;
+	overflow: hidden;
+}
+.companyTit{
+	margin-top: 67px;
+	font-size: 40px;
+	font-weight: bold;
+	color: #fff;
+	font-family: "微软雅黑";
+	margin-left: 30px;
+	text-shadow: 0.05em 0.1em #034678
+}
+.companyWrap .nav{
+	height: 36px;
+	background: url(../img/companyLine.jpg) repeat-x;
+	width: 100%;
+	margin-top: 10px;
+}
+.companyWrap .nav ul{
+	margin-left: 20px;
+}
+.companyWrap .nav li{
+	float: left;
+	margin-left: 10px;
+	line-height: 36px;
+}
+.companyWrap .nav li a{
+	color: #fff;
+	font-size: 14px;
+	text-decoration: none;
+	font-weight: bold;
+	
+}
+.ge1{
+	margin:  0 18px;
+	color: #fff;
+}
+.companyDetail .leftBox3{
+	width: 250px;
+
+}
+.companyDetail{
+	overflow: hidden;
+	width: 100%;
+	margin-top: 10px;
+	font-size: 14px;
+}
+.companyDetail .rightBox3{
+	width: 890px;
+	
+	border: 1px solid #dcdcdc;
+}
+.companyDetail .jibenBox{
+	overflow: hidden;
+	border: 1px solid #dcdcdc;
+}
+.companyDetail h5{
+	color: #333;
+	height: 36px;
+	border-top: 2px solid #026ec6;
+	line-height: 36px;
+	padding-left: 10px;
+	border-bottom: 1px solid #dcdcdc;
+	font-size: 14px;
+}
+.companyDetail .jibenBox .jibenText{
+	padding: 20px;
+}
+.companyDetail .jibenBox .jibenText li{
+	line-height: 2;
+	border-bottom: 1px dashed #dcdcdc;
+}
+.jibenText ul li{
+	width: 210px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.jibenText ul li a{
+	color: #026ec6;
+	text-decoration: none;
+}
+.jianjie{
+	padding: 20px;
+}
+.jianjie p{
+	text-indent: 2em;
+	line-height: 2;
+	margin: 10px 0;
+}
+.jianjie .companyImg{
+	text-align: center;
+}
+.jianjie .companyImg img{
+	width: 100%;
+	height: 453px;
+}
+.jianjie .hotzhao li{
+	height: 36px;
+	border-bottom: 1px dashed #dcdcdc;
+	line-height: 36px;
+}
+.jianjie .hotzhao li span{
+	float: right;
+}
+.jianjie .hotzhao li a{
+	color: #333;
+	text-decoration: none;
+}
+.jianjie .hotzhao li a:hover{
+	color: #025AA3;
+}
+.jianjie table td{
+	height: 36px;
+	padding-left: 10px;
+}
+/*登录界面*/
+.loginPage{
+	background: url(../img/loginBg1.jpg) no-repeat center;
+	height: 608px;
+}
+.loginPageBox .loginCons{
+	width: 380px;
+	height: 390px;
+	background: #fff;
+	float: right;
+	margin-top: 90px;
+	margin-right: 80px;
+	box-shadow: 0px 0px 30px rgba(3,70,120,0.4);
+	border-radius: 4px;
+}
+.loginPageBox .loginCons h5{
+	font-size: 22px;
+	color: #22699f;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	text-align: center;
+	padding-top: 20px;
+	border-bottom: 1px solid #dcdcdc;
+	padding-bottom: 20px;
+	
+}
+.loginWrap{
+	width: 334px;
+	margin: 35px auto;
+	
+}
+.changeLogin{
+	overflow: hidden;
+	width: 246px;
+	height: 36px;
+	margin: 10px auto;
+}
+.changeLoginAction{
+	border-bottom: 2px solid #22699f;
+	color: #22699f !important;
+	font-weight: bold;
+
+}
+.changeLogin li{
+	float: left;
+	width: 100px;
+	text-align: center;
+	line-height: 34px;
+	font-size: 14px;
+	margin-right: 46px;
+	cursor: pointer;
+}
+.loginWrap .userName,.loginWrap .passWord{
+	margin-bottom: 20px;
+	font-size: 14px;
+	color: #333;
+}
+.loginWrap .userName input ,.loginWrap .passWord input{
+	height: 40px;
+	background: #f0f5fb;
+	border: 1px solid #dcdcdc;
+	border-radius: 4px;
+	padding-left: 10px;
+	width: 240px;
+}
+.loginWrap .userName input:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+.loginWrap .passWord input:focus{
+	outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+.loginWrap .userName label,.loginWrap .passWord label{
+	width: 70px;
+	display: inline-block;
+	text-align: right;
+}
+.loginWrap .submitBox{
+	width: 100%;
+	margin-top:20px;
+	height: 45px;
+}
+.loginWrap .submitBox input{
+	width: 100%;
+	background: #265a94;
+	border-radius: 4px;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	display: inline-block;
+	height: 45px;
+	cursor: pointer;
+	border: none;
+}
+.noUser{
+	margin-top: 20px;
+	font-size: 14px;
+}
+.noUser a{
+	color: #265a94;
+	font-weight: bold;
+}
+.registerBox{
+	border-top: 1px solid #026ec6;
+	margin-top: 20px;
+	background: #fff;
+	padding-bottom: 50px;
+}
+.registerBox .top{
+	width: 575px;
+	margin: 60px auto;
+}
+.registerBox .center{
+	width: 130px;
+	font-size: 18px;
+	color: #000;
+	margin: 0 auto;
+	font-weight: bold;
+	text-align: center;
+}
+.registerBox .registerCompany, .registerBox .registerPeople{
+	width: 250px;
+	height: 250px;
+	border: 1px solid #8aadd2;
+	background: #f4f7fa;
+	border-radius: 4px;
+	text-decoration: none;
+
+	
+}
+.registerBox .bottom{
+	width: 600px;
+	margin: 40px auto;
+	overflow: hidden;
+}
+.registerBox .registerCompany:hover{
+	border: 1px solid #2965a4;
+}
+.registerBox .registerPeople:hover{
+	border: 1px solid #2965a4;
+}
+.registerBox  .title{
+	text-align: center;
+	margin: 20px 0;
+	font-size: 18px;
+	color: #2965a4;
+	font-weight: bold;
+	
+}
+.registerBox .title img{
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.registerBox .registerComText{
+	padding: 0 30px;
+	color: #2965a4;
+	font-size: 14px;
+	line-height: 2;
+}
+.registerWrap{
+	width: 500px;
+	margin: 40px auto;
+}
+.registerWrap input{
+	border: 1px solid #dcdcdc;
+	height: 34px;
+	width: 356px;
+	padding-left: 10px;
+}
+.registerWrap label{
+	font-size: 16px;
+	width: 100px;
+	text-align: right;
+	display: inline-block;
+}
+.registerWrap div{
+	margin-bottom: 20px;
+}
+.registerWrap input:focus{
+	outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 2px #9ecaed;
+}
+.red{
+	color: red;
+}
+.xieyiBox{
+	width: 18px !important;
+	height: 18px !important;
+	vertical-align: middle;
+}
+.tong{
+	font-size: 14px;
+	color: #2965a4;
+	text-decoration: none;
+}
+.tong1{
+	font-size: 14px;
+}
+.tijiaoBtn a{
+	text-align: center;
+	font-size: 16px;
+	line-height: 40px;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	height: 40px;
+	background: #016ec5;
+	border-radius: 2px;
+	color:#fff ;
+	border: none;
+	cursor: pointer;
+	
+}
+.tijiaoBtn a:hover{
+	background-color: #265a94;
+}
+.registerWrapCom .upImg{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	vertical-align: top;
+	margin-bottom: 0;
+}
+.registerWrapCom .upImg img{
+	width: 100px;
+	height: 100px;
+}
+.registerWrapCom .retro textarea{
+	vertical-align: top;
+}
+.registerCon1{
+	width: 100%;
+	height: 300px;
+	margin: 50px auto;
+	text-align: center;
+	font-size: 24px;
+}
+.registerCon1 i{
+	font-size: 46px;
+	color: #016ec5;
+	margin-bottom: 20px;
+}
+.registerCon1 .backBtn{
+	margin-top: 40px;
+}
+.registerCon1 .backHome ,.registerCon1 .backLogin{
+	width: 200px;
+	border: 1px solid #265a94;
+	padding: 10px;
+	text-decoration: none;
+	border-radius: 4px;
+	color: #265a94;
+	font-size: 18px;
+	font-weight: bold;
+}
+.registerCon1 .backHome:hover{
+	background: #265a94;
+	color: #fff;
+}
+.registerCon1 .backLogin:hover{
+	background: #265a94;
+	color: #fff;
+}
+.trainDetail{
+	width: 100% !important;
+}
+.trainDetail .newsDetailBox h4{
+	background: #edf5fb;
+	border-bottom: none;
+	text-align: center;
+	color: #333;
+	line-height: 30px;
+	padding-bottom: 0;
+	font-weight: bold;
+}
+.biaoti{
+	font-size: 14px;
+	font-weight: bold;
+}
+.rightBoxNew{
+	width: 840px !important;
+}
+.leftBoxNew{
+	width: 260px !important;
+}
+.leftBoxNew img{
+	width: 100%;
+	margin-bottom: 6px;
+}
+.ncsoTabel{
+	width: 660px;
+	margin: 20px auto;
+}
+.ncsoTabel td,.ncsoTabel th{
+	height: 26px;
+	text-align: center;
+}
+.zheng{
+	width: 600px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.zheng img{
+	width: 100%;
+}
+.aboutUs img{
+	width: 100%;
+
+}
+.contactUs{
+	margin: 20px 0;
+}
+.contactBox{
+	
+	margin: 20px auto;
+
+}
+.aboutUsBox{
+	padding: 20px;
+}
+.contactImg{
+	margin: 20px 0;
+}
+.contactWrap{
+	margin: 20px 0;
+}
+/*个人中心*/
+.centerLogo{
+	height: 100px;
+	background: #fff;
+	border-bottom: 1px solid #bfbfbf;
+}
+.centerTop{
+	margin-top: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	
+}
+.centerTop span{
+	margin-top: 6px;
+	display: inline-block;
+}
+.centerTop img{
+	vertical-align: top;
+	
+}
+.centerPersonalBox{
+	margin-top: 20px;
+	overflow: hidden;
+}
+.centerPersonalBox .leftBox{
+	width: 270px;
+	background: #fff;
+	border: 1px solid #bfbfbf;
+	padding-bottom: 50px;
+}
+.centerPersonalBox .rightBox{
+	width: 874px;
+	
+}
+.centerPersonalBox .rightWrap{
+	background: #fff;
+	margin-bottom: 20px;
+	border: 1px solid #bfbfbf;
+}
+.centerImgBox img{
+	width: 74px;
+	height: 74px;
+}
+.centerImg{
+	width: 150px;
+	height: 150px;
+	margin: 30px auto 0;
+	text-align: center;
+}
+.centerPersonalBox .userBox{
+	margin-top: 10px;
+}
+.centerPersonalBox .userBox .user{
+	font-size: 14px;
+	width: 90px;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display: inline-block;
+}
+.centerPersonalBox .userBox .qian{
+	background: #cf2120;
+	width: 70px;
+	height: 24px;
+	padding: 2px;
+	color: #fff;
+	border-radius: 2px;
+}
+.centerPersonalBox .jiben h5{
+	padding: 20px 60px;
+	font-size: 14px;
+	color: #1765b0;
+	border-bottom: 1px solid #bfbfbf;
+}
+.centerPersonalBox .jiben h5 i{
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.centerPersonalBox .jiben ul  li{
+	height: 46px;
+	padding-left:80px;
+	font-size: 14px;
+	line-height: 46px;
+}
+.centerPersonalBox .jiben ul  li a{
+	text-decoration: none;
+	color: #333;
+}
+.centerPersonalBox .jiben ul  li a:hover{
+	color: #cf2120;
+}
+.centerPersonalBox .rightWrap h6{
+	height: 46px;
+	border-bottom: 1px solid #1866a8;
+	line-height: 46px;
+	font-size: 16px;
+	color: #1866a8;
+	font-weight: bold;
+}
+.centerPersonalBox .rightWrap{
+	padding: 20px;
+	font-size: 14px;
+	font-weight: bold;
+
+}
+.centerPersonalBox .personalText{
+	margin: 20px 0;
+}
+.centerPersonalBox .tishi{
+	width: 100%;
+	background: #f4f9ff;
+	
+	font-weight: normal;
+}
+.centerPersonalBox .tishiBox{
+	padding: 20px;
+	line-height: 1.8;
+}
+.centerPersonalBox .jibenTit{
+	height: 46px;
+	background: #f4f9ff;
+	line-height: 46px;
+	margin: 20px 0;
+	padding: 0 20px;
+	border-radius: 10px;
+	
+}
+.centerPersonalBox .jibenCon{
+	width: 720px;
+	margin: 0 auto;
+}
+.centerPersonalBox .userJiBen{
+	width: 720px;
+	margin: 20px auto;
+}
+.centerPersonalBox .tableCon{
+	font-size: 14px;
+	font-weight: normal;
+}
+.centerPersonalBox .tableCon p{
+	margin-bottom:20px;
+
+}
+.centerPersonalBox .tableCon p input{
+	height: 26px;
+	width: 500px;
+	padding-left: 10px;
+	
+}
+.centerPersonalBox .tableCon p label{
+	width: 100px;
+	text-align: right;
+	display: inline-block;
+}
+.centerPersonalBox .jianliUl{
+	margin: 30px auto;
+	border: 1px solid #bfbfbf;
+	padding: 20px;
+	overflow: hidden;
+}
+.centerPersonalBox .jianliUl li{
+	height: 36px;
+	line-height: 36px;
+	border-bottom: 1px dashed #dcdcdc;
+	padding: 10px;
+	border-radius: 10px;
+}
+.centerPersonalBox .jianliUl li a{
+	color: #2769a6;
+	text-decoration: none;
+}
+.centerPersonalBox .nameText{
+	font-size: 20px;
+	background: #f4f9ff;
+	font-family: "微软雅黑";
+	
+
+}
+.submitBoxCenter{
+	text-align: center;
+}
+.submitBoxCenter a{
+	width: 120px;
+	color: #fff;
+	height: 36px;
+	display: inline-block;
+	background: #1765b0;
+	border-radius: 4px;
+	line-height: 36px;
+	text-decoration: none;
+}
+.submitBoxCenter a:hover{
+	background: #025aa3;
+}
+.sucessfull{
+	text-align: center;
+	margin-top: 100px;
+	font-size: 24px;
+}
+.sucessfull .gou{
+	font-size: 32px;
+	color: #025aa3;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.backCenter a{
+	width: 120px;
+	color: #fff;
+	height: 36px;
+	display: inline-block;
+	background: #1765b0;
+	border-radius: 4px;
+	line-height: 36px;
+	text-decoration: none;
+	margin-top: 20px;
+	font-size: 16px;
+}
+.jianliXiu .rightWrap .radios{
+	width: 20px !important;
+	height: 20px !important;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+.jianliXiu select{
+	width: 515px;
+	height: 30px;
+}
+.comXiu .comImgbox{
+	width: 100px;
+	vertical-align: top;
+}
+.comShou{
+	overflow: hidden;
+}
+.comShou li{
+	border-bottom: 1px dashed #dcdcdc;
+	overflow: hidden;
+	height: 36px;
+	line-height: 36px;
+}
+.comShou li a{
+	color: #333;
+	text-decoration: none;
+}
+/*在线考试登录*/
+.examBg{
+	background: url(../img/examBg.jpg) no-repeat top;
+	height: 937px;
+	background-size: 100%;
+	overflow: hidden;
+}
+.examBg .kaoshiImgBox{
+	width: 305px;
+	height: 60px;
+	margin: 120px auto 0;
+}
+.examBg .kaoshiImg{
+	width: 100%;
+}
+.examBg .loginBoxWrap{
+	width: 582px;
+	height: 440px;
+	background: url(../img/examLoginBox.png) no-repeat center;
+	margin: 60px auto;
+	overflow: hidden;
+}
+.examBg .examForm {
+	width: 348px;
+	height: 206px;
+	margin: 150px auto 0;
+	font-size: 14px;
+}
+.examBg .examForm input{
+	height: 32px;
+	width: 260px;
+	padding-left: 10px;
+}
+.examBg .examForm .inputBox{
+	margin-bottom: 20px;
+}
+.examBg .examSubmit{
+	margin-left:60px;
+}
+.examBg .remen input{
+	width: 18px;
+	height: 18px;
+	vertical-align: top;
+	margin-right: 10px;
+}
+.examBg label{
+	width: 60px;
+	display: inline-block;
+}
+.examBg .banquan{
+	text-align: center;
+	font-size: 14px;
+}
+/*专家平台*/
+.zhuanjiaUl{
+	overflow: hidden;
+}
+.zhuanjiaUl li{
+	float: left;
+	width: 150px;
+	height: 234px;
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+.zhuanjiaUl li img{
+	width: 100%;
+}
+.zhuanjiaUl li a{
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	margin: 4px auto;
+}
+.zhuanImg{
+	text-align: center;
+}
+/*人才系统*/
+.talentTopLogo{
+	height: 120px;
+	background: #fff;
+	overflow: hidden;
+}
+.talentTopLogo .talentLogo{
+	margin-top: 30px;
+}
+.talentBgBox{
+	width: 100%;
+	height: 545px;
+	background: url(../img/talentBg.jpg) no-repeat center;
+	margin-top: 70px;
+}
+.talentBgBox .loginBox{
+	width: 422px;
+	height: 496px;
+	background: url(../img/talentBox.png) no-repeat center;
+	margin-right: 30px;
+}
+.talentBgBox .talentForm{
+	width: 300px;
+	height: 220px;
+	margin:140px auto;
+}
+.talentForm .inputBox input{
+	height: 42px;
+	width: 230px;
+	margin-bottom: 20px;
+	padding-left: 50px;
+	font-size: 16px;
+}
+.talentForm  .remen1{
+	font-size: 14px;
+}
+.talentForm  .remen1 input{
+	width: 22px !important;
+	height: 22px !important;
+	vertical-align: middle;
+	margin-bottom: 0;
+	margin-right: 10px;
+	
+}
+.talentSubmit a{
+	display: inline-block;
+	width: 100%;
+	height: 46px;
+	background: #006591;
+	margin-top: 20px;
+	font-size: 22px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	line-height: 46px;
+	font-family: "微软雅黑";
+}
+.talentSubmit a:hover{
+	background: #005478;
+}
+.inputBox .userBg{
+	background: url(../img/talentUser.png) no-repeat left;
+	border: 1px solid #bfbfbf;
+
+}
+.inputBox .passBg{
+	background: url(../img/talentPass.png) no-repeat left;
+	border: 1px solid #bfbfbf;
+
+}
+.talentSubmit input[type='submit']{
+	display: inline-block;
+    width: 100%;
+    height: 46px;
+    background: #006591;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 46px;
+    font-family: "微软雅黑";
+    border:none;
+    cursor: pointer;
+}
