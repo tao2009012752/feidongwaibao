@@ -3,6 +3,13 @@
 	<title>服务外包人才信息综合服务平台</title>
 {/block}
 {block name="content"}
+
+<style>
+    .loginP{
+        padding:10px 5px;
+        font-size: 14px;
+    }
+</style>
 <!--人才库-->
 <div class="talentBox contant gundong">
     <div class="talentCon borderdc">
@@ -70,6 +77,12 @@
                     <img src="<{$img}>/talentLogin.png"/>
                 </div>
                 <div class="talentInput">
+                    {if condition="isset($userdata['company_name']) or isset($userdata['account'])"}
+                    <p class="loginP">欢迎登录服务外包人才信息综合服务平台</p>
+                    <p class="loginP">
+                        <a href="<{:url('Login/loginOut')}>">退出</a>
+                    </p>
+                    {else/}
                     <div>
                         <label for="">用户名：</label><input type="text" name="username" placeholder="请输入用户名" />
                     </div>
@@ -77,8 +90,11 @@
                         <label for="">密&nbsp;码：</label><input type="password" name="password" placeholder="请输入密码" />
                     </div>
                     <div class="submitBox">
-                        <a href="##"><img  class="loginBtn" src="<{$img}>/talentBtn.png"/></a>
+                        <a href="##"><img  data-type="1" class="loginBtn" src="<{$img}>/talentBtn.png"/></a>
                     </div>
+
+                    {/if}
+
                 </div>
 
             </div>
@@ -146,7 +162,7 @@
     </div>
     <div class="talentPic borderdc">
         <div class="talentPicBox">
-            <h4><span class="shu"></span>推荐职位 <a class="more1" href="#">更多></a></h4>
+            <h4><span class="shu"></span>推荐职位 <a class="more1" href="<{:url('Job/index')}>">更多></a></h4>
             <div class="recruitCon recruitCon1">
                 {volist name="jobs" id="v"}
                 <ul class="reBox fl">

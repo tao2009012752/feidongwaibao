@@ -37,7 +37,11 @@
     <div class="fl leftBox">
         <div class="centerImg">
             <div class="centerImgBox">
+                {if condition="$userInfo.info.pic"}
+                <img src="<{$userInfo.info.pic}>"/>
+                {else\}
                 <img src="<{$img}>/centerImg.png"/>
+                {/if}
             </div>
             <div class="userBox">
                 <span class="user"><{$userInfo.account}></span>
