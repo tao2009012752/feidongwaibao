@@ -3,7 +3,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	background: #f3f3f3;
-	font-family: "微软雅黑";
+	font-family: "宋体";
 	color: #000;
 	font-size: 12px;
 }
@@ -495,7 +495,7 @@ input:focus{outline:0;}
 .reBox li{
 	height: 32px;
 	line-height: 32px;
-	/*padding: 0 10px;*/
+	padding: 0 10px;
 	width: 520px;
 	float: left;
 	margin-right: 25px;
@@ -511,7 +511,7 @@ input:focus{outline:0;}
 	color: #e60012;
 }
 .recruitLi{
-	/*background:#f4f4f4;;*/
+	background:#f4f4f4;;
 }
 .reBox li .job{
 	color: #026ec6;
@@ -1405,10 +1405,10 @@ input:focus{outline:0;}
 	line-height: 2;
 	margin: 10px 0;
 }
- .companyImg{
+.jianjie .companyImg{
 	text-align: center;
 }
- .companyImg img{
+.jianjie .companyImg img{
 	width: 100%;
 	height: 453px;
 }
@@ -2009,7 +2009,7 @@ input:focus{outline:0;}
 }
 /*在线考试登录*/
 .examBg{
-	background: url(../img/examBg.jpg) no-repeat top;
+	background: url(../images/examBg.jpg) no-repeat top;
 	height: 937px;
 	background-size: 100%;
 	overflow: hidden;
@@ -2025,7 +2025,7 @@ input:focus{outline:0;}
 .examBg .loginBoxWrap{
 	width: 582px;
 	height: 440px;
-	background: url(../img/examLoginBox.png) no-repeat center;
+	background: url(../images/examLoginBox.png) no-repeat center;
 	margin: 60px auto;
 	overflow: hidden;
 }

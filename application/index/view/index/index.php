@@ -114,11 +114,11 @@
 	<div class="systemBox contant">
 		<div class="systemCon">
 			<ul>
-				<li class="nomarl"><a href="#"><img src="<{$img}>/xuexi.png"/></a></li>
-				<li><a href="#"><img src="<{$img}>/kaoshi.png"/></a></li>
-				<li><a href="#"><img src="<{$img}>/zixun.png"/></a></li>
-				<li><a href="#"><img src="<{$img}>/ku.png"/></a></li>
-				<li><a href="#"><img src="<{$img}>/rencai.png"/></a></li>
+				<li class="nomarl"><a href="/kaoshi/index.php?user-app-login"><img src="<{$img}>/xuexi.png"/></a></li>
+				<li><a href="/kaoshi/index.php?user-app-login"><img src="<{$img}>/kaoshi.png"/></a></li>
+                                <li><a href="<{:url('/index/Newsinfo/index')}>"><img src="<{$img}>/zixun.png"/></a></li>
+				<li><a href="<{:url('/index/Talent/index')}>"><img src="<{$img}>/ku.png"/></a></li>
+				<li><a href="<{:url('/index/Job/index')}>"><img src="<{$img}>/rencai.png"/></a></li>
 			</ul>
 		</div>
 	</div>
@@ -176,32 +176,32 @@
 				<div class="platBox">
 					<div class="pingBox">
 						<div class="fl">
-							<a href="#"><img src="<{$img}>/zhuan.png"/></a>
+                                                    <a href="<{:url('Zj/index')}>"><img src="<{$img}>/zhuan.png"/></a>
 						</div>
 						<div class="fr">
-							<a href="#"><img src="<{$img}>/ren.png"/></a>
+							<a href="<{:url('/index/Talent/index')}>"><img src="<{$img}>/ren.png"/></a>
 						</div>
 					</div>
 					<div class="pingBox">
 						<div class="fl">
-							<a href="#">
+							<a href="<{:url('/index/Train/ncsoin')}>">
 								<img src="<{$img}>/xiangmu.png"/>
 							</a>
 						</div>
 						<div class="fr">
-							<a href="#">
+                                                    <a href="<{:url('/index/Newsinfo/index',['cate'=>15])}>">
 								<img src="<{$img}>/ke.png"/>
 							</a>
 						</div>
 					</div>
 					<div class="pingBox">
 						<div class="fl">
-							<a href="#">
+							<a href="<{:url('Job/index')}>">
 								<img src="<{$img}>/qiye.png"/>
 							</a>
 						</div>
 						<div class="fr">
-							<a href="#">
+							<a href="<{:url('/index/Newsinfo/index',['cate'=>23])}>">
 								<img src="<{$img}>/shizi.png"/>
 							</a>
 						</div>
@@ -262,7 +262,7 @@
 						<div class="imgTit">省人事考试应急协调小组第19次联席会议召开</div>
 					</div>
 					<div class="chenLine">
-						<a href="#"><img src="<{$img}>/chengSearch.png"/></a>
+						<a href="http://www.ncie.gov.cn/Category_1247/Index.aspx"><img src="<{$img}>/chengSearch.png"/></a>
 					</div>
 					<div class="biaoLine">
 						<a href="#"><img src="<{$img}>/downloadExcel.png"/></a>
@@ -320,7 +320,7 @@
 				</div>
 				<div class="peiRight fr">
 					<div>
-						<a href="#"><img src="<{$img}>/onlineStudy.png"/></a>
+						<a href="/kaoshi/index.php?user-app-login"><img src="<{$img}>/onlineStudy.png"/></a>
 					</div>
 					<div class="shizi">
 						<div class="titleBox">
@@ -346,29 +346,21 @@
 		</div>
 	</div>
 	<!--人才招聘-->
-	<div class="recruit contant">
-		<div class="recruitBox conCon">
-			<h3><span>人才招聘</span></h3>
-		</div>
-		<div class="recruitCon">
-			<ul class="reBox fl">
-				{volist name="joblist" id="v" key="i" length="6"}
-					<li class="{if condition="$i%2==1"}recruitLi{/if}">
-						<a href="<{:url('Job/jobDetail',['job_id'=>$v['job_id']])}>" class="fl job"><{$v.job_name}></a>
-						<a href="<{:url('Companys/index',['id'=>$v['companyInfo']['company_id']])}>" class="fr"><{$v.companyInfo.company_name}></a>
+        <div class="recruit contant">
+			<div class="recruitBox conCon">
+				<h3><span>人才招聘</span></h3>
+			</div>
+			<div class="recruitCon">
+				<ul class="reBox">
+                                        {volist name="joblist" id="v"}
+					<li class="recruitLi">
+						<a href="<{:url('Job/jobDetail',['id'=>$v['job_id']])}>" class="fl job"><{$v.job_name}></a>
+						<a href="<{:url('Com/index',['id'=>$v['companyInfo']['company_id']])}>" class="fr"><{$v.companyInfo.company_name}> </a>
 					</li>
-				{/volist}
-			</ul>
-			<ul class="reBox fr">
-				{volist name="joblist" id="v" offset="7" length="12"}
-				<li class="recruitLi">
-					<a href="#" class="fl job"><{$v.job_name}></a>
-					<a href="#" class="fr"><{$v.companyInfo.company_name}></a>
-				</li>
-				{/volist}
-			</ul>
+                                        {/volist}
+				</ul>
+			</div>
 		</div>
-	</div>
 	<!--企业录-->
 	<div class="company contant">
 		<div class="companyBox conCon">
@@ -383,7 +375,7 @@
 						<ul class="picList">
 							{volist name="comlist" id="v"}
 							<li>
-								<div class="pic"><a href="<{:url('Companys/index',['id'=>$v['company_id']])}>"><img src="<{$v.logo}>"/></a></div>
+								<div class="pic"><a href="<{:url('Com/index',['id'=>$v['company_id']])}>"><img src="<{$v.logo}>"/></a></div>
 								<div class="title"><{$v.company_name}></a></div>
 							</li>
 							{/volist}
