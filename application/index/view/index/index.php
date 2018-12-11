@@ -58,7 +58,16 @@
 					<div class="loginTit">
 						<img src="<{$img}>/yonghu.png" alt="" />
 					</div>
-					<div class="loginForm">
+					
+                                    {if condition="$userdata"}
+                                    <div class="loginText">
+                                            欢迎您
+                                            <a href="{if condition="isset($userdata['company_name'])"}
+                                             <{:url('Companys/center')}>
+                                              {/if}"><{$userdata.account}></a>
+                                    </div>
+                                    {else /}
+                                   <div class="loginForm">
 						<div class="loginText">
 							<a href="#"  class="liActions tapText yongTap">个人会员</a>
 							<span class="dividing">|</span>
@@ -78,6 +87,7 @@
 									<img src="<{$img}>/loginBtn.png"/>
 								</div>
 							</form>
+                                                    
 						</div>
 						<div class="loginCon disnone qiyeBox">
 							<form action="" method="post">
@@ -95,6 +105,7 @@
 							</form>
 						</div>
 					</div>
+                                    {/if}
 				</div>
 			</div>
 		</div>
@@ -213,16 +224,16 @@
 			<div class="kaoNews">
 				<div class="fl examIcons">
 					<div>
-						<a href="#"><img src="<{$img}>/examImg01.png"/></a>
+						<a href="<{:url('Newsinfo/index',['cate'=>17])}>"><img src="<{$img}>/examImg01.png"/></a>
 					</div>
 					<div>
-						<a href="#"><img src="<{$img}>/examImg02.png"/></a>
+						<a href="<{:url('Newsinfo/index',['cate'=>18])}>"><img src="<{$img}>/examImg02.png"/></a>
 					</div>
 					<div>
-						<a href="#"><img src="<{$img}>/examImg03.png"/></a>
+						<a href="<{:url('Newsinfo/index',['cate'=>19])}>"><img src="<{$img}>/examImg03.png"/></a>
 					</div>
 					<div>
-						<a href="#"><img src="<{$img}>/examImg04.png"/ class="nomarb"></a>
+						<a href="<{:url('Newsinfo/index',['cate'=>20])}>"><img src="<{$img}>/examImg04.png"/ class="nomarb"></a>
 					</div>
 				</div>
 				<div class="local fl style2">

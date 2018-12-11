@@ -33,12 +33,12 @@ class Common extends Controller
                           JOIN manager_group AS b 
                           ON a.manager_group=b.manager_group_id 
                           WHERE a.account='$account'");
-
+            
             $menus = explode(',', $menuinfo['0']['menus']);
 
             // 当前控制器路径对应的菜单id
-            $menuId = Db::query("SELECT menu_id FROM `menu` WHERE  replace(url,'_','') = '$url'");
-
+            $menuId = Db::query("SELECT menu_id FROM `menu` WHERE  replace('$url','_','') = '$url'");
+            
             // 权限检测
             if (!in_array($menuId[0]['menu_id'], $menus)) {
                 ajax_return(['code' => 10000, 'msg' => '你没有此权限']);

@@ -24,18 +24,18 @@
                 <th><input type="checkbox" id="checkall"></th>
                 <th>ID</th>
                 <th>用户名</th>
-                <th>是否显示</th>
+                <th>是否能登陆</th>
                 <th>注册时间</th>
                 <th width="268">操作</th>
             </tr>
             </thead>
             <tbody>
-            <?php foreach ($list_array as $v) {?>
+            <?php foreach ($list as $v) {?>
             <tr >
                 <td><input type="checkbox" class="check" value="<{$v['user_id']}>"></td>
                 <td><{$v.user_id}></td>
                 <td><{$v.account}></td>
-                <td><{$v.is_forbidden_value}></td>
+                <td><{$v.is_forbidden}></td>
                 <td><?=date('Y-m-d H:i', $v['add_time'])?></td>
                 <td>
                     <a href="javascript:void(0);"

@@ -13,12 +13,12 @@ class Reg extends Common
     }
 
     //公司注册
-    public function comreg(){
+    public function comReg(){
         return $this->fetch();
     }
 
     //个人注册
-    public function perreg(){
+    public function perReg(){
         return $this->fetch();
     }
 

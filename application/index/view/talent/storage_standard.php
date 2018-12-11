@@ -30,7 +30,7 @@
                         <a href="<{:url('Talent/index',['type'=>'talent_introduction'])}>"><img src="<{$img}>/talent01.png"/></a>
                         <a href="<{:url('Talent/index',['type'=>'storage_standard'])}>"><img src="<{$img}>/talent02.png"/></a>
                         <a href="<{:url('Talent/index',['type'=>'storage_process'])}>"><img src="<{$img}>/talent03.png"/></a>
-                        <a href="<{:url('Talent/index',['type'=>'storage_join'])}>"><img src="<{$img}>/talent04.png"/></a>
+                        <a href="<{:url('Reg/perReg')}>"><img src="<{$img}>/talent04.png"/></a>
                     </div>
                 </div>
                 <div class="two">

@@ -53,6 +53,14 @@
                         <span>查看在招职位</span>
                     </a>
                     <a href="javascript:void(0);"
+                       class="table_btn table_info detail_btn"
+                       mini="show"
+                       data-url="<{:url('Company/mJob',['company_id' => $v['company_id']])}>"
+                    >
+                        <i class="fa fa-edit"></i>
+                        <span>发布职位</span>
+                    </a>
+                    <a href="javascript:void(0);"
                        class="table_btn table_edit edit_btn"
                        mini="show"
                        data-url="<{:url('Company/edit',['company_id' => $v['company_id']])}>"

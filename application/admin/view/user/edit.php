@@ -13,7 +13,7 @@
                     <input type="password" name="pwd" placeholder="请输入密码" value="<{$detail['pwd']}>" />
                 </li>
                 <li>
-                    <label>是否显示：</label>
+                    <label>是否禁用：</label>
                     <div class="radio_box">
                         <input type="radio" name="is_forbidden" value="1"  <?=$detail['is_forbidden'] ? 'checked' : ''?> > <span>是</span>
                         <span style="width: 15px;height: 1px"></span>

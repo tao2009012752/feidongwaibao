@@ -20,7 +20,7 @@
 				<div class="fr loginText">
 					欢迎您
 					<a href="{if condition="isset($userdata['company_name'])"}
-					 <{:url('Companys/center')}>
+					 <{:url('Companys/center')}>{else/}<{:url('User/pindex')}>
 					  {/if}"><{$userdata.account}></a> | <a href="<{:url('Login/loginOut')}>">退出</a>
 				</div>
 				{else /}

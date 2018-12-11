@@ -20,34 +20,16 @@ class User extends Common{
         $where = [];
         $where['is_delete'] = 0;
 
-        if ($type) {
-            $where['type'] = $type;
-        }
         $count = Db::table($this->_tableName)->where($where)->count();
+        
         $list = Db::table($this->_tableName)
-            ->where($where)->order('friend_link_sort desc')
-            ->join('user_info ui',"$this->_tableName.user_id = ui.uid")
-            ->paginate(20);
-
-
-        //将对象转换成数组
-        $list_array = $list->all();
-
-//        dump($list_array);die;
-
-        //获取系统定义默认数组
-        $status_arr = config('status');
-
-        if(!empty($list_array)){
-            foreach($list_array as $k=>$v){
-                $list_array[$k]['is_forbidden_value'] = $status_arr[$v['is_forbidden']];
-                $list_array[$k]['userinfo_id'] = 1;
-            }
-        }
+            ->where($where)
+            ->order('friend_link_sort desc')
+            ->join('user_info ui',"$this->_tableName.user_id = ui.uid",'LEFT')
+            ->paginate(10);
         
         $this->assign('count', $count);
         $this->assign('list', $list);
-        $this->assign('list_array', $list_array);
 
         return $this->fetch();
     }
@@ -62,7 +44,7 @@ class User extends Common{
             $request  = Request::instance();
             $insertData = [
                 'account' => $request->param('account'),
-                'pwd' =>md5(md5($request->param('pwd'))),
+                'pwd' =>sha1(config('passsalt').$request->param('pwd')),
                 'is_forbidden' => $request->param('is_forbidden'),
                 'add_time' => time(),
                 'add_ip' => $request->ip(),
@@ -93,7 +75,7 @@ class User extends Common{
 
         //新增用户时给定默认相关信息
         $userInfo = [];
-        $userInfo['is_forbidden'] = 1;
+        $userInfo['is_forbidden'] = 0;
         $this->assign('userInfo', $userInfo);
 
         return $this->fetch();
@@ -118,7 +100,7 @@ class User extends Common{
             $updateData = [
                 'user_id' => $userId,
                 'account' => Request::instance()->param('account'),
-                'pwd' =>(Request::instance()->param('pwd')),
+                'pwd' =>sha1(config('passsalt').Request::instance()->param('pwd')),
                 'is_forbidden' => Request::instance()->param('is_forbidden'),
                 'update_time' => time()
             ];

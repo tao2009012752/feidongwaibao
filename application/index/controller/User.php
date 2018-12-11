@@ -2,7 +2,8 @@
 
 namespace app\index\controller;
 use app\index\model\User as UserModel;
-
+use think\Request;
+use think\Db;
 
 /**
  * Description of UserCenter
@@ -31,10 +32,8 @@ class User extends Common{
     }
     
     public function pindex () {
-        /*$userInfo = $this->userInfo;
-
-        dump($userInfo);
-        $this->assign('userInfo',$userInfo);*/
+        $userInfo = $this->userInfo;
+        $this->assign('userInfo',$userInfo);
         return $this->fetch();
     }
 
@@ -51,6 +50,46 @@ class User extends Common{
 
     //个人中心简历修改
     public function person_resume_modify(){
-        return $this->fetch();
+        if (Request::instance()->isPost()) {
+            $data = [
+                'uid' => $this->userInfo['user_id'],
+                'name' => input('name',''),
+                'pic' => input('pic',''),
+                'sex' => input('sex',3),
+                'birthday' => strtotime(input('birthday')),
+                'age' => input('age',0),
+                'phone' => input('phone',''),
+                'email' => input('email',''),
+                'working_years' => input('working_years',''),
+                'native_place' => input('native_place',''),
+                'address' => input('address',''),
+                'nationality' => input('nationality',''),
+                'college' => input('college',''),
+                'degree' => input('degree',''),
+                'major' => input('major',''),
+                'skill' => input('skill',''),
+                'salary' => input('salary',''),
+                'work_exprience' => input('work_exprience',''),
+                'project_exprience' => input('project_exprience',''),
+                'evaluate' => input('evaluate',''),
+                'intentional_position' => input('intentional_position',''),
+                'marital_status' => input('marital_status',''),
+                'add_time' => time(),
+                'update_time' => time()
+            ];
+            if ($this->userInfo['info']['userinfo_id']) {
+                $res = Db::table("user_info")->where('userinfo_id',$this->userInfo['info']['userinfo_id'])->update($data);
+            } else {
+                $res = Db::table("user_info")->insert($data);
+            }
+            
+            if ($res) {
+                ajax_return(['code' => 0, 'msg' => '简历更新成功']);
+            }else {
+                ajax_return(['code' => 0, 'msg' => '简历更新失败']);
+            }
+        } else {
+            return $this->fetch();
+        }  
     }
 }

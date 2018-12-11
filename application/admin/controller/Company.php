@@ -30,7 +30,7 @@ class Company extends Common
         $list = Db::name($this->_tableName)
             ->where($where)
             ->order('orderby DESC')
-            ->paginate(20);
+            ->paginate(10);
 
         $this->assign('count', $count);
         $this->assign('list', $list);
@@ -46,6 +46,7 @@ class Company extends Common
             $request  = Request::instance();
             $insertData = [
                 'account' =>  $request->param('account'),
+                'pwd' =>  sha1(config('passsalt').$request->param('pwd')),
                 'company_name' =>  $request->param('company_name'),
                 'logo' =>  $request->param('logo'),
                 'image' =>  $request->param('image'),
@@ -158,7 +159,7 @@ class Company extends Common
             ->join('company c','j.company_id = c.company_id')
             ->order('job_id desc')
             ->where($where)
-            ->paginate(2);
+            ->paginate(10);
 
         //将对象转换成数组
         $list_array = $list->all();
@@ -190,5 +191,34 @@ class Company extends Common
         $_POST['table_name'] = $this->_tableName;
         $ret = parent::sort();
         ajax_return($ret);
+    }
+    
+    public function mJob () {
+        $cpmpany_id = input('company_id');
+        if (request()->isPost()) {
+            
+            $data = [
+                'job_name' => Request::instance()->param('job_name'),
+                'need_num' => Request::instance()->param('need_num'),
+                'work_place' => Request::instance()->param('work_place'),
+                'degree' => Request::instance()->param('degree'),
+                'sex' => Request::instance()->param('sex'),
+                'min_salary' => Request::instance()->param('min_salary'),
+                'max_salary' => Request::instance()->param('max_salary'),
+                'exprience' => Request::instance()->param('exprience'),
+                'due' => Request::instance()->param('due'),
+                'requirements' => Request::instance()->param('requirements'),
+                'company_id' => Request::instance()->param('company_id')
+            ];
+            $res = Db::table('jobs')->insert($data);
+            if ($res ) {
+                ajax_return(['code' => 0, 'msg' => '发布成功']);
+            } else {
+                ajax_return(['code' => 2000, 'msg' => '发布失败']);
+            }
+        } else {
+            $this->assign('company_id', $cpmpany_id);
+            return $this->fetch();
+        }
     }
 }

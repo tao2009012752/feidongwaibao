@@ -39,6 +39,7 @@
                 <img src="<{$img}>/centerImg.png"/>
             </div>
             <div class="userBox">
+                
                 <span class="user"><{$userInfo.info.name}></span>
                 <span class="qian">个人用户</span>
             </div>

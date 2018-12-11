@@ -20,7 +20,7 @@
 		</div>
 	</div>
 	<div class="hotCons">
-		<div><a href="<{:url('Newsinfo/index')}>"><img src="<{$img}>/hotimg1.png"/></a></div>
-		<div class="aboutLink"><a href="<{:url('Index/about')}>"><img src="<{$img}>/hotimg2.png"/></a></div>
+		<div><a href="<{:url('Newsinfo/index',['cate'=>4])}>"><img src="<{$img}>/hotimg1.png"/></a></div>
+		<div class="aboutLink"><a href="<{:url('About/index')}>"><img src="<{$img}>/hotimg2.png"/></a></div>
 	</div>
 </div>
