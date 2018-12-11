@@ -6,7 +6,7 @@ Base = {
         var url = window.location.href;
         if(url.search('Newsinfo')>0||url.search('listdetail')>0){
             $('.navBox li').eq(1).addClass('liAction');
-        }else if(url.search('Talent/index')>0){
+        }else if(url.search('Talent')>0){
             $('.navBox li').eq(2).addClass('liAction');
         }else if(url.search('Train')>0){
             $('.navBox li').eq(3).addClass('liAction');
@@ -128,6 +128,24 @@ Company = {
     }
 }
 
+
+/*用户中心页面*/
+User = {
+    //修改密码
+    PassEdit : function(){
+        $('.sub').click(function(){
+            var password = $('input[name="password"]').val();
+            var cpassword = $('input[name="cpassword"]').val();
+            if(password != cpassword){alert('两次密码输入的不一致！');return false;}
+            $.post('/index/User/password_modify_handdle',{'password':password},function(a){
+                var data = $.parseJSON(a);
+                alert(data.msg);
+            })
+        })
+    },
+}
+
+
 /*人才招聘*/
 Job = {
     //投递简历
@@ -152,27 +170,44 @@ Job = {
 /*注册页*/
 Reg = {
     //个人注册 url 为成功后跳转url
-    Perreg : function(url){
+    Perreg : function(url,type){
         $('.regBtn').click(function(){
             var username = $('input[name="username"]').val();
             var phone = $('input[name="phone"]').val();
+            var email = $('input[name="email"]').val();
+            var address = $('input[name="address"]').val();
             var password = $('input[name="password"]').val();
             var cpassword = $('input[name="cpassword"]').val();
             var agree = $('input[name="agree"]').prop('checked');
 
             if(!username){alert('用户名不能为空！');return false;}
             if(!phone && phone.length != 11){alert('手机号不能为空！');return false;}
-            if(!password){alert('密码不能为空！');return false;}
-            if(password != cpassword){alert('两次密码输入不一致');return false;}
-            if(!agree){alert('请在协议处点击我同意！');return false;}
+            if(!password && type==1){alert('密码不能为空！');return false;}
+            if(password != cpassword && type==1){alert('两次密码输入不一致');return false;}
+            if(!email && type==2){alert('邮箱不能为空！');return false;}
+            if(!address && type==2){alert('地址不能为空！');return false;}
+            if(!agree && type==1){alert('请在协议处点击我同意！');return false;}
 
-            var data = {'username':username,'phone':phone,'password':password,'cpassword':cpassword};
-            $.post('/index/Reg/perRegAjax',data,function(a){
+
+            var data = {'username':username,'phone':phone,'password':password,'cpassword':cpassword,'email':email,'address':address};
+
+            var url = '';
+            if(type==1){
+                url = '/index/reg/perRegAjax';
+            }else{
+                url = '/index/User/person_modify_handdle';
+            }
+
+            $.post(url,data,function(a){
                 var data = $.parseJSON(a);
                 if(data.code){
                     alert(data.msg);
                 }else{
-                    location.href = url;
+                    alert(data.msg);
+                    if(type == 2){
+                        location.href = '/index/User/person_modify';
+                    }
+
                 }
             })
         })
