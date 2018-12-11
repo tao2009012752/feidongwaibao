@@ -71,7 +71,7 @@ class action extends app
 		}
 		else
 		{
-			$this->tpl->display('login');
+			$this->tpl->display('login1');
 		}
 	}
 }

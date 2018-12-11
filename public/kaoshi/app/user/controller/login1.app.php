@@ -15,7 +15,7 @@ class action extends app
 		$this->$action();
 		exit;
 	}
-
+ 
 	private function index()
 	{
 		$appid = 'user';
