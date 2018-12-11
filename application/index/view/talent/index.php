@@ -86,7 +86,7 @@
     </div>
     <div class="talentPic borderdc">
         <div class="talentPicBox">
-            <h4><span class="shu"></span>最新人才照片<a class="more1" href="#">更多></a></h4>
+            <h4><span class="shu"></span>最新人才照片</h4>
             <div class="pics">
                 <div class="picScroll-left">
                     <div class="hd">
@@ -122,7 +122,7 @@
     </div>
     <div class="talentPic borderdc">
         <div class="talentPicBox">
-            <h4><span class="shu"></span>最新简历 <a class="more1" href="#">更多></a></h4>
+            <h4><span class="shu"></span>最新简历 </h4>
             <div class="jianliBox">
                 <div class="fl jian">
                     <ul>
@@ -146,7 +146,7 @@
     </div>
     <div class="talentPic borderdc">
         <div class="talentPicBox">
-            <h4><span class="shu"></span>推荐职位 <a class="more1" href="#">更多></a></h4>
+            <h4><span class="shu"></span>推荐职位 <a class="more1" href="<{:url('job/index')}>">更多></a></h4>
             <div class="recruitCon recruitCon1">
                 {volist name="jobs" id="v"}
                 <ul class="reBox fl">
