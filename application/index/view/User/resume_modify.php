@@ -6,26 +6,17 @@
     <div class="fr rightBox jianliXiu">
         <div class="rightWrap">
             <h6>修改简历</h6>
-            <form action="<{:url('User/person_resume_modify')}>" method="post">
             <div class="jibenCon">
                 <div class="jibenTit">基本信息</div>
                 <div class="tableCon">
-                    
-                    <p>
-                            <label>头像：</label>
-                            
-                                    <a class="upimg"  href="javascript:void(0)"><img style="width:150px;" src="<{$img}>/upload.png"/></a>
-                                    <input type="file" data-url="<{:url('/admin/third/upload')}>" style="display: none;"  />
-                            
-                    </p>
                     <p>
                         <label>姓名：</label>
                         <input name="name" value="<{$userInfo.info.name}>" type="text" />
                     </p>
                     <p>
                         <label>性别：</label>
-                        <input name="sex" type="radio" value="1" class="radios" />男
-                        <input name="sex" type="radio" value="2" class="radios" />女
+                        <input name="sex" type="radio" value="" class="radios" />男
+                        <input name="sex" type="radio" value="" class="radios" />女
                     </p>
                     <p>
                         <label>年龄：</label>
@@ -37,13 +28,16 @@
                     </p>
                     <p>
                         <label>民族：</label>
-                        <input name="nationality" value="<{$userInfo.info.nationality}>" type="text" />
+                        <select>
+                          <option value ="volvo">汉</option>
+                          <option value ="saab">其他民族</option>
+                        </select>
                     </p>
                     <p>
                         <label>婚姻状况：</label>
-                        <select name='marital_status'>
-                          <option value ="1">已婚</option>
-                          <option value ="2">未婚</option>
+                        <select>
+                          <option value ="volvo">已婚</option>
+                          <option value ="saab">未婚</option>
                         </select>
                     </p>
                     <p>
@@ -52,13 +46,11 @@
                     </p>
                     <p>
                         <label>学历：</label>
-                        <select name='degree'>
-                          <option value ="初中">初中</option>
-                          <option value ="高中">高中</option>
-                          <option value ="大专">大专</option>
-                          <option value ="本科">本科</option>
-                          <option value ="硕士">硕士</option>
-                          <option value ="博士">博士</option>
+                        <select>
+                          <option value ="volvo">初中</option>
+                          <option value ="volvo">高中</option>
+                          <option value ="volvo">大专</option>
+                          <option value ="saab">本科</option>
                         </select>
                     </p>
                     <p>
@@ -71,7 +63,7 @@
                     </p>
                     <p>
                         <label>出生年月：</label>
-                        <input name="birthday" value="<{$userInfo.info.birthday|date='Y-m-d',###}>"  type="date" />
+                        <input name="birthday" value="<{$userInfo.info.birthday|date='Y-m-d',###}>"  type="text" />
                     </p>
                     <p>
                         <label>电子邮箱：</label>
@@ -116,10 +108,8 @@
                     </p>
                 </div>
                 <div class="submitBoxCenter">
-                    <!--<a href="javascript:;" onclick="form.submit()">提交</a>-->
-                    <input type="submit" value='提交'>
+                    <a href="personalSucess.html">提交</a>
                 </div>
-                </form>
             </div>
         </div>
 

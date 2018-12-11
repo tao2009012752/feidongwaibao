@@ -8,7 +8,7 @@
 					<h6>个人中心</h6>
 					<div class="userJiBen">
 						<div class="personalText">
-							用户<{$userInfo.info.name}>，上午好，欢迎光临服务外包人才信息综合服务平台!
+							用户 <{$userInfo.account}>，上午好，欢迎光临服务外包人才信息综合服务平台!
 						</div>
 						<div class="tishi">
 							<div class="tishiBox">
@@ -36,11 +36,11 @@
 							<li class="nameText">
 								<div class="nameText">用户<{$userInfo.info.name}></div>
 							</li>
-							<li><a href="#" class="fl">基本信息</a><a href="#" class="fr">修改</a></li>
-							<li><a href="#" class="fl">求职意向</a><a href="#" class="fr">修改</a></li>
-							<li><a href="#" class="fl">工作经验</a><a href="#" class="fr">修改</a></li>
-							<li><a href="#" class="fl">项目经验</a><a href="#" class="fr">修改</a></li>
-							<li><a href="#" class="fl">个人评价</a><a href="#" class="fr">修改</a></li>
+							<li><a href="#" class="fl">基本信息</a><a href="<{:url('/index/User/resume_modify')}>" class="fr">修改</a></li>
+							<li><a href="#" class="fl">求职意向</a><a href="<{:url('/index/User/resume_modify')}>" class="fr">修改</a></li>
+							<li><a href="#" class="fl">工作经验</a><a href="<{:url('/index/User/resume_modify')}>" class="fr">修改</a></li>
+							<li><a href="#" class="fl">项目经验</a><a href="<{:url('/index/User/resume_modify')}>" class="fr">修改</a></li>
+							<li><a href="#" class="fl">个人评价</a><a href="<{:url('/index/User/resume_modify')}>" class="fr">修改</a></li>
 						</ul>
 						
 					</div>

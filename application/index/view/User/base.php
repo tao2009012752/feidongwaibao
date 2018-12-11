@@ -8,6 +8,7 @@
     <script src="<{$js}>/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="<{$js}>/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
     <script src="<{$js}>/index.js" type="text/javascript" charset="utf-8"></script>
+    <script src="<{$js}>/main.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body style="background: #f3f3f3;">
 <!--top-->
@@ -39,8 +40,7 @@
                 <img src="<{$img}>/centerImg.png"/>
             </div>
             <div class="userBox">
-                
-                <span class="user"><{$userInfo.info.name}></span>
+                <span class="user"><{$userInfo.account}></span>
                 <span class="qian">个人用户</span>
             </div>
         </div>
@@ -48,14 +48,14 @@
             <h5><i class="fa fa-file-text-o"></i>基本资料</h5>
             <ul>
                 <li><a href="<{:url('/index/User/person_modify')}>">资料修改</a></li>
-                <li><a href="<{:url('/index/User/person_password_modify')}>">修改密码</a></li>
+                <li><a href="<{:url('/index/User/password_modify')}>">修改密码</a></li>
             </ul>
         </div>
         <div class="jiben">
             <h5><i class="fa fa-file-text-o"></i>简历设置</h5>
             <ul>
-                <li><a href="<{:url('/index/User/person_resume_modify')}>">修改简历</a></li>
-                <li><a href="jianliXiu.html">简历预览</a></li>
+                <li><a href="<{:url('/index/User/resume_modify')}>">修改简历</a></li>
+                <li><a href="<{:url('/index/Talent/get_resume_info',['userinfo_id'=>$userInfo['info']['userinfo_id']])}>">简历预览</a></li>
             </ul>
         </div>
         <div class="jiben">
