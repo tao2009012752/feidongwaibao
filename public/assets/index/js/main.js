@@ -143,6 +143,89 @@ User = {
             })
         })
     },
+
+
+    //新增或编辑个人简历
+    ResumeModify : function(url){
+        $('.subBtn').click(function(){
+            var userinfo_id = $('input[name="userinfo_id"]').val();
+            var name = $('input[name="name"]').val();
+            var sex = $('input[name="sex"]:checked').val();
+            var pic = $('.upimg img').eq(0).attr('src');
+            var age = $('input[name="age"]').val();
+            var native_place = $('input[name="native_place"]').val();
+            var nationality = $('input[name="nationality"]').val();
+            var marital_status = $('#marital_status option:selected').val();
+            var college = $('input[name="college"]').val();
+            var degree = $('input[name="degree"]').val();
+            var major = $('input[name="major"]').val();
+            var phone = $('input[name="phone"]').val();
+            var birthday = $('input[name="birthday"]').val();
+            var email = $('input[name="email"]').val();
+            var address = $('input[name="address"]').val();
+            var intentional_position = $('input[name="intentional_position"]').val();
+            var salary = $('input[name="salary"]').val();
+            var work_exprience = $('textarea[name="work_exprience"]').val();
+            var project_exprience = $('textarea[name="project_exprience"]').val();
+            var evaluate = $('textarea[name="evaluate"]').val();
+
+
+            //验证内容
+            if(!name){alert('姓名不能为空！');return false;}
+            if(pic.indexOf("upload.png") >= 0){alert('个人头像不能为空');return false;}
+            if(!age){alert('年龄不能为空！');return false;}
+            if(!native_place){alert('籍贯不能为空！');return false;}
+            if(!nationality){alert('所属民族不能为空！');return false;}
+            if(!college){alert('毕业院校不能为空！');return false;}
+            if(!degree){alert('学历不能为空！');return false;}
+            if(!major){alert('专业不能为空！');return false;}
+            if(!phone){alert('手机号不能为空！');return false;}
+            if(phone.length != 11){alert('手机号格式不正确！');return false;}
+            if(!birthday){alert('出生日期不能为空！');return false;}
+            if(!email){alert('邮箱不能为空！');return false;}
+            if(!address){alert('地址不能为空！');return false;}
+            if(!intentional_position){alert('工作职位不能为空！');return false;}
+            if(!salary){alert('期望薪资不能为空！');return false;}
+            if(!work_exprience){alert('工作经验不能为空！');return false;}
+            if(!project_exprience){alert('项目经验不能为空！');return false;}
+            if(!evaluate){alert('个人评价不能为空！');return false;}
+
+
+            var data = {
+                'userinfo_id':userinfo_id,
+                'name':name,
+                'sex':sex,
+                'pic':pic,
+                'age':age,
+                'native_place':native_place,
+                'nationality':nationality,
+                'marital_status':marital_status,
+                'college':college,
+                'degree':degree,
+                'major':major,
+                'birthday':birthday,
+                'address':address,
+                'phone':phone,
+                'email':email,
+                'intentional_position':intentional_position,
+                'salary':salary,
+                'work_exprience':work_exprience,
+                'project_exprience':project_exprience,
+                'evaluate':evaluate,
+            };
+
+            $.post(url,data,function(a){
+                var data = $.parseJSON(a);
+                if(data.code){
+                    alert(data.msg);
+                }else{
+                    alert(data.msg);
+                    location.href = '/index/User/resume_modify';
+                }
+            })
+
+        })
+    }
 }
 
 

@@ -15,8 +15,18 @@
                     </p>
                     <p>
                         <label>性别：</label>
-                        <input name="sex" type="radio" value="" class="radios" />男
-                        <input name="sex" type="radio" value="" class="radios" />女
+                        <input name="sex" type="radio"  {if condition="$userInfo.info.sex eq 1"}checked{/if} value="1" class="radios" />男
+                        <input name="sex" type="radio" {if condition="$userInfo.info.sex eq 0"}checked{/if}  value="0" class="radios" />女
+                    </p>
+                    <p>
+                        <label>个人头像：</label>
+                        {if condition="$userInfo.info.pic neq ''"}
+                        <a class="upimg" href="javascript:void(0)"><img src="<{$userInfo.info.pic}>" style=" width: 100px;vertical-align: top;" /></a>
+                        <input type="file" data-url="<{:url('/admin/third/upload')}>"  />
+                        {else/}
+                        <a class="upimg" href="javascript:void(0)"><img src="<{$img}>/upload.png" style=" width: 100px;vertical-align: top;" /></a>
+                        <input type="file" data-url="<{:url('/admin/third/upload')}>" style="display:none;"  />
+                        {/if}
                     </p>
                     <p>
                         <label>年龄：</label>
@@ -28,16 +38,13 @@
                     </p>
                     <p>
                         <label>民族：</label>
-                        <select>
-                          <option value ="volvo">汉</option>
-                          <option value ="saab">其他民族</option>
-                        </select>
+                        <input name="nationality" value="<{$userInfo.info.nationality}>" type="text" />
                     </p>
                     <p>
                         <label>婚姻状况：</label>
-                        <select>
-                          <option value ="volvo">已婚</option>
-                          <option value ="saab">未婚</option>
+                        <select id="marital_status">
+                          <option {if condition="$userInfo.info.marital_status eq 1"}selected{/if} value ="1">已婚</option>
+                          <option {if condition="$userInfo.info.marital_status eq 0"}selected{/if}  value ="0">未婚</option>
                         </select>
                     </p>
                     <p>
@@ -46,12 +53,7 @@
                     </p>
                     <p>
                         <label>学历：</label>
-                        <select>
-                          <option value ="volvo">初中</option>
-                          <option value ="volvo">高中</option>
-                          <option value ="volvo">大专</option>
-                          <option value ="saab">本科</option>
-                        </select>
+                        <input name="degree" value="<{$userInfo.info.degree}>" type="text" />
                     </p>
                     <p>
                         <label>所学专业：</label>
@@ -63,7 +65,7 @@
                     </p>
                     <p>
                         <label>出生年月：</label>
-                        <input name="birthday" value="<{$userInfo.info.birthday|date='Y-m-d',###}>"  type="text" />
+                        <input  type="date" name="birthday" value="<{$userInfo.info.birthday|date='Y-m-d',###}>" />
                     </p>
                     <p>
                         <label>电子邮箱：</label>
@@ -108,10 +110,20 @@
                     </p>
                 </div>
                 <div class="submitBoxCenter">
-                    <a href="personalSucess.html">提交</a>
+                    <a href="javascript:void(0)" class="subBtn">提交</a>
                 </div>
+
+                <!--隐藏表单，判断当前是新增还是编辑简历-->
+                <input type="hidden" name="userinfo_id" value="<{$userInfo.info.userinfo_id}>">
             </div>
         </div>
 
     </div>
+    <script>
+        $(function(){
+            //用户更新简历
+            User.ResumeModify("<{:url('User/resume_modify_handdle')}>");
+            Common.ImgUpload();//图片上传
+        });
+    </script>
 {/block}
