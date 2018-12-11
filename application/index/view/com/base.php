@@ -17,12 +17,12 @@
             <li><a href="/">网站首页</a><span class="ge">|</span></li>
             <li><a href="<{:url('/index/index/newslist')}>">资讯中心</a><span class="ge">|</span></li>
             <li><a href="<{:url('/index/talent/index')}>">人才库</a><span class="ge">|</span></li>
-            <li><a href="#">培训信息</a><span class="ge">|</span></li>
+            <li><a href="<{:url('/index/Train/index')}>">培训信息</a><span class="ge">|</span></li>
             <li><a href="<{:url('/index/job/index')}>">人才招聘</a><span class="ge">|</span></li>
             <li><a href="/kaoshi/index.php?user-app-login">人才考评</a><span class="ge">|</span></li>
             <li><a href="/kaoshi/index.php?user-app-login">在线学习</a><span class="ge">|</span></li>
-            <li><a href="#">关于我们</a><span class="ge">|</span></li>
-            <li><a href="#">联系我们</a></li>
+            <li><a href="<{:url('/index/About/index')}>">关于我们</a><span class="ge">|</span></li>
+            <li><a href="<{:url('/index/Contact/index')}>">联系我们</a></li>
         </ul>
     </div>
 </div>
@@ -75,9 +75,9 @@
 <!--footer-->
 <div class="footer">
     <div class="footerBox contant">
-        <p>Copyright @2013 All Rright Reserve 免责声明 安徽易服商务服务有限公司 版权所有 皖ICP备16008153号 </p>
-        <p>地址：合肥市政务区龙图路与怀宁路交口置地广场C座2403室 </p>
-        <p>电话：0551-63530530</p>
+        <p>Copyright @2013 All Rright Reserve 免责声明 安徽皖信人力资源管理有限公司 版权所有 皖ICP备10203475号 </p>
+				<p>地址：合肥市政务区龙图路与怀宁路交口置地广场C座8楼 </p>
+				<p>电话：0551-63432400, 0551-63431150</p>
     </div>
 </div>
 </body>

@@ -12,7 +12,7 @@
                 <div class="fl">
                     <ul class="infoList">
                         {volist name="jobs" id="v"}
-                        <li><a href=""><{$v.companyInfo.company_name}></a> 发布了：<a href="#"><{$v.job_name}></a></li>
+                        <li><a href="<{:url('Com/index',['id'=>$v['companyInfo']['company_id']])}>"><{$v.companyInfo.company_name}></a> 发布了：<a href="<{:url('Job/jobDetail',['id'=>$v['job_id']])}>"><{$v.job_name}></a></li>
                         {/volist}
                     </ul>
                 </div>
@@ -49,14 +49,14 @@
                         <ul>
                             {volist name="gg" id="v"}
                             <li><span class="date"><{$v.add_time|date='Y-m-d',###}></span><a
-                                    href="<{:url('/index/index/listdetail',['id'=>$v['news_id']])}>" target="_blank"><{$v.title}></a>
+                                    href="<{:url('/index/Newsinfo/listdetail',['id'=>$v['news_id']])}>" target="_blank"><{$v.title}></a>
                             </li>
                             {/volist}
                         </ul>
                         <ul>
                             {volist name="zx" id="v"}
                             <li><span class="date"><{$v.add_time|date='Y-m-d',###}></span><a
-                                    href="<{:url('/index/index/listdetail',['id'=>$v['news_id']])}>" target="_blank"><{$v.title}></a>
+                                    href="<{:url('/index/Newsinfo/listdetail',['id'=>$v['news_id']])}>" target="_blank"><{$v.title}></a>
                             </li>
                             {/volist}
                         </ul>
