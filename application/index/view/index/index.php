@@ -80,11 +80,11 @@
 										<label for="" class="leftName">用户名：</label><input type="text" name="username" class="formInputs" placeholder="请输入用户名或者手机号"/>
 									</div>
 									<div class="inputLine">
-										<label for="" class="leftName">密码：</label><input type="text" name="password" class="formInputs" placeholder="请输入密码"/>
+										<label for="" class="leftName">密码：</label><input type="password" name="password" class="formInputs" placeholder="请输入密码"/>
 									</div>
 								</div>
-								<div class="fr loginBtn">
-									<img src="<{$img}>/loginBtn.png"/>
+								<div class="fr loginBtn" data-type="1">
+									<img src="<{$img}>/loginBtn.png" />
 								</div>
 							</form>
                                                     
@@ -93,13 +93,13 @@
 							<form action="" method="post">
 								<div class="fl">
 									<div class="inputLine">
-										<label for="" class="leftName">用户名：</label><input type="text" class="formInputs" placeholder="请输入企业用户名或者手机号"/>
+										<label for="" class="leftName">用户名：</label><input type="text" name="cusername" class="formInputs" placeholder="请输入企业用户名或者手机号"/>
 									</div>
 									<div class="inputLine">
-										<label for="" class="leftName">密码：</label><input type="text" class="formInputs" placeholder="请输入密码"/>
+                                                                            <label for="" class="leftName">密码：</label><input type="password"name="password" class="formInputs" placeholder="请输入密码"/>
 									</div>
 								</div>
-								<div class="fr loginBtn">
+								<div class="fr loginBtn" data-type="2">
 									<img src="<{$img}>/loginBtn.png"/>
 								</div>
 							</form>
@@ -110,11 +110,16 @@
 			</div>
 		</div>
 	</div>
+        <script>
+                $(function(){
+                        Index.Login('/');
+                })
+        </script>
 	<!--系统集合-->
 	<div class="systemBox contant">
 		<div class="systemCon">
 			<ul>
-				<li class="nomarl"><a href="/kaoshi/index.php?user-app-login"><img src="<{$img}>/xuexi.png"/></a></li>
+				<li class="nomarl"><a href="/kaoshi/index.php?user-app-login1"><img src="<{$img}>/xuexi.png"/></a></li>
 				<li><a href="/kaoshi/index.php?user-app-login"><img src="<{$img}>/kaoshi.png"/></a></li>
                                 <li><a href="<{:url('/index/Newsinfo/index')}>"><img src="<{$img}>/zixun.png"/></a></li>
 				<li><a href="<{:url('/index/Talent/index')}>"><img src="<{$img}>/ku.png"/></a></li>
@@ -258,7 +263,7 @@
 				</div>
 				<div class="examxin fr">
 					<div class="topImg">
-						<a href="#"><img src="<{$img}>/news.png"/></a>
+                                                <a href="<{:url('/index/Newsinfo/index',['cate'=>15])}>"><img src="<{$img}>/news.png"/></a>
 						<div class="imgTit">省人事考试应急协调小组第19次联席会议召开</div>
 					</div>
 					<div class="chenLine">
@@ -320,7 +325,7 @@
 				</div>
 				<div class="peiRight fr">
 					<div>
-						<a href="/kaoshi/index.php?user-app-login"><img src="<{$img}>/onlineStudy.png"/></a>
+						<a href="/kaoshi/index.php?user-app-login1"><img src="<{$img}>/onlineStudy.png"/></a>
 					</div>
 					<div class="shizi">
 						<div class="titleBox">

@@ -53,13 +53,13 @@ class User extends Common{
         $userData = [
             'account'=>$account,
             'phone'=>$phone,
-//            'update_time'=>time(),
+            'update_time'=>time(),
         ];
 
         $userInfoData = [
             'email'=>$email,
             'address'=>$address,
-//            'update_time'=>time(),
+            'update_time'=>time(),
         ];
 
 

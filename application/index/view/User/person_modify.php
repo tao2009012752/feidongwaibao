@@ -1,4 +1,4 @@
-{extend name="User/base" /}
+{extend name="user/base" /}
 {block name="tdk"}
 <title>资料修改</title>
 {/block}

@@ -24,12 +24,14 @@ class Login extends Common
             if($logindata){
                 Session::set('user',$logindata);
                 ajax_return(['code'=>0,'msg'=>'登录成功']);
+                return;
             }
         }else{
             $logindata = Company::where("account = '{$account}' and pwd = '{$mpwd}'")->find();
             if($logindata){
                 Session::set('com',$logindata);
                 ajax_return(['code'=>0,'msg'=>'登录成功']);
+                return;
             }
         }
         ajax_return(['code'=>1,'msg'=>'用户名或密码错误']);

@@ -253,7 +253,7 @@ Job = {
 /*注册页*/
 Reg = {
     //个人注册 url 为成功后跳转url
-    Perreg : function(url,type){
+    Perreg : function(url1,type=1){
         $('.regBtn').click(function(){
             var username = $('input[name="username"]').val();
             var phone = $('input[name="phone"]').val();
@@ -283,12 +283,14 @@ Reg = {
 
             $.post(url,data,function(a){
                 var data = $.parseJSON(a);
+                
                 if(data.code){
                     alert(data.msg);
                 }else{
-                    alert(data.msg);
                     if(type == 2){
                         location.href = '/index/User/person_modify';
+                    } else {
+                        location.href = url1;
                     }
 
                 }
@@ -297,7 +299,7 @@ Reg = {
     },
 
     //企业注册
-    Comreg : function(url,type){
+    Comreg : function(url1,type){
         $('.regBtn').click(function(){
             var username = $('input[name="username"]').val();
             var password = $('input[name="password"]').val();
@@ -341,7 +343,7 @@ Reg = {
                     alert(data.msg);
                 }else{
                     if(type==2)alert(data.msg);
-                    location.href = url;
+                    location.href = url1;
                 }
             })
         })

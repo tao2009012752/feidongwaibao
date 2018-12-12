@@ -43,7 +43,7 @@
 </div>
 <script>
 	$(function(){
-		Reg.Perreg("<{:url('Reg/regSuccess')}>"); //个人注册
+		Reg.Perreg("<{:url('Reg/regSuccess')}>",1); //个人注册
 	})
 </script>
 {/block}

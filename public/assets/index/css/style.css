@@ -489,7 +489,7 @@ input:focus{outline:0;}
 	padding: 0px 20px;
 	font-size: 14px;
 	margin-top: 8px;
-	
+	margin-bottom:20px;
 }
 
 .reBox li{
@@ -2072,7 +2072,8 @@ input:focus{outline:0;}
 	margin-bottom: 30px;
 }
 .zhuanjiaUl li img{
-	width: 100%;
+	width:150px;
+        height:188px;
 }
 .zhuanjiaUl li a{
 	width: 100%;
