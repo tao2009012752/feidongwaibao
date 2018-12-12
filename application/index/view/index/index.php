@@ -122,7 +122,7 @@
 				<li class="nomarl"><a href="/kaoshi/index.php?user-app-login1"><img src="<{$img}>/xuexi.png"/></a></li>
 				<li><a href="/kaoshi/index.php?user-app-login"><img src="<{$img}>/kaoshi.png"/></a></li>
                                 <li><a href="<{:url('/index/Newsinfo/index')}>"><img src="<{$img}>/zixun.png"/></a></li>
-				<li><a href="<{:url('/index/Talent/index')}>"><img src="<{$img}>/ku.png"/></a></li>
+				<li><a href="<{:url('/index/Login/tlogin')}>"><img src="<{$img}>/ku.png"/></a></li>
 				<li><a href="<{:url('/index/Job/index')}>"><img src="<{$img}>/rencai.png"/></a></li>
 			</ul>
 		</div>

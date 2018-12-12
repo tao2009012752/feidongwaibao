@@ -12,6 +12,10 @@ class Login extends Common
         return $this->fetch();
     }
 
+    public function tlogin(){
+        return $this->fetch();
+    }
+
     //登录处理
     public function loginAjax(){
         $account = input('username');
